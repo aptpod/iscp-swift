@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>iSCP  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a title="iSCP  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">iSCP v0.9.0 Docs</a></p>
+        <div class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">iSCP Reference</a>
+        <img id="carat" src="img/carat.png" alt=""/>
+        iSCP  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/Connection.html">Connection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Downstream.html">Downstream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Downstream/State.html">– State</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SequenceNumberGenerator.html">SequenceNumberGenerator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Transport.html">Transport</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Transport/WebSocket.html">– WebSocket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Upstream.html">Upstream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Upstream/State.html">– State</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/iSCPLog.html">iSCPLog</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Global%20Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Global%20Variables.html#/s:4iSCP21kiSCPFrameworkVersionSSvp">kiSCPFrameworkVersion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Global%20Variables.html#/s:4iSCP29kiSCPSupportedProtocolVersionSSvp">kiSCPSupportedProtocolVersion</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/EncodingName.html">EncodingName</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/QoS.html">QoS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/TransportType.html">TransportType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/iSCPError.html">iSCPError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/iSCPLogLevel.html">iSCPLogLevel</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Float.html">Float</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Int16.html">Int16</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Int32.html">Int32</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Int64.html">Int64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Int8.html">Int8</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UInt16.html">UInt16</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UInt32.html">UInt32</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UInt64.html">UInt64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UInt8.html">UInt8</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/ConnectionDelegate.html">ConnectionDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/DownstreamDelegate.html">DownstreamDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/ITransportConfig.html">ITransportConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/UpstreamDelegate.html">UpstreamDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/iSCPLogDelegate.html">iSCPLogDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/BaseTime.html">BaseTime</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/DataFilter.html">DataFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/DataID.html">DataID</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/DataPoint.html">DataPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/DataPointGroup.html">DataPointGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/DownstreamAbnormalClose.html">DownstreamAbnormalClose</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/DownstreamChunk.html">DownstreamChunk</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/DownstreamFilter.html">DownstreamFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/DownstreamMetadata.html">DownstreamMetadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/DownstreamMetadata/Metadata.html">– Metadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/DownstreamNormalClose.html">DownstreamNormalClose</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/DownstreamOpen.html">DownstreamOpen</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/DownstreamResume.html">DownstreamResume</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/FlushPolicy.html">FlushPolicy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/FlushPolicy/FlushType.html">– FlushType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/UpstreamAbnormalClose.html">UpstreamAbnormalClose</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/UpstreamChunk.html">UpstreamChunk</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/UpstreamChunkAck.html">UpstreamChunkAck</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/UpstreamInfo.html">UpstreamInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/UpstreamNormalClose.html">UpstreamNormalClose</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/UpstreamOpen.html">UpstreamOpen</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/UpstreamResume.html">UpstreamResume</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='iscp-2-0-client-library-for-swift' class='heading'>iSCP 2.0 Client Library for Swift</h1>
+
+<p>iSCP Client for Swift は、iSCP version 2 を用いたリアルタイムAPIにアクセスするためのクライアントライブラリです。</p>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<ul>
+<li>iOS 13 or later</li>
+<li>macOS 10.15 (Catalina) or later</li>
+<li>Xcode 13.0 (13A233) or later</li>
+</ul>
+<h2 id='installation' class='heading'>Installation</h2>
+
+<p>iscp-swiftは <a href="https://cocoapods.org/">CocoaPods</a> から入手可能です。
+<code>Podfile</code> に、iscp-swiftと依存ライブラリ <a href="https://github.com/apple/swift-protobuf">SwiftProtobuf</a> を追加してください。</p>
+<pre class="highlight plaintext"><code>target '{YOUR_APP_SCHEME}' do
+  ...
+  pod 'iSCP'
+  pod 'SwiftProtobuf', '~&gt; 1.0'
+  ...
+end
+
+# Please add at the end
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+    end
+  end
+end
+</code></pre>
+<h2 id='implementation' class='heading'>Implementation</h2>
+<h3 id='em-connect-to-intdash-api-em' class='heading'><em>Connect To intdash API</em></h3>
+
+<p>このサンプルではiscp-swiftを使ってintdash APIに接続します。</p>
+<pre class="highlight swift"><code><span class="c1">// このサンプルではiscp-goを使ってintdash APIに接続します。</span>
+<span class="c1">// iSCPをインポート</span>
+<span class="kd">import</span> <span class="n">iSCP</span>
+
+<span class="c1">/// 接続するintdashサーバー</span>
+<span class="k">var</span> <span class="nv">targetServer</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"https://example.com"</span>
+<span class="c1">/// ノードUUID（ここで指定されたノードとして送受信を行います。</span>
+<span class="c1">/// intdash APIでノードを生成した際に発行されたノードUUIDを指定します。）</span>
+<span class="k">var</span> <span class="nv">nodeID</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"00000000-0000-0000-0000-000000000000"</span>
+<span class="c1">/// アクセストークン</span>
+<span class="c1">///</span>
+<span class="c1">/// intdash APIで取得したアクセストークンを設定して下さい。</span>
+<span class="k">var</span> <span class="nv">accessToken</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span>
+<span class="c1">/// コネクション</span>
+<span class="k">var</span> <span class="nv">connection</span><span class="p">:</span> <span class="kt">Connection</span><span class="p">?</span>
+
+<span class="kd">extension</span> <span class="kt">ExampleViewController</span> <span class="p">{</span>
+
+    <span class="kd">func</span> <span class="nf">connect</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// WebSocketを使って接続するように指定します。</span>
+        <span class="k">let</span> <span class="nv">transportConfig</span><span class="p">:</span> <span class="kt">ITransportConfig</span> <span class="o">=</span> <span class="kt">Transport</span><span class="o">.</span><span class="kt">WebSocket</span><span class="o">.</span><span class="kt">Config</span><span class="p">()</span>
+        <span class="kt">Connection</span><span class="o">.</span><span class="nf">connect</span><span class="p">(</span>
+            <span class="nv">address</span><span class="p">:</span> <span class="n">targetServer</span><span class="p">,</span>
+            <span class="nv">transportConfig</span><span class="p">:</span> <span class="n">transportConfig</span><span class="p">,</span>
+            <span class="nv">tokenSource</span><span class="p">:</span> <span class="p">{</span> <span class="n">token</span> <span class="k">in</span>
+                <span class="c1">// 接続時にイベントが発生しアクセスに使用するトークンを指定します。</span>
+                <span class="c1">// ここでは固定のトークンを返していますが随時トークンの更新を行う実装にするとトークンの期限切れを考える必要がなくなります。</span>
+                <span class="nf">token</span><span class="p">(</span><span class="n">accessToken</span><span class="p">)</span>
+            <span class="p">},</span>
+            <span class="nv">nodeID</span><span class="p">:</span> <span class="n">nodeID</span><span class="p">)</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="n">con</span><span class="p">,</span> <span class="n">error</span> <span class="k">in</span>
+            <span class="k">guard</span> <span class="k">let</span> <span class="nv">con</span> <span class="o">=</span> <span class="n">con</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="c1">// 接続失敗。</span>
+                <span class="k">return</span>
+            <span class="p">}</span>
+            <span class="c1">// 接続成功。</span>
+            <span class="n">connection</span> <span class="o">=</span> <span class="n">con</span>
+            <span class="n">connection</span><span class="p">?</span><span class="o">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="k">self</span> <span class="c1">// ConnectionDelegate</span>
+            <span class="c1">// 以降、openUpstreamやopenDownstreamなどが実行可能になります。</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">extension</span> <span class="kt">ExampleViewController</span> <span class="p">:</span> <span class="kt">ConnectionDelegate</span> <span class="p">{</span>
+
+    <span class="kd">func</span> <span class="nf">didReconnect</span><span class="p">(</span><span class="nv">connection</span><span class="p">:</span> <span class="kt">Connection</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Connectionが再オープンされた際にコールされます。</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">didDisconnect</span><span class="p">(</span><span class="nv">connection</span><span class="p">:</span> <span class="kt">Connection</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Connectionがクローズされた際にコールされます。</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">didFailWithError</span><span class="p">(</span><span class="nv">connection</span><span class="p">:</span> <span class="kt">Connection</span><span class="p">,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Connection内部で何らかのエラーが発生した際にコールされます。</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre>
+<h3 id='em-start-upstream-em' class='heading'><em>Start Upstream</em></h3>
+
+<p>アップストリームの送信サンプルです。このサンプルでは、基準時刻のメタデータと、文字列型のデータポイントをiSCPサーバーへ送信しています。</p>
+<pre class="highlight swift"><code><span class="c1">/// 送信するデータを永続化するかどうか</span>
+<span class="k">var</span> <span class="nv">upstreamPersist</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span>
+<span class="c1">/// オープンしたストリーム一覧</span>
+<span class="k">var</span> <span class="nv">upstreams</span><span class="p">:</span> <span class="p">[</span><span class="kt">Upstream</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="kd">extension</span> <span class="kt">ExampleViewController</span> <span class="p">{</span>
+
+    <span class="kd">func</span> <span class="nf">startUpstream</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// セッションIDを払い出します。</span>
+        <span class="k">let</span> <span class="nv">sessionID</span> <span class="o">=</span> <span class="kt">UUID</span><span class="p">()</span><span class="o">.</span><span class="n">uuidString</span><span class="o">.</span><span class="nf">lowercased</span><span class="p">()</span>
+
+        <span class="c1">// Upstreamをオープンします。</span>
+        <span class="n">connection</span><span class="p">?</span><span class="o">.</span><span class="nf">openUpstream</span><span class="p">(</span><span class="nv">sessionID</span><span class="p">:</span> <span class="n">sessionID</span><span class="p">,</span>
+                                 <span class="nv">persist</span><span class="p">:</span> <span class="n">upstreamPersist</span><span class="p">,</span>
+                                 <span class="nv">completion</span><span class="p">:</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="n">upstream</span><span class="p">,</span> <span class="n">error</span> <span class="k">in</span>
+            <span class="k">guard</span> <span class="k">let</span> <span class="nv">upstream</span> <span class="o">=</span> <span class="n">upstream</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="c1">// オープン失敗。</span>
+                <span class="k">return</span>
+            <span class="p">}</span>
+            <span class="c1">// オープン成功。</span>
+            <span class="n">upstreams</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="n">upstream</span><span class="p">)</span>
+
+            <span class="c1">// 送信するデータポイントを保存したい場合や、アップストリームのエラーをハンドリングしたい場合はデリゲートを設定します。</span>
+            <span class="n">upstream</span><span class="o">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="k">self</span> <span class="c1">// UpstreamDelegate</span>
+
+            <span class="k">let</span> <span class="nv">baseTime</span> <span class="o">=</span> <span class="kt">Date</span><span class="p">()</span><span class="o">.</span><span class="n">timeIntervalSince1970</span> <span class="c1">// 基準時刻です。</span>
+
+            <span class="c1">// 基準時刻をiSCPサーバーへ送信します。</span>
+            <span class="n">connection</span><span class="p">?</span><span class="o">.</span><span class="nf">sendBaseTime</span><span class="p">(</span>
+                <span class="nv">baseTime</span><span class="p">:</span> <span class="kt">BaseTime</span><span class="p">(</span>
+                    <span class="nv">sessionID</span><span class="p">:</span> <span class="n">sessionID</span><span class="p">,</span>
+                    <span class="nv">name</span><span class="p">:</span> <span class="s">"manual"</span><span class="p">,</span>
+                    <span class="nv">priority</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span>
+                    <span class="nv">elapsedTime</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="nv">baseTime</span><span class="p">:</span> <span class="n">baseTime</span><span class="p">),</span>
+                <span class="nv">persist</span><span class="p">:</span> <span class="n">upstreamPersist</span><span class="p">)</span> <span class="p">{</span> <span class="n">error</span> <span class="k">in</span>
+                    <span class="k">if</span> <span class="n">error</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+                        <span class="c1">// 基準時刻の送信に失敗。</span>
+                        <span class="k">return</span>
+                    <span class="p">}</span>
+                    <span class="c1">// 基準時刻の送信に成功。</span>
+
+                    <span class="c1">// 文字列型のデータポイントをiSCPサーバーへ送信します。</span>
+                    <span class="n">upstream</span><span class="o">.</span><span class="nf">writeDataPoint</span><span class="p">(</span>
+                        <span class="nv">dataID</span><span class="p">:</span> <span class="kt">DataID</span><span class="p">(</span>
+                            <span class="nv">name</span><span class="p">:</span> <span class="s">"greeting"</span><span class="p">,</span>
+                            <span class="nv">type</span><span class="p">:</span> <span class="s">"string"</span><span class="p">),</span>
+                        <span class="nv">dataPoint</span><span class="p">:</span> <span class="kt">DataPoint</span><span class="p">(</span>
+                            <span class="nv">elapsedTime</span><span class="p">:</span> <span class="kt">Date</span><span class="p">()</span><span class="o">.</span><span class="n">timeIntervalSince1970</span><span class="o">-</span><span class="n">baseTime</span><span class="p">,</span> <span class="c1">// 基準時刻からの経過時間をデータポイントの経過時間として打刻します。</span>
+                            <span class="nv">payload</span><span class="p">:</span> <span class="s">"hello"</span><span class="o">.</span><span class="nf">data</span><span class="p">(</span><span class="nv">using</span><span class="p">:</span> <span class="o">.</span><span class="n">utf8</span><span class="p">)</span> <span class="p">??</span> <span class="kt">Data</span><span class="p">())</span>
+                    <span class="p">)</span>
+                <span class="p">}</span>
+        <span class="p">})</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="kd">extension</span> <span class="kt">ExampleViewController</span> <span class="p">:</span> <span class="kt">UpstreamDelegate</span> <span class="p">{</span>
+
+    <span class="kd">func</span> <span class="nf">didGenerateChunk</span><span class="p">(</span><span class="nv">upstream</span><span class="p">:</span> <span class="kt">Upstream</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">UpstreamChunk</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// バッファへ書き込んだデータポイントが実際に送信される直前にコールされます。</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">didReceiveAck</span><span class="p">(</span><span class="nv">upstream</span><span class="p">:</span> <span class="kt">Upstream</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">UpstreamChunkAck</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// データポイントの送信後に返却されるACKを受信できた場合にコールされます。</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">didFailWithError</span><span class="p">(</span><span class="nv">upstream</span><span class="p">:</span> <span class="kt">Upstream</span><span class="p">,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// 内部でエラーが発生した場合にコールされます。</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">didCloseWithError</span><span class="p">(</span><span class="nv">upstream</span><span class="p">:</span> <span class="kt">Upstream</span><span class="p">,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// 何らかの理由でストリームがクローズした場合にコールされます。</span>
+        <span class="c1">// 再度アップストリームをオープンしたい場合は、 `Connection.reopenUpstream()` を使用することにより、ストリームの設定を引き継いで別のストリームを開くことが可能です。</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">didResume</span><span class="p">(</span><span class="nv">upstream</span><span class="p">:</span> <span class="kt">Upstream</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// 自動再接続機能が働き、再接続が行われた場合にコールされます。</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre>
+<h3 id='em-start-downstream-em' class='heading'><em>Start Downstream</em></h3>
+
+<p>前述のアップストリームで送信されたデータをダウンストリームで受信するサンプルです。</p>
+
+<p>このサンプルでは、アップストリーム開始のメタデータ、基準時刻のメタデータ、 文字列型のデータポイントを受信しています。</p>
+<pre class="highlight swift"><code><span class="c1">/// 受信したいデータを送信している送信元ノードのUUID</span>
+<span class="c1">/// （アップストリームを行っている送信元でConnection.Configで設定したnodeIDを指定してください。）</span>
+<span class="k">var</span> <span class="nv">targetDownstreamNodeID</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"00000000-0000-0000-0000-000000000000"</span>
+<span class="c1">/// オープンしたダウンストリーム一覧</span>
+<span class="k">var</span> <span class="nv">downstreams</span><span class="p">:</span> <span class="p">[</span><span class="kt">Downstream</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="kd">extension</span> <span class="kt">ExampleViewController</span> <span class="p">{</span>
+
+    <span class="kd">func</span> <span class="nf">startDownstream</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// ダウンストリームをオープンします。</span>
+        <span class="n">connection</span><span class="p">?</span><span class="o">.</span><span class="nf">openDownstream</span><span class="p">(</span>
+            <span class="nv">downstreamFilters</span><span class="p">:</span> <span class="p">[</span>
+                <span class="kt">DownstreamFilter</span><span class="p">(</span>
+                    <span class="nv">sourceNodeID</span><span class="p">:</span> <span class="n">targetDownstreamNodeID</span><span class="p">,</span> <span class="c1">// 送信元ノードのIDを指定します。</span>
+                    <span class="nv">dataFilters</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="kt">DataFilter</span><span class="p">(</span>
+                            <span class="nv">name</span><span class="p">:</span> <span class="s">"#"</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="s">"#"</span> <span class="c1">// 受信したいデータを名称と型で指定します。この例では、ワイルドカード `#` を使用して全てのデータを取得します。</span>
+                        <span class="p">)</span>
+                    <span class="p">])</span>
+                <span class="p">],</span>
+            <span class="nv">completion</span><span class="p">:</span> <span class="p">{</span> <span class="n">downstream</span><span class="p">,</span> <span class="n">error</span> <span class="k">in</span>
+            <span class="k">guard</span> <span class="k">let</span> <span class="nv">downstream</span> <span class="o">=</span> <span class="n">downstream</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="c1">// オープン失敗。</span>
+                <span class="k">return</span>
+            <span class="p">}</span>
+            <span class="c1">// オープン成功。</span>
+            <span class="n">downstreams</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="n">downstream</span><span class="p">)</span>
+            <span class="c1">// 受信データを取り扱うためにデリゲートを設定します。</span>
+            <span class="n">downstream</span><span class="o">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="k">self</span> <span class="c1">// DownstreamDelegate</span>
+        <span class="p">})</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">extension</span> <span class="kt">ExampleViewController</span> <span class="p">:</span> <span class="kt">DownstreamDelegate</span> <span class="p">{</span>
+
+    <span class="kd">func</span> <span class="nf">didReceiveChunk</span><span class="p">(</span><span class="nv">downstream</span><span class="p">:</span> <span class="kt">Downstream</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">DownstreamChunk</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// データポイントを読み込むことができた際にコールされます。</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Received dataPoints sequenceNumber[</span><span class="se">\(</span><span class="n">message</span><span class="o">.</span><span class="n">sequenceNumber</span><span class="se">)</span><span class="s">], sessionId[</span><span class="se">\(</span><span class="n">message</span><span class="o">.</span><span class="n">upstreamInfo</span><span class="o">.</span><span class="n">sessionID</span><span class="se">)</span><span class="s">]"</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">g</span> <span class="k">in</span> <span class="n">message</span><span class="o">.</span><span class="n">dataPointGroups</span> <span class="p">{</span>
+            <span class="k">for</span> <span class="n">dp</span> <span class="k">in</span> <span class="n">g</span><span class="o">.</span><span class="n">dataPoints</span> <span class="p">{</span>
+                <span class="nf">print</span><span class="p">(</span><span class="s">"Received a dataPoint dataName[</span><span class="se">\(</span><span class="n">g</span><span class="o">.</span><span class="n">dataID</span><span class="o">.</span><span class="n">name</span><span class="se">)</span><span class="s">], dataType[</span><span class="se">\(</span><span class="n">g</span><span class="o">.</span><span class="n">dataID</span><span class="o">.</span><span class="n">type</span><span class="se">)</span><span class="s">], payload[</span><span class="se">\(</span><span class="kt">String</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">dp</span><span class="o">.</span><span class="n">payload</span><span class="p">,</span> <span class="nv">encoding</span><span class="p">:</span> <span class="o">.</span><span class="n">utf8</span><span class="p">)</span> <span class="p">??</span> <span class="s">""</span><span class="se">)</span><span class="s">]"</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">didReceiveMetadata</span><span class="p">(</span><span class="nv">downstream</span><span class="p">:</span> <span class="kt">Downstream</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">DownstreamMetadata</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// メタデータを受信した際にコールされます。</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Received a metadata sourceNodeID[</span><span class="se">\(</span><span class="n">message</span><span class="o">.</span><span class="n">sourceNodeID</span><span class="se">)</span><span class="s">], metadataType:</span><span class="se">\(</span><span class="kt">String</span><span class="p">(</span><span class="nv">describing</span><span class="p">:</span> <span class="n">message</span><span class="o">.</span><span class="n">metadata</span><span class="p">)</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+        <span class="k">switch</span> <span class="n">message</span><span class="o">.</span><span class="n">metadata</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="o">.</span><span class="nf">baseTime</span><span class="p">(</span><span class="k">let</span> <span class="nv">baseTime</span><span class="p">):</span>
+            <span class="nf">print</span><span class="p">(</span><span class="s">"Received baseTime[</span><span class="se">\(</span><span class="kt">Date</span><span class="p">(</span><span class="nv">timeIntervalSince1970</span><span class="p">:</span> <span class="n">baseTime</span><span class="o">.</span><span class="n">baseTime</span><span class="p">)</span><span class="se">)</span><span class="s">], priority[</span><span class="se">\(</span><span class="n">baseTime</span><span class="o">.</span><span class="n">priority</span><span class="se">)</span><span class="s">], name[</span><span class="se">\(</span><span class="n">baseTime</span><span class="o">.</span><span class="n">priority</span><span class="se">)</span><span class="s">]"</span><span class="p">)</span>
+        <span class="k">default</span><span class="p">:</span> <span class="k">break</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">didFailWithError</span><span class="p">(</span><span class="nv">downstream</span><span class="p">:</span> <span class="kt">Downstream</span><span class="p">,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// 内部でエラーが発生した場合にコールされます。</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">didCloseWithError</span><span class="p">(</span><span class="nv">downstream</span><span class="p">:</span> <span class="kt">Downstream</span><span class="p">,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// 何らかの理由でストリームがクローズした場合にコールされます。</span>
+        <span class="c1">// 再度ダウンストリームをオープンしたい場合は、 `Connection.reopenDownstream()` を使用することにより、ストリームの設定を引き継いで別のストリームを開くことが可能です。</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">didResume</span><span class="p">(</span><span class="nv">downstream</span><span class="p">:</span> <span class="kt">Downstream</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// 自動再接続機能が働き、再接続が行われた場合にコールされます。</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre>
+<h2 id='references' class='heading'>References</h2>
+
+<ul>
+<li><a href="https://docs.intdash.jp/api/intdash-sdk/swift/latest/">APIリファレンス</a>
+
+<ul>
+<li>過去のバージョンのリファレンスは <a href="https://docs.intdash.jp/api/intdash-sdk/swift-versions">こちら</a></li>
+</ul></li>
+<li><a href="https://github.com/aptpod/iscp-swift">Github</a></li>
+</ul>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2022 <a class="link" href="https://www.aptpod.co.jp" target="_blank" rel="external noopener">aptpod Inc</a>. All rights reserved. (Last updated: 2022-11-11)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>

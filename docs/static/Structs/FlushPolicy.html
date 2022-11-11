@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FlushPolicy Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/FlushPolicy" class="dashAnchor"></a>
+    <a title="FlushPolicy Structure Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">iSCP v0.9.0 Docs</a></p>
+        <div class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">iSCP Reference</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        FlushPolicy Structure Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Connection.html">Connection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Downstream.html">Downstream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Downstream/State.html">– State</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SequenceNumberGenerator.html">SequenceNumberGenerator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Transport.html">Transport</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Transport/WebSocket.html">– WebSocket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Upstream.html">Upstream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Upstream/State.html">– State</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/iSCPLog.html">iSCPLog</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global%20Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:4iSCP21kiSCPFrameworkVersionSSvp">kiSCPFrameworkVersion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:4iSCP29kiSCPSupportedProtocolVersionSSvp">kiSCPSupportedProtocolVersion</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/EncodingName.html">EncodingName</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/QoS.html">QoS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TransportType.html">TransportType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/iSCPError.html">iSCPError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/iSCPLogLevel.html">iSCPLogLevel</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Float.html">Float</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int16.html">Int16</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int32.html">Int32</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int64.html">Int64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int8.html">Int8</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UInt16.html">UInt16</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UInt32.html">UInt32</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UInt64.html">UInt64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UInt8.html">UInt8</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ConnectionDelegate.html">ConnectionDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DownstreamDelegate.html">DownstreamDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ITransportConfig.html">ITransportConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/UpstreamDelegate.html">UpstreamDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/iSCPLogDelegate.html">iSCPLogDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/BaseTime.html">BaseTime</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataFilter.html">DataFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataID.html">DataID</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataPoint.html">DataPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataPointGroup.html">DataPointGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DownstreamAbnormalClose.html">DownstreamAbnormalClose</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DownstreamChunk.html">DownstreamChunk</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DownstreamFilter.html">DownstreamFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DownstreamMetadata.html">DownstreamMetadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DownstreamMetadata/Metadata.html">– Metadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DownstreamNormalClose.html">DownstreamNormalClose</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DownstreamOpen.html">DownstreamOpen</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DownstreamResume.html">DownstreamResume</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/FlushPolicy.html">FlushPolicy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/FlushPolicy/FlushType.html">– FlushType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UpstreamAbnormalClose.html">UpstreamAbnormalClose</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UpstreamChunk.html">UpstreamChunk</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UpstreamChunkAck.html">UpstreamChunkAck</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UpstreamInfo.html">UpstreamInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UpstreamNormalClose.html">UpstreamNormalClose</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UpstreamOpen.html">UpstreamOpen</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UpstreamResume.html">UpstreamResume</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>FlushPolicy</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">FlushPolicy</span></code></pre>
+
+                </div>
+              </div>
+            <p>Upstreamのフラッシュの方法について定義します。</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Type%20Properties"></a>
+                <a name="//apple_ref/swift/Section/Type Properties" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Type%20Properties"></a>
+                  <h3 class="section-name"><span>Type Properties</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP11FlushPolicyV18DEFAULT_FLUSH_TYPEAC0B4TypeOvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/DEFAULT_FLUSH_TYPE" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP11FlushPolicyV18DEFAULT_FLUSH_TYPEAC0B4TypeOvpZ">DEFAULT_FLUSH_TYPE</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>データポイントのフラッシュポリシーのデフォルト値。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">DEFAULT_FLUSH_TYPE</span><span class="p">:</span> <span class="kt"><a href="../Structs/FlushPolicy/FlushType.html">FlushType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP11FlushPolicyV16DEFAULT_INTERVALSdvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/DEFAULT_INTERVAL" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP11FlushPolicyV16DEFAULT_INTERVALSdvpZ">DEFAULT_INTERVAL</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>フラッシュの送信間隔のデフォルト値。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">DEFAULT_INTERVAL</span><span class="p">:</span> <span class="kt">TimeInterval</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP11FlushPolicyV19DEFAULT_BUFFER_SIZEs6UInt32VvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/DEFAULT_BUFFER_SIZE" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP11FlushPolicyV19DEFAULT_BUFFER_SIZEs6UInt32VvpZ">DEFAULT_BUFFER_SIZE</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>フラッシュのバッファサイズのデフォルト値。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">DEFAULT_BUFFER_SIZE</span><span class="p">:</span> <span class="kt">UInt32</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Type%20Methods"></a>
+                <a name="//apple_ref/swift/Section/Type Methods" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Type%20Methods"></a>
+                  <h3 class="section-name"><span>Type Methods</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP11FlushPolicyV11ImmediatelyACyFZ"></a>
+                    <a name="//apple_ref/swift/Method/Immediately()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP11FlushPolicyV11ImmediatelyACyFZ">Immediately()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>即時フラッシュを行うFlushPolicy。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="kt">Immediately</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">FlushPolicy</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP11FlushPolicyV12IntervalOnly8intervalACSd_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/IntervalOnly(interval:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP11FlushPolicyV12IntervalOnly8intervalACSd_tFZ">IntervalOnly(interval:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>インターバルによるフラッシュを行うFlushPolicy。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="kt">IntervalOnly</span><span class="p">(</span><span class="nv">interval</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Structs/FlushPolicy.html#/s:4iSCP11FlushPolicyV16DEFAULT_INTERVALSdvpZ">DEFAULT_INTERVAL</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">FlushPolicy</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>interval</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>フラッシュの間隔。</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP11FlushPolicyV20IntervalOrBufferSize8interval06bufferG0ACSd_s6UInt32VtFZ"></a>
+                    <a name="//apple_ref/swift/Method/IntervalOrBufferSize(interval:bufferSize:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP11FlushPolicyV20IntervalOrBufferSize8interval06bufferG0ACSd_s6UInt32VtFZ">IntervalOrBufferSize(interval:<wbr>bufferSize:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>インターバル、またはバッファサイズによるフラッシュを行うFlushPolicy。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="kt">IntervalOrBufferSize</span><span class="p">(</span><span class="nv">interval</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Structs/FlushPolicy.html#/s:4iSCP11FlushPolicyV16DEFAULT_INTERVALSdvpZ">DEFAULT_INTERVAL</a></span><span class="p">,</span> <span class="nv">bufferSize</span><span class="p">:</span> <span class="kt">UInt32</span> <span class="o">=</span> <span class="kt"><a href="../Structs/FlushPolicy.html#/s:4iSCP11FlushPolicyV19DEFAULT_BUFFER_SIZEs6UInt32VvpZ">DEFAULT_BUFFER_SIZE</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">FlushPolicy</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>interval</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>フラッシュの間隔。</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>bufferSize</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>フラッシュのバッファサイズ。</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP11FlushPolicyV14BufferSizeOnly06bufferE0ACs6UInt32V_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/BufferSizeOnly(bufferSize:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP11FlushPolicyV14BufferSizeOnly06bufferE0ACs6UInt32V_tFZ">BufferSizeOnly(bufferSize:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>バッファサイズによるフラッシュを行うFlushPolicy。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="kt">BufferSizeOnly</span><span class="p">(</span><span class="nv">bufferSize</span><span class="p">:</span> <span class="kt">UInt32</span> <span class="o">=</span> <span class="kt"><a href="../Structs/FlushPolicy.html#/s:4iSCP11FlushPolicyV19DEFAULT_BUFFER_SIZEs6UInt32VvpZ">DEFAULT_BUFFER_SIZE</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">FlushPolicy</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>bufferSize</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>フラッシュのバッファサイズ。</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP11FlushPolicyV02NoB0ACyFZ"></a>
+                    <a name="//apple_ref/swift/Method/NoFlush()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP11FlushPolicyV02NoB0ACyFZ">NoFlush()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>フラッシュを行わないFlushPolicy。</p>
+
+<p>このFlushPolicyは明示的なフラッシュを強制します。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="kt">NoFlush</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">FlushPolicy</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Instance%20Properties"></a>
+                <a name="//apple_ref/swift/Section/Instance Properties" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Instance%20Properties"></a>
+                  <h3 class="section-name"><span>Instance Properties</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP11FlushPolicyV4typeAC0B4TypeOvp"></a>
+                    <a name="//apple_ref/swift/Property/type" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP11FlushPolicyV4typeAC0B4TypeOvp">type</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Upstreamのフラッシュ方法。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Structs/FlushPolicy/FlushType.html">FlushType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP11FlushPolicyV8intervalSdvp"></a>
+                    <a name="//apple_ref/swift/Property/interval" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP11FlushPolicyV8intervalSdvp">interval</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>フラッシュの間隔。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">interval</span><span class="p">:</span> <span class="kt">TimeInterval</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP11FlushPolicyV10bufferSizes6UInt32Vvp"></a>
+                    <a name="//apple_ref/swift/Property/bufferSize" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP11FlushPolicyV10bufferSizes6UInt32Vvp">bufferSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>フラッシュのバッファサイズ。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">bufferSize</span><span class="p">:</span> <span class="kt">UInt32</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Enumerations"></a>
+                <a name="//apple_ref/swift/Section/Enumerations" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Enumerations"></a>
+                  <h3 class="section-name"><span>Enumerations</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP11FlushPolicyV0B4TypeO"></a>
+                    <a name="//apple_ref/swift/Enum/FlushType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP11FlushPolicyV0B4TypeO">FlushType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Upstreamのフラッシュ方法です。</p>
+
+                        <a href="../Structs/FlushPolicy/FlushType.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">FlushType</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2022 <a class="link" href="https://www.aptpod.co.jp" target="_blank" rel="external noopener">aptpod Inc</a>. All rights reserved. (Last updated: 2022-11-11)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>

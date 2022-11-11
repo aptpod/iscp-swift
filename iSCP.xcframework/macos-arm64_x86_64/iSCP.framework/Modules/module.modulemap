@@ -1,0 +1,11 @@
+framework module iSCP {
+  umbrella header "iSCP.h"
+
+  export *
+  module * { export * }
+}
+
+module iSCP.Swift {
+    header "iSCP-Swift.h"
+    requires objc
+}

@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Upstream Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Upstream" class="dashAnchor"></a>
+    <a title="Upstream Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">iSCP v0.9.0 Docs</a></p>
+        <div class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">iSCP Reference</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        Upstream Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Connection.html">Connection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Downstream.html">Downstream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Downstream/State.html">– State</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SequenceNumberGenerator.html">SequenceNumberGenerator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Transport.html">Transport</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Transport/WebSocket.html">– WebSocket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Upstream.html">Upstream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Upstream/State.html">– State</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/iSCPLog.html">iSCPLog</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global%20Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:4iSCP21kiSCPFrameworkVersionSSvp">kiSCPFrameworkVersion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:4iSCP29kiSCPSupportedProtocolVersionSSvp">kiSCPSupportedProtocolVersion</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/EncodingName.html">EncodingName</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/QoS.html">QoS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TransportType.html">TransportType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/iSCPError.html">iSCPError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/iSCPLogLevel.html">iSCPLogLevel</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Float.html">Float</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int16.html">Int16</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int32.html">Int32</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int64.html">Int64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int8.html">Int8</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UInt16.html">UInt16</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UInt32.html">UInt32</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UInt64.html">UInt64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UInt8.html">UInt8</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ConnectionDelegate.html">ConnectionDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DownstreamDelegate.html">DownstreamDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ITransportConfig.html">ITransportConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/UpstreamDelegate.html">UpstreamDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/iSCPLogDelegate.html">iSCPLogDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/BaseTime.html">BaseTime</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataFilter.html">DataFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataID.html">DataID</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataPoint.html">DataPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataPointGroup.html">DataPointGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DownstreamAbnormalClose.html">DownstreamAbnormalClose</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DownstreamChunk.html">DownstreamChunk</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DownstreamFilter.html">DownstreamFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DownstreamMetadata.html">DownstreamMetadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DownstreamMetadata/Metadata.html">– Metadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DownstreamNormalClose.html">DownstreamNormalClose</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DownstreamOpen.html">DownstreamOpen</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DownstreamResume.html">DownstreamResume</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/FlushPolicy.html">FlushPolicy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/FlushPolicy/FlushType.html">– FlushType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UpstreamAbnormalClose.html">UpstreamAbnormalClose</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UpstreamChunk.html">UpstreamChunk</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UpstreamChunkAck.html">UpstreamChunkAck</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UpstreamInfo.html">UpstreamInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UpstreamNormalClose.html">UpstreamNormalClose</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UpstreamOpen.html">UpstreamOpen</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UpstreamResume.html">UpstreamResume</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Upstream</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Upstream</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>アップストリームを表すクラスです。</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Type%20Properties"></a>
+                <a name="//apple_ref/swift/Section/Type Properties" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Type%20Properties"></a>
+                  <h3 class="section-name"><span>Type Properties</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP8UpstreamC21DEFAULT_CLOSE_TIMEOUTSdvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/DEFAULT_CLOSE_TIMEOUT" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP8UpstreamC21DEFAULT_CLOSE_TIMEOUTSdvpZ">DEFAULT_CLOSE_TIMEOUT</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>クローズのタイムアウトのデフォルト値。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">DEFAULT_CLOSE_TIMEOUT</span><span class="p">:</span> <span class="kt">TimeInterval</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP8UpstreamC20DEFAULT_ACK_INTERVALSdvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/DEFAULT_ACK_INTERVAL" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP8UpstreamC20DEFAULT_ACK_INTERVALSdvpZ">DEFAULT_ACK_INTERVAL</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ack返却間隔のデフォルト値。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">DEFAULT_ACK_INTERVAL</span><span class="p">:</span> <span class="kt">TimeInterval</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP8UpstreamC23DEFAULT_EXPIRY_INTERVALSdvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/DEFAULT_EXPIRY_INTERVAL" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP8UpstreamC23DEFAULT_EXPIRY_INTERVALSdvpZ">DEFAULT_EXPIRY_INTERVAL</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>有効期限のデフォルト値。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">DEFAULT_EXPIRY_INTERVAL</span><span class="p">:</span> <span class="kt">TimeInterval</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP8UpstreamC20DEFAULT_FLUSH_POLICYAA11FlushPolicyVvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/DEFAULT_FLUSH_POLICY" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP8UpstreamC20DEFAULT_FLUSH_POLICYAA11FlushPolicyVvpZ">DEFAULT_FLUSH_POLICY</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>データポイントのフラッシュポリシーのデフォルト値。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">DEFAULT_FLUSH_POLICY</span><span class="p">:</span> <span class="kt"><a href="../Structs/FlushPolicy.html">FlushPolicy</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Instance%20Properties"></a>
+                <a name="//apple_ref/swift/Section/Instance Properties" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Instance%20Properties"></a>
+                  <h3 class="section-name"><span>Instance Properties</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP8UpstreamC8delegateAA0B8Delegate_pSgvp"></a>
+                    <a name="//apple_ref/swift/Property/delegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP8UpstreamC8delegateAA0B8Delegate_pSgvp">delegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>アップストリームで扱われるデリゲート。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/UpstreamDelegate.html">UpstreamDelegate</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP8UpstreamC2id10Foundation4UUIDVvp"></a>
+                    <a name="//apple_ref/swift/Property/id" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP8UpstreamC2id10Foundation4UUIDVvp">id</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>ストリームID。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">UUID</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP8UpstreamC10serverTimeSdvp"></a>
+                    <a name="//apple_ref/swift/Property/serverTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP8UpstreamC10serverTimeSdvp">serverTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>サーバー時刻。</p>
+
+<p>アップストリームを開いた時点におけるサーバーの現在時刻です。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">serverTime</span><span class="p">:</span> <span class="kt">TimeInterval</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP8UpstreamC9sessionIDSSvp"></a>
+                    <a name="//apple_ref/swift/Property/sessionID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP8UpstreamC9sessionIDSSvp">sessionID</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>セッションID。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">sessionID</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP8UpstreamC11ackIntervalSdvp"></a>
+                    <a name="//apple_ref/swift/Property/ackInterval" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP8UpstreamC11ackIntervalSdvp">ackInterval</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ack返却間隔。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ackInterval</span><span class="p">:</span> <span class="kt">TimeInterval</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP8UpstreamC14expiryIntervalSdvp"></a>
+                    <a name="//apple_ref/swift/Property/expiryInterval" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP8UpstreamC14expiryIntervalSdvp">expiryInterval</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>有効期限。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">expiryInterval</span><span class="p">:</span> <span class="kt">TimeInterval</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP8UpstreamC7persistSbvp"></a>
+                    <a name="//apple_ref/swift/Property/persist" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP8UpstreamC7persistSbvp">persist</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>永続化するかどうか。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">persist</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP8UpstreamC3qosAA3QoSOvp"></a>
+                    <a name="//apple_ref/swift/Property/qos" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP8UpstreamC3qosAA3QoSOvp">qos</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>QoS。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">qos</span><span class="p">:</span> <span class="kt"><a href="../Enums/QoS.html">QoS</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP8UpstreamC11flushPolicyAA05FlushD0Vvp"></a>
+                    <a name="//apple_ref/swift/Property/flushPolicy" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP8UpstreamC11flushPolicyAA05FlushD0Vvp">flushPolicy</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>データポイントのフラッシュポリシー。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">flushPolicy</span><span class="p">:</span> <span class="kt"><a href="../Structs/FlushPolicy.html">FlushPolicy</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP8UpstreamC12closeTimeoutSdvp"></a>
+                    <a name="//apple_ref/swift/Property/closeTimeout" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP8UpstreamC12closeTimeoutSdvp">closeTimeout</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>クローズのタイムアウト。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">closeTimeout</span><span class="p">:</span> <span class="kt">TimeInterval</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@iSCP@objc(cs)Upstream(py)hash"></a>
+                    <a name="//apple_ref/swift/Property/hash" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@iSCP@objc(cs)Upstream(py)hash">hash</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">public</span> <span class="k">var</span> <span class="nv">hash</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Instance%20Methods"></a>
+                <a name="//apple_ref/swift/Section/Instance Methods" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Instance%20Methods"></a>
+                  <h3 class="section-name"><span>Instance Methods</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@iSCP@objc(cs)Upstream(im)isEqual:"></a>
+                    <a name="//apple_ref/swift/Method/isEqual(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@iSCP@objc(cs)Upstream(im)isEqual:">isEqual(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">isEqual</span><span class="p">(</span><span class="n">_</span> <span class="nv">object</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP8UpstreamC5close0C7Session10completionySb_ys5Error_pSgcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/close(closeSession:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP8UpstreamC5close0C7Session10completionySb_ys5Error_pSgcSgtF">close(closeSession:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>アップストリームを閉じます。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">close</span><span class="p">(</span><span class="nv">closeSession</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">())?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closeSession</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>セッションを閉じるかどうか。</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>処理完了時のコールバック。</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP8UpstreamC8getStateAC0D0VyF"></a>
+                    <a name="//apple_ref/swift/Method/getState()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP8UpstreamC8getStateAC0D0VyF">getState()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>アップストリームの状態を取得します。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getState</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Upstream/State.html">State</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP8UpstreamC14writeDataPoint6dataID0fE0s5Error_pSgAA0dG0V_AA0dE0VtF"></a>
+                    <a name="//apple_ref/swift/Method/writeDataPoint(dataID:dataPoint:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP8UpstreamC14writeDataPoint6dataID0fE0s5Error_pSgAA0dG0V_AA0dE0VtF">writeDataPoint(dataID:<wbr>dataPoint:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>データポイントを送信バッファへ書き込みます。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">writeDataPoint</span><span class="p">(</span><span class="nv">dataID</span><span class="p">:</span> <span class="kt"><a href="../Structs/DataID.html">DataID</a></span><span class="p">,</span> <span class="nv">dataPoint</span><span class="p">:</span> <span class="kt"><a href="../Structs/DataPoint.html">DataPoint</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Error</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>dataID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>データID。</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>dataPoint</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>送信するデータポイント。</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP8UpstreamC15writeDataPoints6dataID0fE0s5Error_pSgAA0dG0V_SayAA0D5PointVGtF"></a>
+                    <a name="//apple_ref/swift/Method/writeDataPoints(dataID:dataPoints:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP8UpstreamC15writeDataPoints6dataID0fE0s5Error_pSgAA0dG0V_SayAA0D5PointVGtF">writeDataPoints(dataID:<wbr>dataPoints:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>複数のデータポイントを送信バッファへ書き込みます。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">writeDataPoints</span><span class="p">(</span><span class="nv">dataID</span><span class="p">:</span> <span class="kt"><a href="../Structs/DataID.html">DataID</a></span><span class="p">,</span> <span class="nv">dataPoints</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/DataPoint.html">DataPoint</a></span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Error</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>dataID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>データID。</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>dataPoint</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>送信するデータポイントのリスト。</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP8UpstreamC15writeDataPoints14dataPointGroups5Error_pSgAA0dgH0V_tF"></a>
+                    <a name="//apple_ref/swift/Method/writeDataPoints(dataPointGroup:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP8UpstreamC15writeDataPoints14dataPointGroups5Error_pSgAA0dgH0V_tF">writeDataPoints(dataPointGroup:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>複数のデータポイントを送信バッファへ書き込みます。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">writeDataPoints</span><span class="p">(</span><span class="nv">dataPointGroup</span><span class="p">:</span> <span class="kt"><a href="../Structs/DataPointGroup.html">DataPointGroup</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Error</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>dataPointGroup</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>データポイントをデータIDごとにまとめた集合。</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP8UpstreamC15writeDataPoints15dataPointGroupss5Error_pSgSayAA0dG5GroupVG_tF"></a>
+                    <a name="//apple_ref/swift/Method/writeDataPoints(dataPointGroups:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP8UpstreamC15writeDataPoints15dataPointGroupss5Error_pSgSayAA0dG5GroupVG_tF">writeDataPoints(dataPointGroups:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>複数のデータポイントを送信バッファへ書き込みます。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">writeDataPoints</span><span class="p">(</span><span class="nv">dataPointGroups</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/DataPointGroup.html">DataPointGroup</a></span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Error</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>dataPointGroups</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>データポイントをデータIDごとにまとめた集合のリスト。</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP8UpstreamC5flushs5Error_pSgyF"></a>
+                    <a name="//apple_ref/swift/Method/flush()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP8UpstreamC5flushs5Error_pSgyF">flush()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>データポイントを手動でフラッシュします。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">flush</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Error</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Structures"></a>
+                <a name="//apple_ref/swift/Section/Structures" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Structures"></a>
+                  <h3 class="section-name"><span>Structures</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP8UpstreamC5StateV"></a>
+                    <a name="//apple_ref/swift/Struct/State" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP8UpstreamC5StateV">State</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>アップストリームの状態を表します。</p>
+
+                        <a href="../Classes/Upstream/State.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">State</span> <span class="p">:</span> <span class="kt">Equatable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2022 <a class="link" href="https://www.aptpod.co.jp" target="_blank" rel="external noopener">aptpod Inc</a>. All rights reserved. (Last updated: 2022-11-11)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>

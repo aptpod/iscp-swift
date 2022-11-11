@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>UInt32 Extension Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Extension/UInt32" class="dashAnchor"></a>
+    <a title="UInt32 Extension Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">iSCP v0.9.0 Docs</a></p>
+        <div class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">iSCP Reference</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        UInt32 Extension Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Connection.html">Connection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Downstream.html">Downstream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Downstream/State.html">– State</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SequenceNumberGenerator.html">SequenceNumberGenerator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Transport.html">Transport</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Transport/WebSocket.html">– WebSocket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Upstream.html">Upstream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Upstream/State.html">– State</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/iSCPLog.html">iSCPLog</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global%20Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:4iSCP21kiSCPFrameworkVersionSSvp">kiSCPFrameworkVersion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:4iSCP29kiSCPSupportedProtocolVersionSSvp">kiSCPSupportedProtocolVersion</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/EncodingName.html">EncodingName</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/QoS.html">QoS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TransportType.html">TransportType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/iSCPError.html">iSCPError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/iSCPLogLevel.html">iSCPLogLevel</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Float.html">Float</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int16.html">Int16</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int32.html">Int32</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int64.html">Int64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int8.html">Int8</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UInt16.html">UInt16</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UInt32.html">UInt32</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UInt64.html">UInt64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UInt8.html">UInt8</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ConnectionDelegate.html">ConnectionDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DownstreamDelegate.html">DownstreamDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ITransportConfig.html">ITransportConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/UpstreamDelegate.html">UpstreamDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/iSCPLogDelegate.html">iSCPLogDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/BaseTime.html">BaseTime</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataFilter.html">DataFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataID.html">DataID</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataPoint.html">DataPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataPointGroup.html">DataPointGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DownstreamAbnormalClose.html">DownstreamAbnormalClose</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DownstreamChunk.html">DownstreamChunk</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DownstreamFilter.html">DownstreamFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DownstreamMetadata.html">DownstreamMetadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DownstreamMetadata/Metadata.html">– Metadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DownstreamNormalClose.html">DownstreamNormalClose</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DownstreamOpen.html">DownstreamOpen</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DownstreamResume.html">DownstreamResume</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/FlushPolicy.html">FlushPolicy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/FlushPolicy/FlushType.html">– FlushType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UpstreamAbnormalClose.html">UpstreamAbnormalClose</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UpstreamChunk.html">UpstreamChunk</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UpstreamChunkAck.html">UpstreamChunkAck</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UpstreamInfo.html">UpstreamInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UpstreamNormalClose.html">UpstreamNormalClose</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UpstreamOpen.html">UpstreamOpen</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UpstreamResume.html">UpstreamResume</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>UInt32</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">UInt32</span></code></pre>
+
+                </div>
+              </div>
+            
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Instance%20Methods"></a>
+                <a name="//apple_ref/swift/Section/Instance Methods" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Instance%20Methods"></a>
+                  <h3 class="section-name"><span>Instance Methods</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s6UInt32V4iSCPE6toData14isLittleEndian10Foundation0D0VSb_tF"></a>
+                    <a name="//apple_ref/swift/Method/toData(isLittleEndian:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s6UInt32V4iSCPE6toData14isLittleEndian10Foundation0D0VSb_tF">toData(isLittleEndian:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>バイナリ形式へ変換します。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">toData</span><span class="p">(</span><span class="nv">isLittleEndian</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2022 <a class="link" href="https://www.aptpod.co.jp" target="_blank" rel="external noopener">aptpod Inc</a>. All rights reserved. (Last updated: 2022-11-11)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>
