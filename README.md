@@ -57,13 +57,25 @@ var connection: Connection?
 extension ExampleViewController {
     
     func connect() {
+        // 接続情報のセットアップをします。
+        let urls = kTargetServer.components(separatedBy: "://")
+        var address: String
+        var enableTLS = false
+        if urls.count == 1 {
+            address = urls[0]
+        } else {
+            enableTLS = urls[0] == "https"
+            address = urls[1]
+        }
         // WebSocketを使って接続するように指定します。
-        let transportConfig: ITransportConfig = Transport.WebSocket.Config()
+        let transportConfig: ITransportConfig = Transport.WebSocket.Config(
+            enableTLS: enableTLS
+        )
         Connection.connect(
-            address: targetServer,
+            address: address,
             transportConfig: transportConfig,
             tokenSource: { token in
-                // 接続時にイベントが発生しアクセスに使用するトークンを指定します。
+                // アクセス用のトークンを指定します。接続時に発生するイベントにより使用されます。
                 // ここでは固定のトークンを返していますが随時トークンの更新を行う実装にするとトークンの期限切れを考える必要がなくなります。
                 token(accessToken)
             },

@@ -14,11 +14,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		hoKqTNDQmJKhKyva0HA0JF13JAo=
+		VbHhrjBj+m6ENgPX/OlgdAgIkvY=
 		</data>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		E1wNvYk3E3lWA0mzUZ6IjSZDk9Q=
+		ZHpsRODP05CdK4Na/1f+hzKlkKQ=
 		</data>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
@@ -26,11 +26,11 @@
 		</data>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		2wzohNkgcbiVzRN2epY8D1XG6TM=
+		qB8kFBs+HtFgVzrrcXdClUye9j4=
 		</data>
 		<key>Modules/iSCP.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		E1wNvYk3E3lWA0mzUZ6IjSZDk9Q=
+		ZHpsRODP05CdK4Na/1f+hzKlkKQ=
 		</data>
 		<key>Modules/iSCP.swiftmodule/arm64.swiftinterface</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/iSCP.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		2wzohNkgcbiVzRN2epY8D1XG6TM=
+		qB8kFBs+HtFgVzrrcXdClUye9j4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -65,7 +65,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+NDPayZPfj85Pzj0EzT6XjInfQR0b/qfLrmBIYfwUc4=
+			mptpgtiXvLbKiHA9BTIpJByTcevz7tXaP3Xf4PVMLpk=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios.swiftinterface</key>
@@ -79,14 +79,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			oh03eH6iFb2+xQOdLlVe8T1W1nxwb/Rwlbrq18ilhBE=
+			gCLOvroot8K6wC/unzXcOMWxK0f9sb9w3tToYi7fjrI=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+NDPayZPfj85Pzj0EzT6XjInfQR0b/qfLrmBIYfwUc4=
+			mptpgtiXvLbKiHA9BTIpJByTcevz7tXaP3Xf4PVMLpk=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/arm64.swiftinterface</key>
@@ -100,7 +100,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			oh03eH6iFb2+xQOdLlVe8T1W1nxwb/Rwlbrq18ilhBE=
+			gCLOvroot8K6wC/unzXcOMWxK0f9sb9w3tToYi7fjrI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

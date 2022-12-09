@@ -6,7 +6,7 @@
 	<dict>
 		<key>Resources/Info.plist</key>
 		<data>
-		xCt1Kz6S+rs3YiFfOP4mBCnOskI=
+		JZ0Ch4M8BNRF5w2OMB6MFbHQKFc=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -29,7 +29,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TqzF3C8Nwve+uCTi7yEVVQGb7a3C7JKjVSbGZyOZ9Vo=
+			y0uouHyyAAL8RuAi3H+AxFoJASCmoeeswRydSF2NbSI=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-macos.swiftinterface</key>
@@ -43,14 +43,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1xCU1D8HsTa9rFUdXZGNxb0IEGb3NRTU/4r1i531PN4=
+			S54Bv/jzw3rotowEGo+JnEkx1lL9L5/RQDPScHoS1PY=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TqzF3C8Nwve+uCTi7yEVVQGb7a3C7JKjVSbGZyOZ9Vo=
+			y0uouHyyAAL8RuAi3H+AxFoJASCmoeeswRydSF2NbSI=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/arm64.swiftinterface</key>
@@ -64,14 +64,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1xCU1D8HsTa9rFUdXZGNxb0IEGb3NRTU/4r1i531PN4=
+			S54Bv/jzw3rotowEGo+JnEkx1lL9L5/RQDPScHoS1PY=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/x86_64-apple-macos.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			buOl6A6XQkXcisEhJfWQS6B6Yt2Ntmle1XUgz9o3IMw=
+			MFsCEo0UJGT2Uzb90GjItHI+yhmlNp6nn7TTtkT3Dgo=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/x86_64-apple-macos.swiftinterface</key>
@@ -85,14 +85,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kgfpgdDKO7Tv9i1OLsJns9Hzj/Ecp2rMjNv2NsX13ag=
+			N3UMTCaQpywBpWmaR+0phRptFKNSVLZHW91ojWcGxE4=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			buOl6A6XQkXcisEhJfWQS6B6Yt2Ntmle1XUgz9o3IMw=
+			MFsCEo0UJGT2Uzb90GjItHI+yhmlNp6nn7TTtkT3Dgo=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/x86_64.swiftinterface</key>
@@ -106,7 +106,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kgfpgdDKO7Tv9i1OLsJns9Hzj/Ecp2rMjNv2NsX13ag=
+			N3UMTCaQpywBpWmaR+0phRptFKNSVLZHW91ojWcGxE4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -120,7 +120,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xQVdqnFu4Gl44K+FVnMpEBQe7PMLZA9B9Y1xpSrOHWc=
+			c6nvCuRhZikytGPa9QMjdYF0aVFRsaiKl+1/E10IvJ8=
 			</data>
 		</dict>
 	</dict>
