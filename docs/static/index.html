@@ -16,7 +16,7 @@
     <a title="iSCP  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">iSCP v0.9.2 Docs</a></p>
+        <p><a href="index.html">iSCP v0.10.0 Docs</a></p>
         <div class="header-right">
           <form role="search" action="search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -145,6 +145,9 @@
                 <a href="Protocols/ConnectionDelegate.html">ConnectionDelegate</a>
               </li>
               <li class="nav-group-task">
+                <a href="Protocols/ConnectionE2ECallDelegate.html">ConnectionE2ECallDelegate</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Protocols/DownstreamDelegate.html">DownstreamDelegate</a>
               </li>
               <li class="nav-group-task">
@@ -180,6 +183,9 @@
                 <a href="Structs/DownstreamAbnormalClose.html">DownstreamAbnormalClose</a>
               </li>
               <li class="nav-group-task">
+                <a href="Structs/DownstreamCall.html">DownstreamCall</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Structs/DownstreamChunk.html">DownstreamChunk</a>
               </li>
               <li class="nav-group-task">
@@ -198,6 +204,9 @@
                 <a href="Structs/DownstreamOpen.html">DownstreamOpen</a>
               </li>
               <li class="nav-group-task">
+                <a href="Structs/DownstreamReplyCall.html">DownstreamReplyCall</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Structs/DownstreamResume.html">DownstreamResume</a>
               </li>
               <li class="nav-group-task">
@@ -208,6 +217,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Structs/UpstreamAbnormalClose.html">UpstreamAbnormalClose</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/UpstreamCall.html">UpstreamCall</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/UpstreamChunk.html">UpstreamChunk</a>
@@ -223,6 +235,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Structs/UpstreamOpen.html">UpstreamOpen</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/UpstreamReplyCall.html">UpstreamReplyCall</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/UpstreamResume.html">UpstreamResume</a>
@@ -269,8 +284,7 @@ end
 <h3 id='em-connect-to-intdash-api-em' class='heading'><em>Connect To intdash API</em></h3>
 
 <p>このサンプルではiscp-swiftを使ってintdash APIに接続します。</p>
-<pre class="highlight swift"><code><span class="c1">// このサンプルではiscp-goを使ってintdash APIに接続します。</span>
-<span class="c1">// iSCPをインポート</span>
+<pre class="highlight swift"><code><span class="c1">// iSCPをインポート</span>
 <span class="kd">import</span> <span class="n">iSCP</span>
 
 <span class="c1">/// 接続するintdashサーバー</span>
@@ -289,7 +303,7 @@ end
 
     <span class="kd">func</span> <span class="nf">connect</span><span class="p">()</span> <span class="p">{</span>
         <span class="c1">// 接続情報のセットアップをします。</span>
-        <span class="k">let</span> <span class="nv">urls</span> <span class="o">=</span> <span class="n">kTargetServer</span><span class="o">.</span><span class="nf">components</span><span class="p">(</span><span class="nv">separatedBy</span><span class="p">:</span> <span class="s">"://"</span><span class="p">)</span>
+        <span class="k">let</span> <span class="nv">urls</span> <span class="o">=</span> <span class="n">targetServer</span><span class="o">.</span><span class="nf">components</span><span class="p">(</span><span class="nv">separatedBy</span><span class="p">:</span> <span class="s">"://"</span><span class="p">)</span>
         <span class="k">var</span> <span class="nv">address</span><span class="p">:</span> <span class="kt">String</span>
         <span class="k">var</span> <span class="nv">enableTLS</span> <span class="o">=</span> <span class="kc">false</span>
         <span class="k">if</span> <span class="n">urls</span><span class="o">.</span><span class="n">count</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">{</span>
@@ -499,6 +513,164 @@ end
 
 <span class="p">}</span>
 </code></pre>
+<h3 id='em-e2e-call-em' class='heading'><em>E2E Call</em></h3>
+
+<p>E2E（エンドツーエンド）コールのサンプルです。</p>
+
+<p>コントローラーノードが対象ノードに対して指示を出し、対象ノードは受信完了のリプライを行う簡単なサンプルです。</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Foundation</span>
+<span class="kd">import</span> <span class="kt">UIKit</span>
+
+<span class="c1">// iSCPをインポート。</span>
+<span class="kd">import</span> <span class="n">iSCP</span>
+
+<span class="kd">class</span> <span class="kt">E2ECallExampleViewController</span> <span class="p">:</span> <span class="kt">UIViewController</span> <span class="p">{</span>
+    <span class="c1">/// 接続するintdashサーバー</span>
+    <span class="k">var</span> <span class="nv">targetServer</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"https://example.com"</span>
+
+    <span class="c1">/// コントローラーノードのUUID</span>
+    <span class="k">var</span> <span class="nv">controllerNodeID</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"00000000-0000-0000-0000-000000000000"</span>
+    <span class="c1">/// 対象ノードのUUID</span>
+    <span class="k">var</span> <span class="nv">targetNodeID</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"11111111-1111-1111-1111-111111111111"</span>
+
+    <span class="c1">/// コントローラーノード用のアクセストークン</span>
+    <span class="c1">///</span>
+    <span class="c1">/// intdash APIで取得したアクセストークンを設定して下さい。</span>
+    <span class="k">var</span> <span class="nv">accessTokenForController</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="c1">/// 対象ノード用のアクセストークン</span>
+    <span class="c1">///</span>
+    <span class="c1">/// intdash APIで取得したアクセストークンを設定して下さい。</span>
+    <span class="k">var</span> <span class="nv">accessTokenForTarget</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span>
+
+    <span class="c1">/// コントローラーノード用のコネクション</span>
+    <span class="k">var</span> <span class="nv">connectionForController</span><span class="p">:</span> <span class="kt">Connection</span><span class="p">?</span>
+    <span class="c1">/// 対象ノード用のコネクション</span>
+    <span class="k">var</span> <span class="nv">connectionForTarget</span><span class="p">:</span> <span class="kt">Connection</span><span class="p">?</span>
+<span class="p">}</span>
+
+<span class="c1">// コントローラーノードからメッセージを送信するサンプルです。このサンプルでは文字列メッセージを対象ノードに対して送信し、対象ノードからのリプライを待ちます。</span>
+<span class="kd">extension</span> <span class="kt">E2ECallExampleViewController</span> <span class="p">{</span>
+
+    <span class="kd">func</span> <span class="nf">connectForController</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// 接続情報のセットアップをします。</span>
+        <span class="k">let</span> <span class="nv">urls</span> <span class="o">=</span> <span class="n">targetServer</span><span class="o">.</span><span class="nf">components</span><span class="p">(</span><span class="nv">separatedBy</span><span class="p">:</span> <span class="s">"://"</span><span class="p">)</span>
+        <span class="k">var</span> <span class="nv">address</span><span class="p">:</span> <span class="kt">String</span>
+        <span class="k">var</span> <span class="nv">enableTLS</span> <span class="o">=</span> <span class="kc">false</span>
+        <span class="k">if</span> <span class="n">urls</span><span class="o">.</span><span class="n">count</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">{</span>
+            <span class="n">address</span> <span class="o">=</span> <span class="n">urls</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">enableTLS</span> <span class="o">=</span> <span class="n">urls</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s">"https"</span>
+            <span class="n">address</span> <span class="o">=</span> <span class="n">urls</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="p">}</span>
+        <span class="c1">// WebSocketを使って接続するように指定します。</span>
+        <span class="k">let</span> <span class="nv">transportConfig</span><span class="p">:</span> <span class="kt">ITransportConfig</span> <span class="o">=</span> <span class="kt">Transport</span><span class="o">.</span><span class="kt">WebSocket</span><span class="o">.</span><span class="kt">Config</span><span class="p">(</span>
+            <span class="nv">enableTLS</span><span class="p">:</span> <span class="n">enableTLS</span>
+        <span class="p">)</span>
+        <span class="kt">Connection</span><span class="o">.</span><span class="nf">connect</span><span class="p">(</span>
+            <span class="nv">address</span><span class="p">:</span> <span class="n">address</span><span class="p">,</span>
+            <span class="nv">transportConfig</span><span class="p">:</span> <span class="n">transportConfig</span><span class="p">,</span>
+            <span class="nv">tokenSource</span><span class="p">:</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="n">token</span> <span class="k">in</span>
+                <span class="c1">// アクセストークンを指定します。接続時に発生するイベントにより使用されます。</span>
+                <span class="c1">// ここでは固定のトークンを返していますが、随時トークンの更新を行う実装にするとトークンの期限切れを考える必要がなくなります。</span>
+                <span class="nf">token</span><span class="p">(</span><span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">accessTokenForController</span><span class="p">)</span>
+            <span class="p">},</span>
+            <span class="nv">nodeID</span><span class="p">:</span> <span class="n">controllerNodeID</span><span class="p">)</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="n">con</span><span class="p">,</span> <span class="n">error</span> <span class="k">in</span>
+                <span class="k">guard</span> <span class="k">let</span> <span class="nv">con</span> <span class="o">=</span> <span class="n">con</span> <span class="k">else</span> <span class="p">{</span>
+                    <span class="c1">// 接続失敗。</span>
+                    <span class="k">return</span>
+                <span class="p">}</span>
+                <span class="c1">// 接続成功。</span>
+                <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">connectionForController</span> <span class="o">=</span> <span class="n">con</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">sendCall</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// コールを送信し、リプライコールを受信するとコールバックが発生します。</span>
+        <span class="n">connectionForController</span><span class="p">?</span><span class="o">.</span><span class="nf">sendCallAndWaitReplayCall</span><span class="p">(</span>
+            <span class="nv">upstreamCall</span><span class="p">:</span> <span class="kt">UpstreamCall</span><span class="p">(</span>
+                <span class="nv">destinationNodeID</span><span class="p">:</span> <span class="n">targetNodeID</span><span class="p">,</span>
+                <span class="nv">name</span><span class="p">:</span> <span class="s">"greeting"</span><span class="p">,</span>
+                <span class="nv">type</span><span class="p">:</span> <span class="s">"string"</span><span class="p">,</span>
+                <span class="nv">payload</span><span class="p">:</span> <span class="s">"hello"</span><span class="o">.</span><span class="nf">data</span><span class="p">(</span><span class="nv">using</span><span class="p">:</span> <span class="o">.</span><span class="n">utf8</span><span class="p">)</span><span class="o">!</span>
+            <span class="p">),</span>
+            <span class="nv">completion</span><span class="p">:</span> <span class="p">{</span> <span class="n">downstreamReplyCall</span><span class="p">,</span> <span class="n">error</span> <span class="k">in</span>
+                <span class="k">if</span> <span class="n">error</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+                    <span class="c1">// コールの送信もしくはリプライの受信に失敗。</span>
+                    <span class="k">return</span>
+                <span class="p">}</span>
+                <span class="c1">// コールの送信及びリプライの受信に成功。</span>
+            <span class="p">})</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// コントローラーノードからのコールを受け付け、すぐにリプライするサンプルです。</span>
+<span class="kd">extension</span> <span class="kt">E2ECallExampleViewController</span> <span class="p">{</span>
+
+    <span class="kd">func</span> <span class="nf">connectForTarget</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// 接続情報のセットアップをします。</span>
+        <span class="k">let</span> <span class="nv">urls</span> <span class="o">=</span> <span class="n">targetServer</span><span class="o">.</span><span class="nf">components</span><span class="p">(</span><span class="nv">separatedBy</span><span class="p">:</span> <span class="s">"://"</span><span class="p">)</span>
+        <span class="k">var</span> <span class="nv">address</span><span class="p">:</span> <span class="kt">String</span>
+        <span class="k">var</span> <span class="nv">enableTLS</span> <span class="o">=</span> <span class="kc">false</span>
+        <span class="k">if</span> <span class="n">urls</span><span class="o">.</span><span class="n">count</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">{</span>
+            <span class="n">address</span> <span class="o">=</span> <span class="n">urls</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">enableTLS</span> <span class="o">=</span> <span class="n">urls</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s">"https"</span>
+            <span class="n">address</span> <span class="o">=</span> <span class="n">urls</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="p">}</span>
+        <span class="c1">// WebSocketを使って接続するように指定します。</span>
+        <span class="k">let</span> <span class="nv">transportConfig</span><span class="p">:</span> <span class="kt">ITransportConfig</span> <span class="o">=</span> <span class="kt">Transport</span><span class="o">.</span><span class="kt">WebSocket</span><span class="o">.</span><span class="kt">Config</span><span class="p">(</span>
+            <span class="nv">enableTLS</span><span class="p">:</span> <span class="n">enableTLS</span>
+        <span class="p">)</span>
+        <span class="kt">Connection</span><span class="o">.</span><span class="nf">connect</span><span class="p">(</span>
+            <span class="nv">address</span><span class="p">:</span> <span class="n">address</span><span class="p">,</span>
+            <span class="nv">transportConfig</span><span class="p">:</span> <span class="n">transportConfig</span><span class="p">,</span>
+            <span class="nv">tokenSource</span><span class="p">:</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="n">token</span> <span class="k">in</span>
+                <span class="c1">// アクセストークンを指定します。接続時に発生するイベントにより使用されます。</span>
+                <span class="c1">// ここでは固定のトークンを返していますが、随時トークンの更新を行う実装にするとトークンの期限切れを考える必要がなくなります。</span>
+                <span class="nf">token</span><span class="p">(</span><span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">accessTokenForTarget</span><span class="p">)</span>
+            <span class="p">},</span>
+            <span class="nv">nodeID</span><span class="p">:</span> <span class="n">targetNodeID</span><span class="p">)</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="n">con</span><span class="p">,</span> <span class="n">error</span> <span class="k">in</span>
+                <span class="k">guard</span> <span class="k">let</span> <span class="nv">con</span> <span class="o">=</span> <span class="n">con</span> <span class="k">else</span> <span class="p">{</span>
+                    <span class="c1">// 接続失敗。</span>
+                    <span class="k">return</span>
+                <span class="p">}</span>
+                <span class="c1">// 接続成功。</span>
+                <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">connectionForTarget</span> <span class="o">=</span> <span class="n">con</span>
+                <span class="c1">// DownstreamCallの受信を監視するためにデリゲートを設定します。</span>
+                <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">connectionForTarget</span><span class="p">?</span><span class="o">.</span><span class="n">e2eCallDelegate</span> <span class="o">=</span> <span class="k">self</span> <span class="c1">// ConnectionE2ECallDelegate</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">extension</span> <span class="kt">E2ECallExampleViewController</span> <span class="p">:</span> <span class="kt">ConnectionE2ECallDelegate</span> <span class="p">{</span>
+
+    <span class="kd">func</span> <span class="nf">didReceiveCall</span><span class="p">(</span><span class="nv">connection</span><span class="p">:</span> <span class="kt">Connection</span><span class="p">,</span> <span class="nv">downstreamCall</span><span class="p">:</span> <span class="kt">DownstreamCall</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// DownstreamCallを受信した際にコールされます。</span>
+        <span class="c1">// このサンプルではDownstreamCallを受信したらすぐにリプライコールを送信します。</span>
+        <span class="n">connection</span><span class="o">.</span><span class="nf">sendReplyCall</span><span class="p">(</span>
+            <span class="nv">upstreamReplyCall</span><span class="p">:</span>
+                <span class="kt">UpstreamReplyCall</span><span class="p">(</span>
+                    <span class="nv">requestCallID</span><span class="p">:</span> <span class="n">downstreamCall</span><span class="o">.</span><span class="n">callID</span><span class="p">,</span>
+                    <span class="nv">destinationNodeID</span><span class="p">:</span> <span class="n">downstreamCall</span><span class="o">.</span><span class="n">sourceNodeID</span><span class="p">,</span>
+                    <span class="nv">name</span><span class="p">:</span> <span class="s">"reply_greeting"</span><span class="p">,</span>
+                    <span class="nv">type</span><span class="p">:</span> <span class="s">"string"</span><span class="p">,</span>
+                    <span class="nv">payload</span><span class="p">:</span> <span class="s">"world"</span><span class="o">.</span><span class="nf">data</span><span class="p">(</span><span class="nv">using</span><span class="p">:</span> <span class="o">.</span><span class="n">utf8</span><span class="p">)</span><span class="o">!</span>
+                <span class="p">)</span>
+        <span class="p">)</span> <span class="p">{</span> <span class="n">error</span> <span class="k">in</span>
+            <span class="k">if</span> <span class="n">error</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+                <span class="c1">// リプライコールの送信に失敗。</span>
+                <span class="k">return</span>
+            <span class="p">}</span>
+            <span class="c1">// リプライコールの送信に成功。</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">didReceiveReplyCall</span><span class="p">(</span><span class="nv">connection</span><span class="p">:</span> <span class="kt">Connection</span><span class="p">,</span> <span class="nv">downstreamReplyCall</span><span class="p">:</span> <span class="kt">DownstreamReplyCall</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// DownstreamReplyCallを受信した際にコールされます。</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre>
 <h2 id='references' class='heading'>References</h2>
 
 <ul>
@@ -507,13 +679,13 @@ end
 <ul>
 <li>過去のバージョンのリファレンスは <a href="https://docs.intdash.jp/api/intdash-sdk/swift-versions">こちら</a></li>
 </ul></li>
-<li><a href="https://github.com/aptpod/iscp-swift">Github</a></li>
+<li><a href="https://github.com/aptpod/iscp-swift">GitHub</a></li>
 </ul>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="https://www.aptpod.co.jp" target="_blank" rel="external noopener">aptpod Inc</a>. All rights reserved. (Last updated: 2022-12-09)</p>
+          <p>&copy; 2023 <a class="link" href="https://www.aptpod.co.jp" target="_blank" rel="external noopener">aptpod Inc</a>. All rights reserved. (Last updated: 2023-02-08)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>

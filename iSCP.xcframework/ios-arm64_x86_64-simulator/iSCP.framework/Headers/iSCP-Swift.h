@@ -224,6 +224,8 @@ SWIFT_CLASS("_TtC4iSCP10Connection")
 
 
 
+
+
 @class NSNumber;
 
 /// ダウンストリームを表すクラスです。
@@ -468,6 +470,8 @@ SWIFT_CLASS("_TtC4iSCP10Connection")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
+
 
 
 

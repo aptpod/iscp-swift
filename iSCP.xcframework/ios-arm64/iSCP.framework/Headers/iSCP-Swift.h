@@ -222,6 +222,8 @@ SWIFT_CLASS("_TtC4iSCP10Connection")
 
 
 
+
+
 @class NSNumber;
 
 /// ダウンストリームを表すクラスです。

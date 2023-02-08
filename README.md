@@ -38,7 +38,6 @@ end
 このサンプルではiscp-swiftを使ってintdash APIに接続します。
 
 ```swift
-// このサンプルではiscp-goを使ってintdash APIに接続します。
 // iSCPをインポート
 import iSCP
 
@@ -58,7 +57,7 @@ extension ExampleViewController {
     
     func connect() {
         // 接続情報のセットアップをします。
-        let urls = kTargetServer.components(separatedBy: "://")
+        let urls = targetServer.components(separatedBy: "://")
         var address: String
         var enableTLS = false
         if urls.count == 1 {
@@ -275,7 +274,168 @@ extension ExampleViewController : DownstreamDelegate {
 }
 ```
 
+### *E2E Call*
+
+E2E（エンドツーエンド）コールのサンプルです。
+
+コントローラーノードが対象ノードに対して指示を出し、対象ノードは受信完了のリプライを行う簡単なサンプルです。
+
+```swift
+import Foundation
+import UIKit
+
+// iSCPをインポート。
+import iSCP
+
+class E2ECallExampleViewController : UIViewController {
+    /// 接続するintdashサーバー
+    var targetServer: String = "https://example.com"
+
+    /// コントローラーノードのUUID
+    var controllerNodeID: String = "00000000-0000-0000-0000-000000000000"
+    /// 対象ノードのUUID
+    var targetNodeID: String = "11111111-1111-1111-1111-111111111111"
+
+    /// コントローラーノード用のアクセストークン
+    ///
+    /// intdash APIで取得したアクセストークンを設定して下さい。
+    var accessTokenForController: String = ""
+    /// 対象ノード用のアクセストークン
+    ///
+    /// intdash APIで取得したアクセストークンを設定して下さい。
+    var accessTokenForTarget: String = ""
+
+    /// コントローラーノード用のコネクション
+    var connectionForController: Connection?
+    /// 対象ノード用のコネクション
+    var connectionForTarget: Connection?
+}
+
+// コントローラーノードからメッセージを送信するサンプルです。このサンプルでは文字列メッセージを対象ノードに対して送信し、対象ノードからのリプライを待ちます。
+extension E2ECallExampleViewController {
+    
+    func connectForController() {
+        // 接続情報のセットアップをします。
+        let urls = targetServer.components(separatedBy: "://")
+        var address: String
+        var enableTLS = false
+        if urls.count == 1 {
+            address = urls[0]
+        } else {
+            enableTLS = urls[0] == "https"
+            address = urls[1]
+        }
+        // WebSocketを使って接続するように指定します。
+        let transportConfig: ITransportConfig = Transport.WebSocket.Config(
+            enableTLS: enableTLS
+        )
+        Connection.connect(
+            address: address,
+            transportConfig: transportConfig,
+            tokenSource: { [weak self] token in
+                // アクセストークンを指定します。接続時に発生するイベントにより使用されます。
+                // ここでは固定のトークンを返していますが、随時トークンの更新を行う実装にするとトークンの期限切れを考える必要がなくなります。
+                token(self?.accessTokenForController)
+            },
+            nodeID: controllerNodeID) { [weak self] con, error in
+                guard let con = con else {
+                    // 接続失敗。
+                    return
+                }
+                // 接続成功。
+                self?.connectionForController = con
+        }
+    }
+    
+    func sendCall() {
+        // コールを送信し、リプライコールを受信するとコールバックが発生します。
+        connectionForController?.sendCallAndWaitReplayCall(
+            upstreamCall: UpstreamCall(
+                destinationNodeID: targetNodeID,
+                name: "greeting",
+                type: "string",
+                payload: "hello".data(using: .utf8)!
+            ),
+            completion: { downstreamReplyCall, error in
+                if error != nil {
+                    // コールの送信もしくはリプライの受信に失敗。
+                    return
+                }
+                // コールの送信及びリプライの受信に成功。
+            })
+    }
+}
+
+// コントローラーノードからのコールを受け付け、すぐにリプライするサンプルです。
+extension E2ECallExampleViewController {
+    
+    func connectForTarget() {
+        // 接続情報のセットアップをします。
+        let urls = targetServer.components(separatedBy: "://")
+        var address: String
+        var enableTLS = false
+        if urls.count == 1 {
+            address = urls[0]
+        } else {
+            enableTLS = urls[0] == "https"
+            address = urls[1]
+        }
+        // WebSocketを使って接続するように指定します。
+        let transportConfig: ITransportConfig = Transport.WebSocket.Config(
+            enableTLS: enableTLS
+        )
+        Connection.connect(
+            address: address,
+            transportConfig: transportConfig,
+            tokenSource: { [weak self] token in
+                // アクセストークンを指定します。接続時に発生するイベントにより使用されます。
+                // ここでは固定のトークンを返していますが、随時トークンの更新を行う実装にするとトークンの期限切れを考える必要がなくなります。
+                token(self?.accessTokenForTarget)
+            },
+            nodeID: targetNodeID) { [weak self] con, error in
+                guard let con = con else {
+                    // 接続失敗。
+                    return
+                }
+                // 接続成功。
+                self?.connectionForTarget = con
+                // DownstreamCallの受信を監視するためにデリゲートを設定します。
+                self?.connectionForTarget?.e2eCallDelegate = self // ConnectionE2ECallDelegate
+        }
+    }
+}
+
+extension E2ECallExampleViewController : ConnectionE2ECallDelegate {
+    
+    func didReceiveCall(connection: Connection, downstreamCall: DownstreamCall) {
+        // DownstreamCallを受信した際にコールされます。
+        // このサンプルではDownstreamCallを受信したらすぐにリプライコールを送信します。
+        connection.sendReplyCall(
+            upstreamReplyCall:
+                UpstreamReplyCall(
+                    requestCallID: downstreamCall.callID,
+                    destinationNodeID: downstreamCall.sourceNodeID,
+                    name: "reply_greeting",
+                    type: "string",
+                    payload: "world".data(using: .utf8)!
+                )
+        ) { error in
+            if error != nil {
+                // リプライコールの送信に失敗。
+                return
+            }
+            // リプライコールの送信に成功。
+        }
+    }
+    
+    func didReceiveReplyCall(connection: Connection, downstreamReplyCall: DownstreamReplyCall) {
+        // DownstreamReplyCallを受信した際にコールされます。
+    }
+    
+}
+```
+
 ## References
 - [APIリファレンス](https://docs.intdash.jp/api/intdash-sdk/swift/latest/)
   - 過去のバージョンのリファレンスは [こちら](https://docs.intdash.jp/api/intdash-sdk/swift-versions)
-- [Github](https://github.com/aptpod/iscp-swift)
+- [GitHub](https://github.com/aptpod/iscp-swift)
