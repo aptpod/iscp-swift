@@ -18,7 +18,7 @@ public class SequenceNumberGenerator {
 extension iSCP.Connection {
   public func sendBaseTime(baseTime: iSCP.BaseTime, persist: Swift.Bool = false, completion: ((_ error: Swift.Error?) -> ())? = nil)
 }
-public enum iSCPError : Swift.Error, Foundation.LocalizedError, Swift.Equatable {
+public enum ISCPError : Swift.Error, Foundation.LocalizedError, Swift.Equatable {
   case transportClosed
   case streamClosed
   case malformedMessage(_: Swift.String = "unsupported message.")
@@ -28,7 +28,7 @@ public enum iSCPError : Swift.Error, Foundation.LocalizedError, Swift.Equatable 
   public var errorDescription: Swift.String? {
     get
   }
-  public static func == (lhs: iSCP.iSCPError, rhs: iSCP.iSCPError) -> Swift.Bool
+  public static func == (lhs: iSCP.ISCPError, rhs: iSCP.ISCPError) -> Swift.Bool
 }
 extension iSCP.Connection {
   public func openUpstream(sessionID: Swift.String, expiryInterval: Foundation.TimeInterval = Upstream.DEFAULT_EXPIRY_INTERVAL, dataIDs: [iSCP.DataID] = [], qos: iSCP.QoS = .unreliable, ackInterval: Foundation.TimeInterval = Upstream.DEFAULT_ACK_INTERVAL, persist: Swift.Bool = false, flushPolicy: iSCP.FlushPolicy = Upstream.DEFAULT_FLUSH_POLICY, closeTimeout: Foundation.TimeInterval = Upstream.DEFAULT_CLOSE_TIMEOUT, completion: @escaping ((_ upstream: iSCP.Upstream?, _ error: Swift.Error?) -> ()))
@@ -134,7 +134,7 @@ public enum EncodingName : Swift.String {
     get
   }
 }
-public enum iSCPLogLevel : Swift.Int {
+public enum ISCPLogLevel : Swift.Int {
   case verbose
   case debug
   case info
@@ -146,14 +146,14 @@ public enum iSCPLogLevel : Swift.Int {
     get
   }
 }
-public protocol iSCPLogDelegate : ObjectiveC.NSObjectProtocol {
-  func didOutputLog(message: Swift.String, level: iSCP.iSCPLogLevel, function: Swift.StaticString, file: Swift.StaticString, line: Swift.UInt)
+public protocol ISCPLogDelegate : ObjectiveC.NSObjectProtocol {
+  func didOutputLog(message: Swift.String, level: iSCP.ISCPLogLevel, function: Swift.StaticString, file: Swift.StaticString, line: Swift.UInt)
 }
-@_hasMissingDesignatedInitializers public class iSCPLog {
-  public static let shared: iSCP.iSCPLog
-  public var level: iSCP.iSCPLogLevel
+@_hasMissingDesignatedInitializers public class ISCPLog {
+  public static let shared: iSCP.ISCPLog
+  public var level: iSCP.ISCPLogLevel
   public var dateFormat: Foundation.DateFormatter
-  weak public var delegate: iSCP.iSCPLogDelegate?
+  weak public var delegate: iSCP.ISCPLogDelegate?
   @objc deinit
 }
 public protocol DownstreamDelegate : ObjectiveC.NSObjectProtocol {
@@ -247,8 +247,8 @@ extension iSCP.Transport {
     @objc deinit
   }
 }
-public let kiSCPFrameworkVersion: Swift.String
-public let kiSCPSupportedProtocolVersion: Swift.String
+public let kISCPFrameworkVersion: Swift.String
+public let kISCPSupportedProtocolVersion: Swift.String
 extension iSCP.Connection {
   @discardableResult
   public func sendCall(upstreamCall: iSCP.UpstreamCall, completion: ((_ error: Swift.Error?) -> ())? = nil) -> Swift.String?
@@ -501,9 +501,9 @@ extension iSCP.Connection {
 extension iSCP.EncodingName : Swift.Equatable {}
 extension iSCP.EncodingName : Swift.Hashable {}
 extension iSCP.EncodingName : Swift.RawRepresentable {}
-extension iSCP.iSCPLogLevel : Swift.Equatable {}
-extension iSCP.iSCPLogLevel : Swift.Hashable {}
-extension iSCP.iSCPLogLevel : Swift.RawRepresentable {}
+extension iSCP.ISCPLogLevel : Swift.Equatable {}
+extension iSCP.ISCPLogLevel : Swift.Hashable {}
+extension iSCP.ISCPLogLevel : Swift.RawRepresentable {}
 extension iSCP.TransportType : Swift.Equatable {}
 extension iSCP.TransportType : Swift.Hashable {}
 extension iSCP.TransportType : Swift.RawRepresentable {}

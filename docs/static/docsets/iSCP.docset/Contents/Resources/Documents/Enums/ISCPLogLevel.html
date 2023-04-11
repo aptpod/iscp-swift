@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>iSCPError Enumeration Reference</title>
+    <title>ISCPLogLevel Enumeration Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -13,11 +13,11 @@
     <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/iSCPError" class="dashAnchor"></a>
-    <a title="iSCPError Enumeration Reference"></a>
+    <a name="//apple_ref/swift/Enum/ISCPLogLevel" class="dashAnchor"></a>
+    <a title="ISCPLogLevel Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">iSCP v0.10.0 Docs</a></p>
+        <p><a href="../index.html">iSCP v0.10.1 Docs</a></p>
         <div class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -29,7 +29,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">iSCP Reference</a>
         <img id="carat" src="../img/carat.png" alt=""/>
-        iSCPError Enumeration Reference
+        ISCPLogLevel Enumeration Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -48,6 +48,9 @@
                 <a href="../Classes/Downstream/State.html">– State</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/ISCPLog.html">ISCPLog</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/SequenceNumberGenerator.html">SequenceNumberGenerator</a>
               </li>
               <li class="nav-group-task">
@@ -62,19 +65,16 @@
               <li class="nav-group-task">
                 <a href="../Classes/Upstream/State.html">– State</a>
               </li>
-              <li class="nav-group-task">
-                <a href="../Classes/iSCPLog.html">iSCPLog</a>
-              </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a href="../Global%20Variables.html">Global Variables</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Global%20Variables.html#/s:4iSCP21kiSCPFrameworkVersionSSvp">kiSCPFrameworkVersion</a>
+                <a href="../Global%20Variables.html#/s:4iSCP21kISCPFrameworkVersionSSvp">kISCPFrameworkVersion</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Global%20Variables.html#/s:4iSCP29kiSCPSupportedProtocolVersionSSvp">kiSCPSupportedProtocolVersion</a>
+                <a href="../Global%20Variables.html#/s:4iSCP29kISCPSupportedProtocolVersionSSvp">kISCPSupportedProtocolVersion</a>
               </li>
             </ul>
           </li>
@@ -85,16 +85,16 @@
                 <a href="../Enums/EncodingName.html">EncodingName</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/ISCPError.html">ISCPError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ISCPLogLevel.html">ISCPLogLevel</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/QoS.html">QoS</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/TransportType.html">TransportType</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/iSCPError.html">iSCPError</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/iSCPLogLevel.html">iSCPLogLevel</a>
               </li>
             </ul>
           </li>
@@ -152,13 +152,13 @@
                 <a href="../Protocols/DownstreamDelegate.html">DownstreamDelegate</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Protocols/ISCPLogDelegate.html">ISCPLogDelegate</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/ITransportConfig.html">ITransportConfig</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/UpstreamDelegate.html">UpstreamDelegate</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/iSCPLogDelegate.html">iSCPLogDelegate</a>
               </li>
             </ul>
           </li>
@@ -250,15 +250,15 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>iSCPError</h1>
+            <h1>ISCPLogLevel</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="nv">iSCPError</span> <span class="p">:</span> <span class="kt">Error</span><span class="p">,</span> <span class="kt">LocalizedError</span><span class="p">,</span> <span class="kt">Equatable</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ISCPLogLevel</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
 
                 </div>
               </div>
-            <p>iscp-swift内部で発生するエラーの定義です。</p>
+            <p>ログレベルを表す列挙型。</p>
 
           </section>
           <section class="section task-group-section">
@@ -276,184 +276,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4iSCP9iSCPErrorO15transportClosedyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/transportClosed" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4iSCP9iSCPErrorO15transportClosedyA2CmF">transportClosed</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>トランスポートが閉じられている際にトランスポートに対して読み書きをしようとした際に出力されます。</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">transportClosed</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:4iSCP9iSCPErrorO12streamClosedyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/streamClosed" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4iSCP9iSCPErrorO12streamClosedyA2CmF">streamClosed</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>ストリームが既にクローズされている際に何らかの処理を実行しようとした際に出力されます。</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">streamClosed</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:4iSCP9iSCPErrorO16malformedMessageyACSScACmF"></a>
-                    <a name="//apple_ref/swift/Element/malformedMessage(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4iSCP9iSCPErrorO16malformedMessageyACSScACmF">malformedMessage(_:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>メッセージのエンコードやデコードに失敗した際に出力されます。</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">malformedMessage</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"unsupported message."</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:4iSCP9iSCPErrorO13failedMessageyACs6UInt32V_SStcACmF"></a>
-                    <a name="//apple_ref/swift/Element/failedMessage(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4iSCP9iSCPErrorO13failedMessageyACs6UInt32V_SStcACmF">failedMessage(_:<wbr>_:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>iSCP通信時の結果コードが失敗である場合に出力されます。</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">failedMessage</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">_</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:4iSCP9iSCPErrorO7timeoutyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/timeout" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4iSCP9iSCPErrorO7timeoutyA2CmF">timeout</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>iSCP通信時に結果コードが返却されずタイムアウトした際に出力されます。</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">timeout</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:4iSCP9iSCPErrorO10unexpectedyACSScACmF"></a>
-                    <a name="//apple_ref/swift/Element/unexpected(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4iSCP9iSCPErrorO10unexpectedyACSScACmF">unexpected(_:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>定義されていないエラーが発生した際に出力されます。</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">unexpected</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"unsupported message."</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Instance%20Methods"></a>
-                <a name="//apple_ref/swift/Section/Instance Methods" class="dashAnchor"></a>
-                <div class="section-name-container">
-                  <a class="section-name-link" href="#/Instance%20Methods"></a>
-                  <h3 class="section-name"><span>Instance Methods</span>
-</h3>
-                </div>
-              </div>
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10Foundation14LocalizedErrorP16errorDescriptionSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/errorDescription" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10Foundation14LocalizedErrorP16errorDescriptionSSSgvp">errorDescription</a>
+                    <a name="/s:4iSCP12ISCPLogLevelO7verboseyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/verbose" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP12ISCPLogLevelO7verboseyA2CmF">verbose</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -467,32 +292,19 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">errorDescription</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">verbose</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Operators"></a>
-                <a name="//apple_ref/swift/Section/Operators" class="dashAnchor"></a>
-                <div class="section-name-container">
-                  <a class="section-name-link" href="#/Operators"></a>
-                  <h3 class="section-name"><span>Operators</span>
-</h3>
-                </div>
-              </div>
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:SQ2eeoiySbx_xtFZ"></a>
-                    <a name="//apple_ref/swift/Method/==(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:SQ2eeoiySbx_xtFZ">==(_:<wbr>_:<wbr>)</a>
+                    <a name="/s:4iSCP12ISCPLogLevelO5debugyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/debug" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP12ISCPLogLevelO5debugyA2CmF">debug</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -506,7 +318,85 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">==</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="n">iSCPError</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="n">iSCPError</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">debug</span> <span class="o">=</span> <span class="mi">1</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP12ISCPLogLevelO4infoyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/info" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP12ISCPLogLevelO4infoyA2CmF">info</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">info</span> <span class="o">=</span> <span class="mi">2</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP12ISCPLogLevelO7warningyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/warning" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP12ISCPLogLevelO7warningyA2CmF">warning</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">warning</span> <span class="o">=</span> <span class="mi">3</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP12ISCPLogLevelO5erroryA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/error" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP12ISCPLogLevelO5erroryA2CmF">error</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">error</span> <span class="o">=</span> <span class="mi">4</span></code></pre>
 
                         </div>
                       </div>
@@ -518,7 +408,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2023 <a class="link" href="https://www.aptpod.co.jp" target="_blank" rel="external noopener">aptpod Inc</a>. All rights reserved. (Last updated: 2023-02-08)</p>
+          <p>&copy; 2023 <a class="link" href="https://www.aptpod.co.jp" target="_blank" rel="external noopener">aptpod Inc</a>. All rights reserved. (Last updated: 2023-04-11)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>

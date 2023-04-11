@@ -3,42 +3,42 @@
     {
       "file": "/Users/uenomasamitsu/WorkSpace/Xcode/iOS/WorkSpace/iscp-swift/iscp/iSCP/Classes/Logger/Logger.swift",
       "line": 16,
-      "symbol": "iSCPLogLevel.verbose",
+      "symbol": "ISCPLogLevel.verbose",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/uenomasamitsu/WorkSpace/Xcode/iOS/WorkSpace/iscp-swift/iscp/iSCP/Classes/Logger/Logger.swift",
       "line": 17,
-      "symbol": "iSCPLogLevel.debug",
+      "symbol": "ISCPLogLevel.debug",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/uenomasamitsu/WorkSpace/Xcode/iOS/WorkSpace/iscp-swift/iscp/iSCP/Classes/Logger/Logger.swift",
       "line": 18,
-      "symbol": "iSCPLogLevel.info",
+      "symbol": "ISCPLogLevel.info",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/uenomasamitsu/WorkSpace/Xcode/iOS/WorkSpace/iscp-swift/iscp/iSCP/Classes/Logger/Logger.swift",
       "line": 19,
-      "symbol": "iSCPLogLevel.warning",
+      "symbol": "ISCPLogLevel.warning",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/uenomasamitsu/WorkSpace/Xcode/iOS/WorkSpace/iscp-swift/iscp/iSCP/Classes/Logger/Logger.swift",
       "line": 20,
-      "symbol": "iSCPLogLevel.error",
+      "symbol": "ISCPLogLevel.error",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/uenomasamitsu/WorkSpace/Xcode/iOS/WorkSpace/iscp-swift/iscp/iSCP/Classes/Logger/Logger.swift",
       "line": 73,
-      "symbol": "iSCPLog.shared",
+      "symbol": "ISCPLog.shared",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
