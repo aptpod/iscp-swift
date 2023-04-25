@@ -38,7 +38,7 @@ public enum ISCPError : Swift.Error, Foundation.LocalizedError, Swift.Equatable 
   public static func == (lhs: iSCP.ISCPError, rhs: iSCP.ISCPError) -> Swift.Bool
 }
 extension iSCP.Connection {
-  public func openUpstream(sessionID: Swift.String, expiryInterval: Foundation.TimeInterval = Upstream.DEFAULT_EXPIRY_INTERVAL, dataIDs: [iSCP.DataID] = [], qos: iSCP.QoS = .unreliable, ackInterval: Foundation.TimeInterval = Upstream.DEFAULT_ACK_INTERVAL, persist: Swift.Bool = false, flushPolicy: iSCP.FlushPolicy = Upstream.DEFAULT_FLUSH_POLICY, closeTimeout: Foundation.TimeInterval = Upstream.DEFAULT_CLOSE_TIMEOUT, completion: @escaping ((_ upstream: iSCP.Upstream?, _ error: Swift.Error?) -> ()))
+  public func openUpstream(sessionID: Swift.String, expiryInterval: Foundation.TimeInterval = Upstream.DEFAULT_EXPIRY_INTERVAL, dataIDs: [iSCP.DataID] = [], qos: iSCP.QoS = Upstream.DEFAULT_QOS, ackInterval: Foundation.TimeInterval = Upstream.DEFAULT_ACK_INTERVAL, persist: Swift.Bool = Upstream.DEFAULT_PERSIST, flushPolicy: iSCP.FlushPolicy = Upstream.DEFAULT_FLUSH_POLICY, closeTimeout: Foundation.TimeInterval = Upstream.DEFAULT_CLOSE_TIMEOUT, completion: @escaping ((_ upstream: iSCP.Upstream?, _ error: Swift.Error?) -> ()))
   public func reopenUpstream(_ upstream: iSCP.Upstream, handoverDataPoints: Swift.Bool = true, completion: @escaping ((_ upstream: iSCP.Upstream?, _ error: Swift.Error?) -> ()))
 }
 extension Foundation.Data {
@@ -94,6 +94,8 @@ public protocol UpstreamDelegate : ObjectiveC.NSObjectProtocol {
   func didResume(upstream: iSCP.Upstream)
 }
 @objc @_hasMissingDesignatedInitializers public class Upstream : ObjectiveC.NSObject {
+  public static let DEFAULT_QOS: iSCP.QoS
+  public static let DEFAULT_PERSIST: Swift.Bool
   public static let DEFAULT_CLOSE_TIMEOUT: Swift.Double
   public static let DEFAULT_ACK_INTERVAL: Swift.Double
   public static let DEFAULT_EXPIRY_INTERVAL: Swift.Double
@@ -171,6 +173,8 @@ public protocol DownstreamDelegate : ObjectiveC.NSObjectProtocol {
   func didResume(downstream: iSCP.Downstream)
 }
 @objc @_hasMissingDesignatedInitializers public class Downstream : ObjectiveC.NSObject {
+  public static let DEFAULT_QOS: iSCP.QoS
+  public static let DEFAULT_OMIT_EMPTY_CHUNK: Swift.Bool
   public static let DEFAULT_ACK_INTERVAL: Swift.Double
   public static let DEFAULT_EXPIRY_INTERVAL: Swift.Double
   weak public var delegate: iSCP.DownstreamDelegate?
@@ -179,6 +183,7 @@ public protocol DownstreamDelegate : ObjectiveC.NSObjectProtocol {
   final public let filters: [iSCP.DownstreamFilter]
   final public let expiryInterval: Foundation.TimeInterval
   final public let qos: iSCP.QoS
+  final public let omitEmptyChunk: Swift.Bool
   final public let ackInterval: Foundation.TimeInterval
   @objc override dynamic public var hash: Swift.Int {
     @objc get
@@ -208,9 +213,11 @@ public protocol ConnectionE2ECallDelegate : ObjectiveC.NSObjectProtocol {
 @objc public class Connection : ObjectiveC.NSObject {
   public static let DEFAULT_PING_TIMEOUT: Swift.Double
   public static let DEFAULT_PING_INTERVAL: Swift.Double
+  public static let DEFAULT_AUTO_RECONNECT: Swift.Bool
   public static let DEFAULT_RECONNECT_BASE_INTERVAL: Swift.Double
   public static let DEFAULT_RECONNECT_MAX_INTERVAL: Swift.Double
-  public static func connect(address: Swift.String, transportConfig: iSCP.ITransportConfig, tokenSource: @escaping ((@escaping (_ token: Swift.String?) -> ()) -> ()), nodeID: Swift.String = "", projectUUID: Swift.String = "", pingTimeout: Foundation.TimeInterval = DEFAULT_PING_TIMEOUT, pingInterval: Foundation.TimeInterval = DEFAULT_PING_INTERVAL, autoReconnect: Swift.Bool = true, reconnectBaseInterval: Foundation.TimeInterval = DEFAULT_RECONNECT_BASE_INTERVAL, reconnectMaxInterval: Foundation.TimeInterval = DEFAULT_RECONNECT_MAX_INTERVAL, encoding: iSCP.EncodingName = .protobuf, delegate: iSCP.ConnectionDelegate? = nil, e2eCallDelegate: iSCP.ConnectionE2ECallDelegate? = nil, completion: @escaping ((_ connection: iSCP.Connection?, _ error: Swift.Error?) -> ()))
+  public static let DEFAULT_ENCODING: iSCP.EncodingName
+  public static func connect(address: Swift.String, transportConfig: iSCP.ITransportConfig, tokenSource: @escaping ((@escaping (_ token: Swift.String?) -> ()) -> ()), nodeID: Swift.String = "", projectUUID: Swift.String = "", pingTimeout: Foundation.TimeInterval = DEFAULT_PING_TIMEOUT, pingInterval: Foundation.TimeInterval = DEFAULT_PING_INTERVAL, autoReconnect: Swift.Bool = DEFAULT_AUTO_RECONNECT, reconnectBaseInterval: Foundation.TimeInterval = DEFAULT_RECONNECT_BASE_INTERVAL, reconnectMaxInterval: Foundation.TimeInterval = DEFAULT_RECONNECT_MAX_INTERVAL, encoding: iSCP.EncodingName = DEFAULT_ENCODING, delegate: iSCP.ConnectionDelegate? = nil, e2eCallDelegate: iSCP.ConnectionE2ECallDelegate? = nil, completion: @escaping ((_ connection: iSCP.Connection?, _ error: Swift.Error?) -> ()))
   public var tag: Swift.Int
   weak public var delegate: iSCP.ConnectionDelegate?
   weak public var e2eCallDelegate: iSCP.ConnectionE2ECallDelegate?
@@ -234,7 +241,7 @@ public protocol ConnectionE2ECallDelegate : ObjectiveC.NSObjectProtocol {
   public var isConnecting: Swift.Bool {
     get
   }
-  public init(address: Swift.String, transportConfig: iSCP.ITransportConfig, tokenSource: @escaping ((@escaping (_ token: Swift.String?) -> ()) -> ()), nodeID: Swift.String = "", projectUUID: Swift.String = "", pingTimeout: Foundation.TimeInterval = DEFAULT_PING_TIMEOUT, pingInterval: Foundation.TimeInterval = DEFAULT_PING_INTERVAL, autoReconnect: Swift.Bool = true, reconnectBaseInterval: Foundation.TimeInterval = DEFAULT_RECONNECT_BASE_INTERVAL, reconnectMaxInterval: Foundation.TimeInterval = DEFAULT_RECONNECT_MAX_INTERVAL, encoding: iSCP.EncodingName = .protobuf)
+  public init(address: Swift.String, transportConfig: iSCP.ITransportConfig, tokenSource: @escaping ((@escaping (_ token: Swift.String?) -> ()) -> ()), nodeID: Swift.String = "", projectUUID: Swift.String = "", pingTimeout: Foundation.TimeInterval = DEFAULT_PING_TIMEOUT, pingInterval: Foundation.TimeInterval = DEFAULT_PING_INTERVAL, autoReconnect: Swift.Bool = DEFAULT_AUTO_RECONNECT, reconnectBaseInterval: Foundation.TimeInterval = DEFAULT_RECONNECT_BASE_INTERVAL, reconnectMaxInterval: Foundation.TimeInterval = DEFAULT_RECONNECT_MAX_INTERVAL, encoding: iSCP.EncodingName = DEFAULT_ENCODING)
   public func connect(completion: @escaping ((_ error: Swift.Error?) -> ()))
   public func close(completion: ((_ error: Swift.Error?) -> ())? = nil)
   @objc deinit
@@ -494,7 +501,7 @@ public struct DownstreamReplyCall : Swift.Equatable {
   public static func == (lhs: iSCP.DownstreamReplyCall, rhs: iSCP.DownstreamReplyCall) -> Swift.Bool
 }
 extension iSCP.Connection {
-  public func openDownstream(downstreamFilters: [iSCP.DownstreamFilter] = [], dataIDs: [iSCP.DataID] = [], qos: iSCP.QoS = .unreliable, expiryInterval: Foundation.TimeInterval = Downstream.DEFAULT_EXPIRY_INTERVAL, ackInterval: Foundation.TimeInterval = Downstream.DEFAULT_ACK_INTERVAL, completion: @escaping ((_ downstream: iSCP.Downstream?, _ error: Swift.Error?) -> ()))
+  public func openDownstream(downstreamFilters: [iSCP.DownstreamFilter] = [], dataIDs: [iSCP.DataID] = [], qos: iSCP.QoS = Downstream.DEFAULT_QOS, omitEmptyChunk: Swift.Bool = Downstream.DEFAULT_OMIT_EMPTY_CHUNK, expiryInterval: Foundation.TimeInterval = Downstream.DEFAULT_EXPIRY_INTERVAL, ackInterval: Foundation.TimeInterval = Downstream.DEFAULT_ACK_INTERVAL, completion: @escaping ((_ downstream: iSCP.Downstream?, _ error: Swift.Error?) -> ()))
   public func reopenDownstream(_ downstream: iSCP.Downstream, completion: @escaping ((_ downstream: iSCP.Downstream?, _ error: Swift.Error?) -> ()))
 }
 extension iSCP.EncodingName : Swift.Equatable {}

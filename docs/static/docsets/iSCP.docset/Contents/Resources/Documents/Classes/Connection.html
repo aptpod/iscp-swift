@@ -17,7 +17,7 @@
     <a title="Connection Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">iSCP v0.10.1 Docs</a></p>
+        <p><a href="../index.html">iSCP v0.11.0 Docs</a></p>
         <div class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -330,6 +330,33 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:4iSCP10ConnectionC22DEFAULT_AUTO_RECONNECTSbvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/DEFAULT_AUTO_RECONNECT" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP10ConnectionC22DEFAULT_AUTO_RECONNECTSbvpZ">DEFAULT_AUTO_RECONNECT</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>自動で再接続するかどうかのデフォルト値。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">DEFAULT_AUTO_RECONNECT</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:4iSCP10ConnectionC31DEFAULT_RECONNECT_BASE_INTERVALSdvpZ"></a>
                     <a name="//apple_ref/swift/Variable/DEFAULT_RECONNECT_BASE_INTERVAL" class="dashAnchor"></a>
                     <a class="token" href="#/s:4iSCP10ConnectionC31DEFAULT_RECONNECT_BASE_INTERVALSdvpZ">DEFAULT_RECONNECT_BASE_INTERVAL</a>
@@ -381,6 +408,33 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP10ConnectionC16DEFAULT_ENCODINGAA12EncodingNameOvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/DEFAULT_ENCODING" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP10ConnectionC16DEFAULT_ENCODINGAA12EncodingNameOvpZ">DEFAULT_ENCODING</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>エンコーディング名のデフォルト値。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">DEFAULT_ENCODING</span><span class="p">:</span> <span class="kt"><a href="../Enums/EncodingName.html">EncodingName</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
             <div class="task-group">
@@ -421,10 +475,10 @@
                            <span class="nv">projectUUID</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span>
                            <span class="nv">pingTimeout</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Connection.html#/s:4iSCP10ConnectionC20DEFAULT_PING_TIMEOUTSdvpZ">DEFAULT_PING_TIMEOUT</a></span><span class="p">,</span>
                            <span class="nv">pingInterval</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Connection.html#/s:4iSCP10ConnectionC21DEFAULT_PING_INTERVALSdvpZ">DEFAULT_PING_INTERVAL</a></span><span class="p">,</span>
-                           <span class="nv">autoReconnect</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+                           <span class="nv">autoReconnect</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Connection.html#/s:4iSCP10ConnectionC22DEFAULT_AUTO_RECONNECTSbvpZ">DEFAULT_AUTO_RECONNECT</a></span><span class="p">,</span>
                            <span class="nv">reconnectBaseInterval</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Connection.html#/s:4iSCP10ConnectionC31DEFAULT_RECONNECT_BASE_INTERVALSdvpZ">DEFAULT_RECONNECT_BASE_INTERVAL</a></span><span class="p">,</span>
                            <span class="nv">reconnectMaxInterval</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Connection.html#/s:4iSCP10ConnectionC30DEFAULT_RECONNECT_MAX_INTERVALSdvpZ">DEFAULT_RECONNECT_MAX_INTERVAL</a></span><span class="p">,</span>
-                           <span class="nv">encoding</span><span class="p">:</span> <span class="kt"><a href="../Enums/EncodingName.html">EncodingName</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">protobuf</span><span class="p">,</span>
+                           <span class="nv">encoding</span><span class="p">:</span> <span class="kt"><a href="../Enums/EncodingName.html">EncodingName</a></span> <span class="o">=</span> <span class="kt"><a href="../Classes/Connection.html#/s:4iSCP10ConnectionC16DEFAULT_ENCODINGAA12EncodingNameOvpZ">DEFAULT_ENCODING</a></span><span class="p">,</span>
                            <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ConnectionDelegate.html">ConnectionDelegate</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
                            <span class="nv">e2eCallDelegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ConnectionE2ECallDelegate.html">ConnectionE2ECallDelegate</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
                            <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="n">_</span> <span class="nv">connection</span><span class="p">:</span> <span class="kt">Connection</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">()))</span></code></pre>
@@ -1120,10 +1174,10 @@
             <span class="nv">projectUUID</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span>
             <span class="nv">pingTimeout</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Connection.html#/s:4iSCP10ConnectionC20DEFAULT_PING_TIMEOUTSdvpZ">DEFAULT_PING_TIMEOUT</a></span><span class="p">,</span>
             <span class="nv">pingInterval</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Connection.html#/s:4iSCP10ConnectionC21DEFAULT_PING_INTERVALSdvpZ">DEFAULT_PING_INTERVAL</a></span><span class="p">,</span>
-            <span class="nv">autoReconnect</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nv">autoReconnect</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Connection.html#/s:4iSCP10ConnectionC22DEFAULT_AUTO_RECONNECTSbvpZ">DEFAULT_AUTO_RECONNECT</a></span><span class="p">,</span>
             <span class="nv">reconnectBaseInterval</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Connection.html#/s:4iSCP10ConnectionC31DEFAULT_RECONNECT_BASE_INTERVALSdvpZ">DEFAULT_RECONNECT_BASE_INTERVAL</a></span><span class="p">,</span>
             <span class="nv">reconnectMaxInterval</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Connection.html#/s:4iSCP10ConnectionC30DEFAULT_RECONNECT_MAX_INTERVALSdvpZ">DEFAULT_RECONNECT_MAX_INTERVAL</a></span><span class="p">,</span>
-            <span class="nv">encoding</span><span class="p">:</span> <span class="kt"><a href="../Enums/EncodingName.html">EncodingName</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">protobuf</span><span class="p">)</span></code></pre>
+            <span class="nv">encoding</span><span class="p">:</span> <span class="kt"><a href="../Enums/EncodingName.html">EncodingName</a></span> <span class="o">=</span> <span class="kt"><a href="../Classes/Connection.html#/s:4iSCP10ConnectionC16DEFAULT_ENCODINGAA12EncodingNameOvpZ">DEFAULT_ENCODING</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1379,9 +1433,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4iSCP10ConnectionC14openDownstream17downstreamFilters7dataIDs3qos14expiryInterval03ackK010completionySayAA0D6FilterVG_SayAA6DataIDVGAA3QoSOS2dyAA0D0CSg_s5Error_pSgtctF"></a>
-                    <a name="//apple_ref/swift/Method/openDownstream(downstreamFilters:dataIDs:qos:expiryInterval:ackInterval:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4iSCP10ConnectionC14openDownstream17downstreamFilters7dataIDs3qos14expiryInterval03ackK010completionySayAA0D6FilterVG_SayAA6DataIDVGAA3QoSOS2dyAA0D0CSg_s5Error_pSgtctF">openDownstream(downstreamFilters:<wbr>dataIDs:<wbr>qos:<wbr>expiryInterval:<wbr>ackInterval:<wbr>completion:<wbr>)</a>
+                    <a name="/s:4iSCP10ConnectionC14openDownstream17downstreamFilters7dataIDs3qos14omitEmptyChunk14expiryInterval03ackN010completionySayAA0D6FilterVG_SayAA6DataIDVGAA3QoSOSbS2dyAA0D0CSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/openDownstream(downstreamFilters:dataIDs:qos:omitEmptyChunk:expiryInterval:ackInterval:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP10ConnectionC14openDownstream17downstreamFilters7dataIDs3qos14omitEmptyChunk14expiryInterval03ackN010completionySayAA0D6FilterVG_SayAA6DataIDVGAA3QoSOSbS2dyAA0D0CSg_s5Error_pSgtctF">openDownstream(downstreamFilters:<wbr>dataIDs:<wbr>qos:<wbr>omitEmptyChunk:<wbr>expiryInterval:<wbr>ackInterval:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1398,7 +1452,8 @@
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">openDownstream</span><span class="p">(</span><span class="nv">downstreamFilters</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/DownstreamFilter.html">DownstreamFilter</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span>
                            <span class="nv">dataIDs</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/DataID.html">DataID</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span>
-                           <span class="nv">qos</span><span class="p">:</span> <span class="kt"><a href="../Enums/QoS.html">QoS</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">unreliable</span><span class="p">,</span>
+                           <span class="nv">qos</span><span class="p">:</span> <span class="kt"><a href="../Enums/QoS.html">QoS</a></span> <span class="o">=</span> <span class="kt"><a href="../Classes/Downstream.html">Downstream</a></span><span class="o">.</span><span class="kt">DEFAULT_QOS</span><span class="p">,</span>
+                           <span class="nv">omitEmptyChunk</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Downstream.html">Downstream</a></span><span class="o">.</span><span class="kt">DEFAULT_OMIT_EMPTY_CHUNK</span><span class="p">,</span>
                            <span class="nv">expiryInterval</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Downstream.html">Downstream</a></span><span class="o">.</span><span class="kt">DEFAULT_EXPIRY_INTERVAL</span><span class="p">,</span>
                            <span class="nv">ackInterval</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Downstream.html">Downstream</a></span><span class="o">.</span><span class="kt">DEFAULT_ACK_INTERVAL</span><span class="p">,</span>
                            <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="n">_</span> <span class="nv">downstream</span><span class="p">:</span> <span class="kt"><a href="../Classes/Downstream.html">Downstream</a></span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span><span class="o">-&gt;</span><span class="p">()))</span></code></pre>
@@ -1442,6 +1497,18 @@
                               <td>
                                 <div>
                                   <p>QoS。現在は <code>unreliable</code> のみサポート。</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>omitEmptyChunk</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>空チャンク省略フラグ。trueの場合、DownstreamChunk内のdataPointGroupsが空の時、DownstreamChunkの送信を省略します。</p>
                                 </div>
                               </td>
                             </tr>
@@ -1827,9 +1894,9 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">openUpstream</span><span class="p">(</span><span class="nv">sessionID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
                          <span class="nv">expiryInterval</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Upstream.html">Upstream</a></span><span class="o">.</span><span class="kt">DEFAULT_EXPIRY_INTERVAL</span><span class="p">,</span>
                          <span class="nv">dataIDs</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/DataID.html">DataID</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span>
-                         <span class="nv">qos</span><span class="p">:</span> <span class="kt"><a href="../Enums/QoS.html">QoS</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">unreliable</span><span class="p">,</span>
+                         <span class="nv">qos</span><span class="p">:</span> <span class="kt"><a href="../Enums/QoS.html">QoS</a></span> <span class="o">=</span> <span class="kt"><a href="../Classes/Upstream.html">Upstream</a></span><span class="o">.</span><span class="kt">DEFAULT_QOS</span><span class="p">,</span>
                          <span class="nv">ackInterval</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Upstream.html">Upstream</a></span><span class="o">.</span><span class="kt">DEFAULT_ACK_INTERVAL</span><span class="p">,</span>
-                         <span class="nv">persist</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+                         <span class="nv">persist</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Upstream.html">Upstream</a></span><span class="o">.</span><span class="kt">DEFAULT_PERSIST</span><span class="p">,</span>
                          <span class="nv">flushPolicy</span><span class="p">:</span> <span class="kt"><a href="../Structs/FlushPolicy.html">FlushPolicy</a></span> <span class="o">=</span> <span class="kt"><a href="../Classes/Upstream.html">Upstream</a></span><span class="o">.</span><span class="kt">DEFAULT_FLUSH_POLICY</span><span class="p">,</span>
                          <span class="nv">closeTimeout</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Upstream.html">Upstream</a></span><span class="o">.</span><span class="kt">DEFAULT_CLOSE_TIMEOUT</span><span class="p">,</span>
                          <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="n">_</span> <span class="nv">upstream</span><span class="p">:</span> <span class="kt"><a href="../Classes/Upstream.html">Upstream</a></span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span><span class="o">-&gt;</span><span class="p">()))</span></code></pre>
@@ -2029,7 +2096,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2023 <a class="link" href="https://www.aptpod.co.jp" target="_blank" rel="external noopener">aptpod Inc</a>. All rights reserved. (Last updated: 2023-04-11)</p>
+          <p>&copy; 2023 <a class="link" href="https://www.aptpod.co.jp" target="_blank" rel="external noopener">aptpod Inc</a>. All rights reserved. (Last updated: 2023-04-25)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>
