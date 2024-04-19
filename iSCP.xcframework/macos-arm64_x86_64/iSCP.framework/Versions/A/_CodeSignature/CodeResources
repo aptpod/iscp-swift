@@ -6,7 +6,7 @@
 	<dict>
 		<key>Resources/Info.plist</key>
 		<data>
-		y3n3TB/8eq6tUco0JpdL7AWrK0Q=
+		l2V5IWN7ZBXHV3bxTGBX2CrH+ZU=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -15,7 +15,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			77/1FEd0PQML4KuhQuMXiPHuHARixojSsktx4+UdZew=
+			Kxwr2KzbvS2t70OX538I3EBzhpPMH9V91qPFG/3ezqM=
 			</data>
 		</dict>
 		<key>Headers/iSCP.h</key>
@@ -25,102 +25,88 @@
 			YukUYZbEhPivlLuBTpLhpLu+9L6asM2o5TgZFEeV+7Y=
 			</data>
 		</dict>
+		<key>Modules/iSCP.swiftmodule/arm64-apple-macos.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			V+Vu9MYHa3R7pDMyYr08qSM9tss3O8Ocuhu4au1Ve38=
+			</data>
+		</dict>
+		<key>Modules/iSCP.swiftmodule/arm64-apple-macos.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			uLsTvLsqbcJKxYRDW2iTnJaOZk4GOko1O0VvpO98cFw=
+			</data>
+		</dict>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-macos.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eeLY3Xh2QKQ7q4Rx7T0x24h5UsrZG0Bwz6JvJiEBeBQ=
+			1OsNSXcA15z37LeJATkED8K4FKDVGAiRZuiG1QpFFh4=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-macos.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QuAkN1j7hMKRG/6sgle1XQFzbKP0rvr5PS03NUkqS14=
+			uLsTvLsqbcJKxYRDW2iTnJaOZk4GOko1O0VvpO98cFw=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-macos.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LlAYh+rKB1f51Hr9Vqbq/8AiM6GjDzxHu0s5wmahEdU=
+			O8ZXmrRFFXIHCncERrv6CeVsTH+npqhG7eJ63x2xkNk=
 			</data>
 		</dict>
-		<key>Modules/iSCP.swiftmodule/arm64.swiftdoc</key>
+		<key>Modules/iSCP.swiftmodule/x86_64-apple-macos.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eeLY3Xh2QKQ7q4Rx7T0x24h5UsrZG0Bwz6JvJiEBeBQ=
+			V+Vu9MYHa3R7pDMyYr08qSM9tss3O8Ocuhu4au1Ve38=
 			</data>
 		</dict>
-		<key>Modules/iSCP.swiftmodule/arm64.swiftinterface</key>
+		<key>Modules/iSCP.swiftmodule/x86_64-apple-macos.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QuAkN1j7hMKRG/6sgle1XQFzbKP0rvr5PS03NUkqS14=
-			</data>
-		</dict>
-		<key>Modules/iSCP.swiftmodule/arm64.swiftmodule</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			LlAYh+rKB1f51Hr9Vqbq/8AiM6GjDzxHu0s5wmahEdU=
+			F9YnIk4a/eC4jZcwMsFtUZd6a9j2Wg8q/nJ4CBTEpdw=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/x86_64-apple-macos.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1uYMtFmG753OSuLTQ0ConUlHbKPorbUDAFkaCfQMvdM=
+			sGUkmf8C3nfhIbmXSQdIIF/SRO2LpPm6aa6cx/pRNqM=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/x86_64-apple-macos.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pWqcZb+1RTQS58Y0VdrKapAcdceyEGlSVTA1gXUOH30=
+			F9YnIk4a/eC4jZcwMsFtUZd6a9j2Wg8q/nJ4CBTEpdw=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/x86_64-apple-macos.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wkOPQUIDGiYrmJVjpA1Xgj1996sIoTkNGlbpKoy8c/s=
-			</data>
-		</dict>
-		<key>Modules/iSCP.swiftmodule/x86_64.swiftdoc</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			1uYMtFmG753OSuLTQ0ConUlHbKPorbUDAFkaCfQMvdM=
-			</data>
-		</dict>
-		<key>Modules/iSCP.swiftmodule/x86_64.swiftinterface</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			pWqcZb+1RTQS58Y0VdrKapAcdceyEGlSVTA1gXUOH30=
-			</data>
-		</dict>
-		<key>Modules/iSCP.swiftmodule/x86_64.swiftmodule</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			wkOPQUIDGiYrmJVjpA1Xgj1996sIoTkNGlbpKoy8c/s=
+			hI2gwIK0IsiWd6bW3YvA5cigID41prKnse97Ya/tdzA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MybqFbbU3myJeoTjwadbrBhPBeDc7Ear1oXlFkGUKMY=
+			gje8mCF0lYWomaLIHFhHbUrhTNxBC6kQI1gwl71nlFY=
 			</data>
 		</dict>
 		<key>Resources/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GFJSlI4SyDh829weigmyH+aVAG7UgudbAnUZaoDgWBw=
+			XyA3QPKakOqL93XAxpmzL4SnHnuatlQAM9ZEcD+2lzY=
 			</data>
 		</dict>
 	</dict>

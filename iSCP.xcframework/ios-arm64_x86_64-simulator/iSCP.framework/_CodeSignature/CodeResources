@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/iSCP-Swift.h</key>
 		<data>
-		7bQVttg2xhp1bFRjPNSqQ/vEaUE=
+		rsNf2WSodfc7KFFme1k05v0vzK0=
 		</data>
 		<key>Headers/iSCP.h</key>
 		<data>
@@ -14,59 +14,51 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ClvNbpKrXLWr3KBkJ+RCuQtMmVk=
+		TuUi4f9A4N2NWBTK5cGCuYx59Ys=
+		</data>
+		<key>Modules/iSCP.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<data>
+		08W5xZOkfpwaJpFFe5dyMME33ms=
+		</data>
+		<key>Modules/iSCP.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		M9uX6Dmx+iEfRz81HepWMgY5zsU=
 		</data>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		SvBxoZdaD/5yH9sbdueQjzy+9Uw=
+		Xb2wbfsFyCuIMp5F6JnOhEspM1M=
 		</data>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		q/urLKLUXB8d/Y6umFWxSW4BYS0=
+		M9uX6Dmx+iEfRz81HepWMgY5zsU=
 		</data>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		2GLwu7D7HtAwBNvSGa6RKk4Gr3Y=
+		foCEqL/H9YCIukibzi+Psfx2zlQ=
 		</data>
-		<key>Modules/iSCP.swiftmodule/arm64.swiftdoc</key>
+		<key>Modules/iSCP.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		SvBxoZdaD/5yH9sbdueQjzy+9Uw=
+		08W5xZOkfpwaJpFFe5dyMME33ms=
 		</data>
-		<key>Modules/iSCP.swiftmodule/arm64.swiftinterface</key>
+		<key>Modules/iSCP.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		q/urLKLUXB8d/Y6umFWxSW4BYS0=
-		</data>
-		<key>Modules/iSCP.swiftmodule/arm64.swiftmodule</key>
-		<data>
-		2GLwu7D7HtAwBNvSGa6RKk4Gr3Y=
+		5N3ly2DoJIszZfOoisK7b7dTGpk=
 		</data>
 		<key>Modules/iSCP.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		OXHtkDcHQbUEDLKigSPqpc22yrg=
+		ff8YaD4klivbaHp3E89134NOfQ0=
 		</data>
 		<key>Modules/iSCP.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		nnHqF5ApYZMUKHrwK3ErXHOxGr8=
+		5N3ly2DoJIszZfOoisK7b7dTGpk=
 		</data>
 		<key>Modules/iSCP.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		bjGTtM89yG5J3OfFWfN+ra8BlkU=
-		</data>
-		<key>Modules/iSCP.swiftmodule/x86_64.swiftdoc</key>
-		<data>
-		OXHtkDcHQbUEDLKigSPqpc22yrg=
-		</data>
-		<key>Modules/iSCP.swiftmodule/x86_64.swiftinterface</key>
-		<data>
-		nnHqF5ApYZMUKHrwK3ErXHOxGr8=
-		</data>
-		<key>Modules/iSCP.swiftmodule/x86_64.swiftmodule</key>
-		<data>
-		bjGTtM89yG5J3OfFWfN+ra8BlkU=
+		y+9O7B9d05SpTpVJqyaRMl2ZiG0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		v/Y2IIlIvpv1nfff4ClzSFxv2Ew=
+		/7YKF+WDwWkAUZJHkKtPiNCLwzs=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -75,7 +67,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			77/1FEd0PQML4KuhQuMXiPHuHARixojSsktx4+UdZew=
+			Kxwr2KzbvS2t70OX538I3EBzhpPMH9V91qPFG/3ezqM=
 			</data>
 		</dict>
 		<key>Headers/iSCP.h</key>
@@ -85,95 +77,81 @@
 			YukUYZbEhPivlLuBTpLhpLu+9L6asM2o5TgZFEeV+7Y=
 			</data>
 		</dict>
+		<key>Modules/iSCP.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			tPCmJMvfJkAKUROpbV45p/MLl1F+iqjaKObXTloj8yM=
+			</data>
+		</dict>
+		<key>Modules/iSCP.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6BT/Pv2wHcOfAS1AzTn5OMYgyW6X7w/MrcnuYjOOxKc=
+			</data>
+		</dict>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/+aRkCzR44NprtGkplRo47wMJjA+4bBAH8c6sGMVqJY=
+			YNx6Lfmfn6gYHTN7adN3FlWPmiA7TKfR53IsZhZvAnk=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			peGrZ32smf0C3cjEmc4HW/ppe+cnGZZPfbuMENURkU4=
+			6BT/Pv2wHcOfAS1AzTn5OMYgyW6X7w/MrcnuYjOOxKc=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1ZB3EEAOlSx1GauNXSjdRc6AyhSAscUIG/ZsnE+tW/Y=
+			JTm8CfKYd2pCh9z33KyLVuHbPKhVOtfPydmjZ1N06R8=
 			</data>
 		</dict>
-		<key>Modules/iSCP.swiftmodule/arm64.swiftdoc</key>
+		<key>Modules/iSCP.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/+aRkCzR44NprtGkplRo47wMJjA+4bBAH8c6sGMVqJY=
+			tPCmJMvfJkAKUROpbV45p/MLl1F+iqjaKObXTloj8yM=
 			</data>
 		</dict>
-		<key>Modules/iSCP.swiftmodule/arm64.swiftinterface</key>
+		<key>Modules/iSCP.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			peGrZ32smf0C3cjEmc4HW/ppe+cnGZZPfbuMENURkU4=
-			</data>
-		</dict>
-		<key>Modules/iSCP.swiftmodule/arm64.swiftmodule</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			1ZB3EEAOlSx1GauNXSjdRc6AyhSAscUIG/ZsnE+tW/Y=
+			hLY/XIuVldaOLTW6B4SkuPCq7WWe+PSof0yWGnQ4AWc=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			H/t8nrxEoLePIrM2BjBuvY69imF+rJP1lLUUwoTXvrk=
+			Lb7Zm7HHzJAyUM8APUsAZsEKQFPJ65RYf4qSP7iudKU=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			orrUr7N5wCm/le4+00RT2NNs5lCo6ftb5O0YlQ3JUNQ=
+			hLY/XIuVldaOLTW6B4SkuPCq7WWe+PSof0yWGnQ4AWc=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			po8jLaJH96P+3HfKYNw8J4gFfzkQnNv6x+18zpnWRiM=
-			</data>
-		</dict>
-		<key>Modules/iSCP.swiftmodule/x86_64.swiftdoc</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			H/t8nrxEoLePIrM2BjBuvY69imF+rJP1lLUUwoTXvrk=
-			</data>
-		</dict>
-		<key>Modules/iSCP.swiftmodule/x86_64.swiftinterface</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			orrUr7N5wCm/le4+00RT2NNs5lCo6ftb5O0YlQ3JUNQ=
-			</data>
-		</dict>
-		<key>Modules/iSCP.swiftmodule/x86_64.swiftmodule</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			po8jLaJH96P+3HfKYNw8J4gFfzkQnNv6x+18zpnWRiM=
+			TmFuVbgStUeoPfD7+UhM8d90JppTGqhwlcAFFJgt3rk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MybqFbbU3myJeoTjwadbrBhPBeDc7Ear1oXlFkGUKMY=
+			gje8mCF0lYWomaLIHFhHbUrhTNxBC6kQI1gwl71nlFY=
 			</data>
 		</dict>
 	</dict>

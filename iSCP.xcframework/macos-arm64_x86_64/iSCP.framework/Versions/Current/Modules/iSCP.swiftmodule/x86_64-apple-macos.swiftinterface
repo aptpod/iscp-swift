@@ -1,10 +1,13 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
+// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
 // swift-module-flags: -target x86_64-apple-macos10.15 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name iSCP
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import Foundation
 import Network
 import Swift
 import SwiftProtobuf
+import _Concurrency
+import _StringProcessing
 @_exported import iSCP
 extension iSCP.Connection {
   @discardableResult
@@ -101,6 +104,7 @@ public protocol UpstreamDelegate : ObjectiveC.NSObjectProtocol {
   public static let DEFAULT_EXPIRY_INTERVAL: Swift.Double
   public static let DEFAULT_FLUSH_POLICY: iSCP.FlushPolicy
   weak public var delegate: iSCP.UpstreamDelegate?
+  final public let connection: iSCP.Connection
   final public let id: Foundation.UUID
   final public let serverTime: Foundation.TimeInterval
   final public let sessionID: Swift.String
@@ -178,6 +182,7 @@ public protocol DownstreamDelegate : ObjectiveC.NSObjectProtocol {
   public static let DEFAULT_ACK_INTERVAL: Swift.Double
   public static let DEFAULT_EXPIRY_INTERVAL: Swift.Double
   weak public var delegate: iSCP.DownstreamDelegate?
+  final public let connection: iSCP.Connection
   final public let id: Foundation.UUID
   final public let serverTime: Foundation.TimeInterval
   final public let filters: [iSCP.DownstreamFilter]
@@ -401,10 +406,10 @@ public struct DataPoint : Swift.Hashable {
 public struct BaseTime : Swift.Equatable {
   public var sessionID: Swift.String
   public var name: Swift.String
-  public var priority: Swift.UInt32
+  public var priority: Swift.UInt8
   public var elapsedTime: Swift.Double
   public var baseTime: Swift.Double
-  public init(sessionID: Swift.String = String(), name: Swift.String = String(), priority: Swift.UInt32 = 0, elapsedTime: Foundation.TimeInterval = 0, baseTime: Foundation.TimeInterval = 0)
+  public init(sessionID: Swift.String = String(), name: Swift.String = String(), priority: Swift.UInt8 = 0, elapsedTime: Foundation.TimeInterval = 0, baseTime: Foundation.TimeInterval = 0)
   public static func == (lhs: iSCP.BaseTime, rhs: iSCP.BaseTime) -> Swift.Bool
 }
 public struct DownstreamAbnormalClose : Swift.Equatable {

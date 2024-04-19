@@ -6,7 +6,7 @@ iSCP Client for Swift は、iSCP version 2 を用いたリアルタイムAPIに�
 
 - iOS 13 or later
 - macOS 10.15 (Catalina) or later
-- Xcode 13.0 (13A233) or later
+- Xcode 14.1 (14B47b) or later
 
 ## Installation
 
@@ -26,6 +26,8 @@ post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
       config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+      # for Mac
+      config.build_settings['MACOSX_DEPLOYMENT_TARGET'] = '10.14.6'
     end
   end
 end
@@ -145,7 +147,7 @@ extension ExampleViewController {
                 baseTime: BaseTime(
                     sessionID: sessionID,
                     name: "manual",
-                    priority: 1000,
+                    priority: 60,
                     elapsedTime: 0,
                     baseTime: baseTime),
                 persist: upstreamPersist) { error in
@@ -253,7 +255,7 @@ extension ExampleViewController : DownstreamDelegate {
         print("Received a metadata sourceNodeID[\(message.sourceNodeID)], metadataType:\(String(describing: message.metadata))")
         switch message.metadata {
         case .baseTime(let baseTime):
-            print("Received baseTime[\(Date(timeIntervalSince1970: baseTime.baseTime))], priority[\(baseTime.priority)], name[\(baseTime.priority)]")
+            print("Received baseTime[\(Date(timeIntervalSince1970: baseTime.baseTime))], priority[\(baseTime.priority)], name[\(baseTime.name)]")
         default: break
         }
     }

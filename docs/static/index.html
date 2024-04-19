@@ -16,7 +16,7 @@
     <a title="iSCP  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">iSCP v0.11.0 Docs</a></p>
+        <p><a href="index.html">iSCP v1.0.0 Docs</a></p>
         <div class="header-right">
           <form role="search" action="search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -258,7 +258,7 @@
 <ul>
 <li>iOS 13 or later</li>
 <li>macOS 10.15 (Catalina) or later</li>
-<li>Xcode 13.0 (13A233) or later</li>
+<li>Xcode 14.1 (14B47b) or later</li>
 </ul>
 <h2 id='installation' class='heading'>Installation</h2>
 
@@ -276,6 +276,8 @@ post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
       config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+      # for Mac
+      config.build_settings['MACOSX_DEPLOYMENT_TARGET'] = '10.14.6'
     end
   end
 end
@@ -388,7 +390,7 @@ end
                 <span class="nv">baseTime</span><span class="p">:</span> <span class="kt">BaseTime</span><span class="p">(</span>
                     <span class="nv">sessionID</span><span class="p">:</span> <span class="n">sessionID</span><span class="p">,</span>
                     <span class="nv">name</span><span class="p">:</span> <span class="s">"manual"</span><span class="p">,</span>
-                    <span class="nv">priority</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span>
+                    <span class="nv">priority</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
                     <span class="nv">elapsedTime</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
                     <span class="nv">baseTime</span><span class="p">:</span> <span class="n">baseTime</span><span class="p">),</span>
                 <span class="nv">persist</span><span class="p">:</span> <span class="n">upstreamPersist</span><span class="p">)</span> <span class="p">{</span> <span class="n">error</span> <span class="k">in</span>
@@ -493,7 +495,7 @@ end
         <span class="nf">print</span><span class="p">(</span><span class="s">"Received a metadata sourceNodeID[</span><span class="se">\(</span><span class="n">message</span><span class="o">.</span><span class="n">sourceNodeID</span><span class="se">)</span><span class="s">], metadataType:</span><span class="se">\(</span><span class="kt">String</span><span class="p">(</span><span class="nv">describing</span><span class="p">:</span> <span class="n">message</span><span class="o">.</span><span class="n">metadata</span><span class="p">)</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
         <span class="k">switch</span> <span class="n">message</span><span class="o">.</span><span class="n">metadata</span> <span class="p">{</span>
         <span class="k">case</span> <span class="o">.</span><span class="nf">baseTime</span><span class="p">(</span><span class="k">let</span> <span class="nv">baseTime</span><span class="p">):</span>
-            <span class="nf">print</span><span class="p">(</span><span class="s">"Received baseTime[</span><span class="se">\(</span><span class="kt">Date</span><span class="p">(</span><span class="nv">timeIntervalSince1970</span><span class="p">:</span> <span class="n">baseTime</span><span class="o">.</span><span class="n">baseTime</span><span class="p">)</span><span class="se">)</span><span class="s">], priority[</span><span class="se">\(</span><span class="n">baseTime</span><span class="o">.</span><span class="n">priority</span><span class="se">)</span><span class="s">], name[</span><span class="se">\(</span><span class="n">baseTime</span><span class="o">.</span><span class="n">priority</span><span class="se">)</span><span class="s">]"</span><span class="p">)</span>
+            <span class="nf">print</span><span class="p">(</span><span class="s">"Received baseTime[</span><span class="se">\(</span><span class="kt">Date</span><span class="p">(</span><span class="nv">timeIntervalSince1970</span><span class="p">:</span> <span class="n">baseTime</span><span class="o">.</span><span class="n">baseTime</span><span class="p">)</span><span class="se">)</span><span class="s">], priority[</span><span class="se">\(</span><span class="n">baseTime</span><span class="o">.</span><span class="n">priority</span><span class="se">)</span><span class="s">], name[</span><span class="se">\(</span><span class="n">baseTime</span><span class="o">.</span><span class="n">name</span><span class="se">)</span><span class="s">]"</span><span class="p">)</span>
         <span class="k">default</span><span class="p">:</span> <span class="k">break</span>
         <span class="p">}</span>
     <span class="p">}</span>
@@ -685,8 +687,8 @@ end
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2023 <a class="link" href="https://www.aptpod.co.jp" target="_blank" rel="external noopener">aptpod Inc</a>. All rights reserved. (Last updated: 2023-04-25)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+          <p>&copy; 2024 <a class="link" href="https://www.aptpod.co.jp" target="_blank" rel="external noopener">aptpod Inc</a>. All rights reserved. (Last updated: 2024-04-19)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>
     </div>
