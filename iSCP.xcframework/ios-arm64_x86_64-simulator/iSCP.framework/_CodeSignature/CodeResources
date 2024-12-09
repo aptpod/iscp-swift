@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/iSCP-Swift.h</key>
 		<data>
-		rsNf2WSodfc7KFFme1k05v0vzK0=
+		rklbZTUEgYTknTE1aoOCzeHQzOw=
 		</data>
 		<key>Headers/iSCP.h</key>
 		<data>
@@ -14,51 +14,51 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		TuUi4f9A4N2NWBTK5cGCuYx59Ys=
+		TWRTxPicUaWrrD0GRRfQcXzbmBY=
 		</data>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		08W5xZOkfpwaJpFFe5dyMME33ms=
+		HNOGAGMVUW7b1MxQnVeb+3iQQgM=
 		</data>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		M9uX6Dmx+iEfRz81HepWMgY5zsU=
+		V7gFRH4RmF+aq3S7JlxpONN9Vwc=
 		</data>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		Xb2wbfsFyCuIMp5F6JnOhEspM1M=
+		9ro8KM+qTsX0dthIJL1vPAD5QLw=
 		</data>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		M9uX6Dmx+iEfRz81HepWMgY5zsU=
+		V7gFRH4RmF+aq3S7JlxpONN9Vwc=
 		</data>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		foCEqL/H9YCIukibzi+Psfx2zlQ=
+		2PAdfrN4j+/ORjnzNL6aTvXi1cM=
 		</data>
 		<key>Modules/iSCP.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		08W5xZOkfpwaJpFFe5dyMME33ms=
+		HNOGAGMVUW7b1MxQnVeb+3iQQgM=
 		</data>
 		<key>Modules/iSCP.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		5N3ly2DoJIszZfOoisK7b7dTGpk=
+		h4ZlxueXKOp/XsZtF7E0sj1acow=
 		</data>
 		<key>Modules/iSCP.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		ff8YaD4klivbaHp3E89134NOfQ0=
+		PbJkzJBdivYqDwvvrTN4LhSz0G4=
 		</data>
 		<key>Modules/iSCP.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		5N3ly2DoJIszZfOoisK7b7dTGpk=
+		h4ZlxueXKOp/XsZtF7E0sj1acow=
 		</data>
 		<key>Modules/iSCP.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		y+9O7B9d05SpTpVJqyaRMl2ZiG0=
+		URn1vWGORq+PbBFxwGhXHyh6MMM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		/7YKF+WDwWkAUZJHkKtPiNCLwzs=
+		v2f9fozffS9J/fqakLF4lzP1AxQ=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -67,7 +67,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Kxwr2KzbvS2t70OX538I3EBzhpPMH9V91qPFG/3ezqM=
+			0BsJxvskh1QBSRZ7cmyMSRteBcS0R7L2cophzxdmv0Q=
 			</data>
 		</dict>
 		<key>Headers/iSCP.h</key>
@@ -81,77 +81,77 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tPCmJMvfJkAKUROpbV45p/MLl1F+iqjaKObXTloj8yM=
+			+HBadLeVAcULfM9gwn2n8np4gfiHTV5u7rUxitI8nUo=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6BT/Pv2wHcOfAS1AzTn5OMYgyW6X7w/MrcnuYjOOxKc=
+			fgeUtzdGIA9R0NqR0Jd5l1C6A1zB3Rs1cKGRPJ6Sp40=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YNx6Lfmfn6gYHTN7adN3FlWPmiA7TKfR53IsZhZvAnk=
+			8Oz8KQsk837fHl2NTYIbfzb6Du+xyBiqP9b/grSnFoc=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6BT/Pv2wHcOfAS1AzTn5OMYgyW6X7w/MrcnuYjOOxKc=
+			fgeUtzdGIA9R0NqR0Jd5l1C6A1zB3Rs1cKGRPJ6Sp40=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JTm8CfKYd2pCh9z33KyLVuHbPKhVOtfPydmjZ1N06R8=
+			a8XTstesa4jdRonGnGMq6MzwFDqQq8Y/8xL7cVqKe6M=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tPCmJMvfJkAKUROpbV45p/MLl1F+iqjaKObXTloj8yM=
+			+HBadLeVAcULfM9gwn2n8np4gfiHTV5u7rUxitI8nUo=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hLY/XIuVldaOLTW6B4SkuPCq7WWe+PSof0yWGnQ4AWc=
+			wsmdd7h9Wc/RYyQPm1dX/5uvsQr1UDh3o9DNw7CxCOA=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Lb7Zm7HHzJAyUM8APUsAZsEKQFPJ65RYf4qSP7iudKU=
+			neGvUgS2Qh7fhZEkT/zw1Cl63iypx70rbvnh14rNY78=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hLY/XIuVldaOLTW6B4SkuPCq7WWe+PSof0yWGnQ4AWc=
+			wsmdd7h9Wc/RYyQPm1dX/5uvsQr1UDh3o9DNw7CxCOA=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TmFuVbgStUeoPfD7+UhM8d90JppTGqhwlcAFFJgt3rk=
+			lS+gxh6WJl3oTFmRcBI2SGSpnUbr5GRiu0ZPw6UmQ1g=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gje8mCF0lYWomaLIHFhHbUrhTNxBC6kQI1gwl71nlFY=
+			/XZyKQageW/rSCMKWscdNuerRT98T2AU9puJDhuhCAU=
 			</data>
 		</dict>
 	</dict>

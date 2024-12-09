@@ -1,7 +1,7 @@
 framework module iSCP {
   umbrella header "iSCP.h"
-
   export *
+
   module * { export * }
 }
 

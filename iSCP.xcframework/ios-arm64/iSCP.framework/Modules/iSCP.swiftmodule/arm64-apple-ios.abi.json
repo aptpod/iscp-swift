@@ -1,8 +1,8 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "TopLevel",
-    "printedName": "TopLevel",
+    "name": "iSCP",
+    "printedName": "iSCP",
     "children": [
       {
         "kind": "Import",
@@ -316,6 +316,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -756,6 +772,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Error",
             "printedName": "Error",
             "usr": "s:s5ErrorP",
@@ -964,7 +994,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "Error",
-                "printedName": "Swift.Error",
+                "printedName": "any Swift.Error",
                 "usr": "s:s5ErrorP"
               }
             ],
@@ -1000,7 +1030,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "Error",
-                "printedName": "Swift.Error",
+                "printedName": "any Swift.Error",
                 "usr": "s:s5ErrorP"
               }
             ],
@@ -1057,6 +1087,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -1384,7 +1430,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "WeakStorage",
-                "printedName": "iSCP.UpstreamDelegate?"
+                "printedName": "(any iSCP.UpstreamDelegate)?"
               }
             ],
             "declKind": "Var",
@@ -1409,12 +1455,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "iSCP.UpstreamDelegate?",
+                    "printedName": "(any iSCP.UpstreamDelegate)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "UpstreamDelegate",
-                        "printedName": "iSCP.UpstreamDelegate",
+                        "printedName": "any iSCP.UpstreamDelegate",
                         "usr": "s:4iSCP16UpstreamDelegateP"
                       }
                     ],
@@ -1441,12 +1487,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "iSCP.UpstreamDelegate?",
+                    "printedName": "(any iSCP.UpstreamDelegate)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "UpstreamDelegate",
-                        "printedName": "iSCP.UpstreamDelegate",
+                        "printedName": "any iSCP.UpstreamDelegate",
                         "usr": "s:4iSCP16UpstreamDelegateP"
                       }
                     ],
@@ -2081,12 +2127,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "((Swift.Error?) -> ())?",
+                "printedName": "(((any Swift.Error)?) -> ())?",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Error?) -> ()",
+                    "printedName": "((any Swift.Error)?) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -2096,12 +2142,12 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Optional",
-                        "printedName": "Swift.Error?",
+                        "printedName": "(any Swift.Error)?",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "Error",
-                            "printedName": "Swift.Error",
+                            "printedName": "any Swift.Error",
                             "usr": "s:s5ErrorP"
                           }
                         ],
@@ -2154,12 +2200,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "Swift.Error?",
+                "printedName": "(any Swift.Error)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Error",
-                    "printedName": "Swift.Error",
+                    "printedName": "any Swift.Error",
                     "usr": "s:s5ErrorP"
                   }
                 ],
@@ -2197,12 +2243,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "Swift.Error?",
+                "printedName": "(any Swift.Error)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Error",
-                    "printedName": "Swift.Error",
+                    "printedName": "any Swift.Error",
                     "usr": "s:s5ErrorP"
                   }
                 ],
@@ -2248,12 +2294,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "Swift.Error?",
+                "printedName": "(any Swift.Error)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Error",
-                    "printedName": "Swift.Error",
+                    "printedName": "any Swift.Error",
                     "usr": "s:s5ErrorP"
                   }
                 ],
@@ -2285,12 +2331,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "Swift.Error?",
+                "printedName": "(any Swift.Error)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Error",
-                    "printedName": "Swift.Error",
+                    "printedName": "any Swift.Error",
                     "usr": "s:s5ErrorP"
                   }
                 ],
@@ -2330,12 +2376,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "Swift.Error?",
+                "printedName": "(any Swift.Error)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Error",
-                    "printedName": "Swift.Error",
+                    "printedName": "any Swift.Error",
                     "usr": "s:s5ErrorP"
                   }
                 ],
@@ -2628,6 +2674,20 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
@@ -2677,6 +2737,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -2916,6 +2990,20 @@
         ],
         "enumRawTypeName": "String",
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -3252,6 +3340,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -3357,6 +3459,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -3597,7 +3715,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "WeakStorage",
-                "printedName": "iSCP.ISCPLogDelegate?"
+                "printedName": "(any iSCP.ISCPLogDelegate)?"
               }
             ],
             "declKind": "Var",
@@ -3622,12 +3740,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "iSCP.ISCPLogDelegate?",
+                    "printedName": "(any iSCP.ISCPLogDelegate)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "ISCPLogDelegate",
-                        "printedName": "iSCP.ISCPLogDelegate",
+                        "printedName": "any iSCP.ISCPLogDelegate",
                         "usr": "s:4iSCP15ISCPLogDelegateP"
                       }
                     ],
@@ -3654,12 +3772,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "iSCP.ISCPLogDelegate?",
+                    "printedName": "(any iSCP.ISCPLogDelegate)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "ISCPLogDelegate",
-                        "printedName": "iSCP.ISCPLogDelegate",
+                        "printedName": "any iSCP.ISCPLogDelegate",
                         "usr": "s:4iSCP15ISCPLogDelegateP"
                       }
                     ],
@@ -3702,7 +3820,23 @@
           "AccessControl",
           "RawDocComment"
         ],
-        "hasMissingDesignatedInitializers": true
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       },
       {
         "kind": "Import",
@@ -3874,7 +4008,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "Error",
-                "printedName": "Swift.Error",
+                "printedName": "any Swift.Error",
                 "usr": "s:s5ErrorP"
               }
             ],
@@ -3910,7 +4044,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "Error",
-                "printedName": "Swift.Error",
+                "printedName": "any Swift.Error",
                 "usr": "s:s5ErrorP"
               }
             ],
@@ -3967,6 +4101,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -4190,7 +4340,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "WeakStorage",
-                "printedName": "iSCP.DownstreamDelegate?"
+                "printedName": "(any iSCP.DownstreamDelegate)?"
               }
             ],
             "declKind": "Var",
@@ -4215,12 +4365,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "iSCP.DownstreamDelegate?",
+                    "printedName": "(any iSCP.DownstreamDelegate)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "DownstreamDelegate",
-                        "printedName": "iSCP.DownstreamDelegate",
+                        "printedName": "any iSCP.DownstreamDelegate",
                         "usr": "s:4iSCP18DownstreamDelegateP"
                       }
                     ],
@@ -4247,12 +4397,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "iSCP.DownstreamDelegate?",
+                    "printedName": "(any iSCP.DownstreamDelegate)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "DownstreamDelegate",
-                        "printedName": "iSCP.DownstreamDelegate",
+                        "printedName": "any iSCP.DownstreamDelegate",
                         "usr": "s:4iSCP18DownstreamDelegateP"
                       }
                     ],
@@ -4798,12 +4948,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "((Swift.Error?) -> ())?",
+                "printedName": "(((any Swift.Error)?) -> ())?",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Error?) -> ()",
+                    "printedName": "((any Swift.Error)?) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -4813,12 +4963,12 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Optional",
-                        "printedName": "Swift.Error?",
+                        "printedName": "(any Swift.Error)?",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "Error",
-                            "printedName": "Swift.Error",
+                            "printedName": "any Swift.Error",
                             "usr": "s:s5ErrorP"
                           }
                         ],
@@ -5196,6 +5346,20 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
@@ -5245,6 +5409,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -5390,7 +5568,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "Error",
-                "printedName": "Swift.Error",
+                "printedName": "any Swift.Error",
                 "usr": "s:s5ErrorP"
               }
             ],
@@ -5417,6 +5595,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -5506,6 +5700,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -5844,7 +6054,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "ITransportConfig",
-                "printedName": "iSCP.ITransportConfig",
+                "printedName": "any iSCP.ITransportConfig",
                 "usr": "s:4iSCP16ITransportConfigP"
               },
               {
@@ -5944,12 +6154,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "iSCP.ConnectionDelegate?",
+                "printedName": "(any iSCP.ConnectionDelegate)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "ConnectionDelegate",
-                    "printedName": "iSCP.ConnectionDelegate",
+                    "printedName": "any iSCP.ConnectionDelegate",
                     "usr": "s:4iSCP18ConnectionDelegateP"
                   }
                 ],
@@ -5959,12 +6169,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "iSCP.ConnectionE2ECallDelegate?",
+                "printedName": "(any iSCP.ConnectionE2ECallDelegate)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "ConnectionE2ECallDelegate",
-                    "printedName": "iSCP.ConnectionE2ECallDelegate",
+                    "printedName": "any iSCP.ConnectionE2ECallDelegate",
                     "usr": "s:4iSCP25ConnectionE2ECallDelegateP"
                   }
                 ],
@@ -5974,7 +6184,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(iSCP.Connection?, Swift.Error?) -> ()",
+                "printedName": "(iSCP.Connection?, (any Swift.Error)?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -5984,7 +6194,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Tuple",
-                    "printedName": "(iSCP.Connection?, Swift.Error?)",
+                    "printedName": "(iSCP.Connection?, (any Swift.Error)?)",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -6003,12 +6213,12 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Optional",
-                        "printedName": "Swift.Error?",
+                        "printedName": "(any Swift.Error)?",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "Error",
-                            "printedName": "Swift.Error",
+                            "printedName": "any Swift.Error",
                             "usr": "s:s5ErrorP"
                           }
                         ],
@@ -6126,7 +6336,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "WeakStorage",
-                "printedName": "iSCP.ConnectionDelegate?"
+                "printedName": "(any iSCP.ConnectionDelegate)?"
               }
             ],
             "declKind": "Var",
@@ -6151,12 +6361,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "iSCP.ConnectionDelegate?",
+                    "printedName": "(any iSCP.ConnectionDelegate)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "ConnectionDelegate",
-                        "printedName": "iSCP.ConnectionDelegate",
+                        "printedName": "any iSCP.ConnectionDelegate",
                         "usr": "s:4iSCP18ConnectionDelegateP"
                       }
                     ],
@@ -6183,12 +6393,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "iSCP.ConnectionDelegate?",
+                    "printedName": "(any iSCP.ConnectionDelegate)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "ConnectionDelegate",
-                        "printedName": "iSCP.ConnectionDelegate",
+                        "printedName": "any iSCP.ConnectionDelegate",
                         "usr": "s:4iSCP18ConnectionDelegateP"
                       }
                     ],
@@ -6230,7 +6440,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "WeakStorage",
-                "printedName": "iSCP.ConnectionE2ECallDelegate?"
+                "printedName": "(any iSCP.ConnectionE2ECallDelegate)?"
               }
             ],
             "declKind": "Var",
@@ -6255,12 +6465,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "iSCP.ConnectionE2ECallDelegate?",
+                    "printedName": "(any iSCP.ConnectionE2ECallDelegate)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "ConnectionE2ECallDelegate",
-                        "printedName": "iSCP.ConnectionE2ECallDelegate",
+                        "printedName": "any iSCP.ConnectionE2ECallDelegate",
                         "usr": "s:4iSCP25ConnectionE2ECallDelegateP"
                       }
                     ],
@@ -6287,12 +6497,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "iSCP.ConnectionE2ECallDelegate?",
+                    "printedName": "(any iSCP.ConnectionE2ECallDelegate)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "ConnectionE2ECallDelegate",
-                        "printedName": "iSCP.ConnectionE2ECallDelegate",
+                        "printedName": "any iSCP.ConnectionE2ECallDelegate",
                         "usr": "s:4iSCP25ConnectionE2ECallDelegateP"
                       }
                     ],
@@ -6383,7 +6593,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "ITransportConfig",
-                "printedName": "iSCP.ITransportConfig",
+                "printedName": "any iSCP.ITransportConfig",
                 "usr": "s:4iSCP16ITransportConfigP"
               }
             ],
@@ -6408,7 +6618,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "ITransportConfig",
-                    "printedName": "iSCP.ITransportConfig",
+                    "printedName": "any iSCP.ITransportConfig",
                     "usr": "s:4iSCP16ITransportConfigP"
                   }
                 ],
@@ -7077,7 +7287,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "ITransportConfig",
-                "printedName": "iSCP.ITransportConfig",
+                "printedName": "any iSCP.ITransportConfig",
                 "usr": "s:4iSCP16ITransportConfigP"
               },
               {
@@ -7198,7 +7408,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(Swift.Error?) -> ()",
+                "printedName": "((any Swift.Error)?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -7208,12 +7418,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "Swift.Error?",
+                    "printedName": "(any Swift.Error)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "Error",
-                        "printedName": "Swift.Error",
+                        "printedName": "any Swift.Error",
                         "usr": "s:s5ErrorP"
                       }
                     ],
@@ -7245,12 +7455,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "((Swift.Error?) -> ())?",
+                "printedName": "(((any Swift.Error)?) -> ())?",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Error?) -> ()",
+                    "printedName": "((any Swift.Error)?) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -7260,12 +7470,12 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Optional",
-                        "printedName": "Swift.Error?",
+                        "printedName": "(any Swift.Error)?",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "Error",
-                            "printedName": "Swift.Error",
+                            "printedName": "any Swift.Error",
                             "usr": "s:s5ErrorP"
                           }
                         ],
@@ -7340,12 +7550,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "((Swift.Error?) -> ())?",
+                "printedName": "(((any Swift.Error)?) -> ())?",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Error?) -> ()",
+                    "printedName": "((any Swift.Error)?) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -7355,12 +7565,12 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Optional",
-                        "printedName": "Swift.Error?",
+                        "printedName": "(any Swift.Error)?",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "Error",
-                            "printedName": "Swift.Error",
+                            "printedName": "any Swift.Error",
                             "usr": "s:s5ErrorP"
                           }
                         ],
@@ -7460,7 +7670,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(iSCP.Upstream?, Swift.Error?) -> ()",
+                "printedName": "(iSCP.Upstream?, (any Swift.Error)?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -7470,7 +7680,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Tuple",
-                    "printedName": "(iSCP.Upstream?, Swift.Error?)",
+                    "printedName": "(iSCP.Upstream?, (any Swift.Error)?)",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -7489,12 +7699,12 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Optional",
-                        "printedName": "Swift.Error?",
+                        "printedName": "(any Swift.Error)?",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "Error",
-                            "printedName": "Swift.Error",
+                            "printedName": "any Swift.Error",
                             "usr": "s:s5ErrorP"
                           }
                         ],
@@ -7542,7 +7752,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(iSCP.Upstream?, Swift.Error?) -> ()",
+                "printedName": "(iSCP.Upstream?, (any Swift.Error)?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -7552,7 +7762,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Tuple",
-                    "printedName": "(iSCP.Upstream?, Swift.Error?)",
+                    "printedName": "(iSCP.Upstream?, (any Swift.Error)?)",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -7571,12 +7781,12 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Optional",
-                        "printedName": "Swift.Error?",
+                        "printedName": "(any Swift.Error)?",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "Error",
-                            "printedName": "Swift.Error",
+                            "printedName": "any Swift.Error",
                             "usr": "s:s5ErrorP"
                           }
                         ],
@@ -7626,12 +7836,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "((Swift.Error?) -> ())?",
+                "printedName": "(((any Swift.Error)?) -> ())?",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Error?) -> ()",
+                    "printedName": "((any Swift.Error)?) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -7641,12 +7851,12 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Optional",
-                        "printedName": "Swift.Error?",
+                        "printedName": "(any Swift.Error)?",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "Error",
-                            "printedName": "Swift.Error",
+                            "printedName": "any Swift.Error",
                             "usr": "s:s5ErrorP"
                           }
                         ],
@@ -7699,12 +7909,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "((Swift.Error?) -> ())?",
+                "printedName": "(((any Swift.Error)?) -> ())?",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Error?) -> ()",
+                    "printedName": "((any Swift.Error)?) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -7714,12 +7924,12 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Optional",
-                        "printedName": "Swift.Error?",
+                        "printedName": "(any Swift.Error)?",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "Error",
-                            "printedName": "Swift.Error",
+                            "printedName": "any Swift.Error",
                             "usr": "s:s5ErrorP"
                           }
                         ],
@@ -7772,7 +7982,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(iSCP.DownstreamReplyCall?, Swift.Error?) -> ()",
+                "printedName": "(iSCP.DownstreamReplyCall?, (any Swift.Error)?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -7782,7 +7992,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Tuple",
-                    "printedName": "(iSCP.DownstreamReplyCall?, Swift.Error?)",
+                    "printedName": "(iSCP.DownstreamReplyCall?, (any Swift.Error)?)",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -7801,12 +8011,12 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Optional",
-                        "printedName": "Swift.Error?",
+                        "printedName": "(any Swift.Error)?",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "Error",
-                            "printedName": "Swift.Error",
+                            "printedName": "any Swift.Error",
                             "usr": "s:s5ErrorP"
                           }
                         ],
@@ -7900,7 +8110,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(iSCP.Downstream?, Swift.Error?) -> ()",
+                "printedName": "(iSCP.Downstream?, (any Swift.Error)?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -7910,7 +8120,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Tuple",
-                    "printedName": "(iSCP.Downstream?, Swift.Error?)",
+                    "printedName": "(iSCP.Downstream?, (any Swift.Error)?)",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -7929,12 +8139,12 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Optional",
-                        "printedName": "Swift.Error?",
+                        "printedName": "(any Swift.Error)?",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "Error",
-                            "printedName": "Swift.Error",
+                            "printedName": "any Swift.Error",
                             "usr": "s:s5ErrorP"
                           }
                         ],
@@ -7975,7 +8185,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(iSCP.Downstream?, Swift.Error?) -> ()",
+                "printedName": "(iSCP.Downstream?, (any Swift.Error)?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -7985,7 +8195,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Tuple",
-                    "printedName": "(iSCP.Downstream?, Swift.Error?)",
+                    "printedName": "(iSCP.Downstream?, (any Swift.Error)?)",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -8004,12 +8214,12 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Optional",
-                        "printedName": "Swift.Error?",
+                        "printedName": "(any Swift.Error)?",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "Error",
-                            "printedName": "Swift.Error",
+                            "printedName": "any Swift.Error",
                             "usr": "s:s5ErrorP"
                           }
                         ],
@@ -8046,6 +8256,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -8879,6 +9103,20 @@
                 "conformances": [
                   {
                     "kind": "Conformance",
+                    "name": "Copyable",
+                    "printedName": "Copyable",
+                    "usr": "s:s8CopyableP",
+                    "mangledName": "$ss8CopyableP"
+                  },
+                  {
+                    "kind": "Conformance",
+                    "name": "Escapable",
+                    "printedName": "Escapable",
+                    "usr": "s:s9EscapableP",
+                    "mangledName": "$ss9EscapableP"
+                  },
+                  {
+                    "kind": "Conformance",
                     "name": "ITransportConfig",
                     "printedName": "ITransportConfig",
                     "usr": "s:4iSCP16ITransportConfigP",
@@ -8929,6 +9167,20 @@
               "ObjectiveC.NSObject"
             ],
             "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
               {
                 "kind": "Conformance",
                 "name": "Equatable",
@@ -8989,7 +9241,23 @@
           "AccessControl",
           "RawDocComment"
         ],
-        "hasMissingDesignatedInitializers": true
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       },
       {
         "kind": "TypeDecl",
@@ -9049,6 +9317,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -9179,6 +9463,20 @@
         ],
         "enumRawTypeName": "String",
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -10055,6 +10353,20 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
@@ -10077,6 +10389,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -10287,6 +10615,20 @@
         ],
         "enumRawTypeName": "UInt8",
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -10648,6 +10990,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -10711,7 +11067,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "Tuple",
-                "printedName": "(iSCP.DataFilter?, Swift.Error?)",
+                "printedName": "(iSCP.DataFilter?, (any Swift.Error)?)",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -10730,12 +11086,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "Swift.Error?",
+                    "printedName": "(any Swift.Error)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "Error",
-                        "printedName": "Swift.Error",
+                        "printedName": "any Swift.Error",
                         "usr": "s:s5ErrorP"
                       }
                     ],
@@ -11059,6 +11415,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -11079,7 +11449,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "Tuple",
-                "printedName": "(iSCP.DataID?, Swift.Error?)",
+                "printedName": "(iSCP.DataID?, (any Swift.Error)?)",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -11098,12 +11468,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "Swift.Error?",
+                    "printedName": "(any Swift.Error)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "Error",
-                        "printedName": "Swift.Error",
+                        "printedName": "any Swift.Error",
                         "usr": "s:s5ErrorP"
                       }
                     ],
@@ -11605,6 +11975,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Hashable",
             "printedName": "Hashable",
             "usr": "s:SH",
@@ -12040,6 +12424,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -12355,6 +12753,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -12701,6 +13113,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -13019,6 +13445,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -13389,6 +13829,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Hashable",
             "printedName": "Hashable",
             "usr": "s:SH",
@@ -13730,6 +14184,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Hashable",
@@ -14290,6 +14758,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -14436,6 +14918,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -14580,6 +15076,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -14926,6 +15436,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -15270,6 +15794,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -15501,6 +16039,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -15910,6 +16462,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -16230,6 +16796,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -16461,6 +17041,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -17237,6 +17831,20 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
@@ -17254,6 +17862,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -17710,6 +18332,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -18261,6 +18897,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -18753,6 +19403,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -19249,6 +19913,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -19593,33 +20271,19 @@
         "usr": "s:10Foundation4DataV",
         "mangledName": "$s10Foundation4DataV",
         "moduleName": "Foundation",
+        "intro_Macosx": "10.10",
+        "intro_iOS": "8.0",
+        "intro_tvOS": "9.0",
+        "intro_watchOS": "2.0",
         "declAttributes": [
-          "Frozen"
+          "Frozen",
+          "Available",
+          "Available",
+          "Available",
+          "Available"
         ],
         "isExternal": true,
         "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "ReferenceConvertible",
-            "printedName": "ReferenceConvertible",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "ReferenceType",
-                "printedName": "ReferenceType",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NSData",
-                    "printedName": "Foundation.NSData",
-                    "usr": "c:objc(cs)NSData"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:10Foundation20ReferenceConvertibleP",
-            "mangledName": "$s10Foundation20ReferenceConvertibleP"
-          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -20012,24 +20676,39 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
           },
           {
             "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
-            "name": "CustomReflectable",
-            "printedName": "CustomReflectable",
-            "usr": "s:s17CustomReflectableP",
-            "mangledName": "$ss17CustomReflectableP"
+            "name": "ReferenceConvertible",
+            "printedName": "ReferenceConvertible",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ReferenceType",
+                "printedName": "ReferenceType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSData",
+                    "printedName": "Foundation.NSData",
+                    "usr": "c:objc(cs)NSData"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:10Foundation20ReferenceConvertibleP",
+            "mangledName": "$s10Foundation20ReferenceConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -20055,6 +20734,27 @@
           },
           {
             "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomReflectable",
+            "printedName": "CustomReflectable",
+            "usr": "s:s17CustomReflectableP",
+            "mangledName": "$ss17CustomReflectableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -20066,6 +20766,13 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SwiftProtobufContiguousBytes",
+            "printedName": "SwiftProtobufContiguousBytes",
+            "usr": "s:13SwiftProtobuf0aB15ContiguousBytesP",
+            "mangledName": "$s13SwiftProtobuf0aB15ContiguousBytesP"
           }
         ]
       },
@@ -20253,6 +20960,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -20420,6 +21141,13 @@
             ],
             "usr": "s:s10SIMDScalarP",
             "mangledName": "$ss10SIMDScalarP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
           },
           {
             "kind": "Conformance",
@@ -20658,6 +21386,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -20818,6 +21560,13 @@
             ],
             "usr": "s:s10SIMDScalarP",
             "mangledName": "$ss10SIMDScalarP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
           },
           {
             "kind": "Conformance",
@@ -21049,6 +21798,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -21216,6 +21979,13 @@
             ],
             "usr": "s:s10SIMDScalarP",
             "mangledName": "$ss10SIMDScalarP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
           },
           {
             "kind": "Conformance",
@@ -21454,6 +22224,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -21614,6 +22398,13 @@
             ],
             "usr": "s:s10SIMDScalarP",
             "mangledName": "$ss10SIMDScalarP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
           },
           {
             "kind": "Conformance",
@@ -21845,6 +22636,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -22005,6 +22810,13 @@
             ],
             "usr": "s:s10SIMDScalarP",
             "mangledName": "$ss10SIMDScalarP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
           },
           {
             "kind": "Conformance",
@@ -22243,6 +23055,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -22417,6 +23243,13 @@
             ],
             "usr": "s:s10SIMDScalarP",
             "mangledName": "$ss10SIMDScalarP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
           },
           {
             "kind": "Conformance",
@@ -22655,6 +23488,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -22815,6 +23662,13 @@
             ],
             "usr": "s:s10SIMDScalarP",
             "mangledName": "$ss10SIMDScalarP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
           },
           {
             "kind": "Conformance",
@@ -23046,6 +23900,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -23213,6 +24081,13 @@
             ],
             "usr": "s:s10SIMDScalarP",
             "mangledName": "$ss10SIMDScalarP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
           },
           {
             "kind": "Conformance",
@@ -23451,6 +24326,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -23621,6 +24510,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "_FormatSpecifiable",
             "printedName": "_FormatSpecifiable",
             "children": [
@@ -23703,6 +24599,20 @@
         ],
         "isExternal": true,
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Decodable",
@@ -24090,6 +25000,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "_FormatSpecifiable",
             "printedName": "_FormatSpecifiable",
             "children": [
@@ -24172,6 +25089,20 @@
         ],
         "isExternal": true,
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Decodable",
@@ -24559,6 +25490,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "_FormatSpecifiable",
             "printedName": "_FormatSpecifiable",
             "children": [
@@ -24655,55 +25593,6 @@
       "offset": 1710,
       "length": 2,
       "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Transport\/Receivers.swift",
-      "kind": "StringLiteral",
-      "offset": 1524,
-      "length": 8,
-      "value": "\"iSCP.Receiver\""
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/QoSMessage.swift",
-      "kind": "IntegerLiteral",
-      "offset": 222,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/QoSMessage.swift",
-      "kind": "IntegerLiteral",
-      "offset": 251,
-      "length": 8,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/QoSMessage.swift",
-      "kind": "IntegerLiteral",
-      "offset": 293,
-      "length": 7,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/QoSMessage.swift",
-      "kind": "IntegerLiteral",
-      "offset": 222,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/QoSMessage.swift",
-      "kind": "IntegerLiteral",
-      "offset": 251,
-      "length": 8,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/QoSMessage.swift",
-      "kind": "IntegerLiteral",
-      "offset": 293,
-      "length": 7,
-      "value": "2"
     },
     {
       "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/QoSMessage.swift",
@@ -26050,13 +26939,6 @@
       "value": "false"
     },
     {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/iSCP\/Stream\/Upstream.swift",
-      "kind": "StringLiteral",
-      "offset": 1751,
-      "length": 8,
-      "value": "\"iSCP.Upstream\""
-    },
-    {
       "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Encoding\/Encoding.swift",
       "kind": "StringLiteral",
       "offset": 812,
@@ -26069,90 +26951,6 @@
       "offset": 865,
       "length": 7,
       "value": "\"proto\""
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Encoding\/Encoding.swift",
-      "kind": "StringLiteral",
-      "offset": 812,
-      "length": 6,
-      "value": "\"json\""
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Encoding\/Encoding.swift",
-      "kind": "StringLiteral",
-      "offset": 865,
-      "length": 7,
-      "value": "\"proto\""
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Logger\/Logger.swift",
-      "kind": "IntegerLiteral",
-      "offset": 291,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Logger\/Logger.swift",
-      "kind": "IntegerLiteral",
-      "offset": 315,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Logger\/Logger.swift",
-      "kind": "IntegerLiteral",
-      "offset": 339,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Logger\/Logger.swift",
-      "kind": "IntegerLiteral",
-      "offset": 363,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Logger\/Logger.swift",
-      "kind": "IntegerLiteral",
-      "offset": 387,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Logger\/Logger.swift",
-      "kind": "IntegerLiteral",
-      "offset": 291,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Logger\/Logger.swift",
-      "kind": "IntegerLiteral",
-      "offset": 315,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Logger\/Logger.swift",
-      "kind": "IntegerLiteral",
-      "offset": 339,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Logger\/Logger.swift",
-      "kind": "IntegerLiteral",
-      "offset": 363,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Logger\/Logger.swift",
-      "kind": "IntegerLiteral",
-      "offset": 387,
-      "length": 1,
-      "value": "4"
     },
     {
       "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Logger\/Logger.swift",
@@ -26911,496 +27709,6 @@
       "value": "35"
     },
     {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 440,
-      "length": 13,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 577,
-      "length": 19,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 777,
-      "length": 18,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1002,
-      "length": 20,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1157,
-      "length": 16,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1269,
-      "length": 8,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1365,
-      "length": 10,
-      "value": "7"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1505,
-      "length": 14,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1616,
-      "length": 16,
-      "value": "9"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1696,
-      "length": 13,
-      "value": "10"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1860,
-      "length": 10,
-      "value": "11"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1961,
-      "length": 14,
-      "value": "12"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2053,
-      "length": 13,
-      "value": "13"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2159,
-      "length": 18,
-      "value": "14"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2265,
-      "length": 17,
-      "value": "15"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2424,
-      "length": 14,
-      "value": "16"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2547,
-      "length": 21,
-      "value": "17"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2638,
-      "length": 13,
-      "value": "18"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2748,
-      "length": 22,
-      "value": "19"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2859,
-      "length": 11,
-      "value": "20"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2964,
-      "length": 19,
-      "value": "21"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3073,
-      "length": 20,
-      "value": "22"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3172,
-      "length": 14,
-      "value": "23"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3268,
-      "length": 18,
-      "value": "24"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3386,
-      "length": 24,
-      "value": "25"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3495,
-      "length": 18,
-      "value": "26"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3589,
-      "length": 21,
-      "value": "27"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3702,
-      "length": 18,
-      "value": "28"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3794,
-      "length": 20,
-      "value": "29"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3890,
-      "length": 19,
-      "value": "30"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3994,
-      "length": 16,
-      "value": "31"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4193,
-      "length": 14,
-      "value": "32"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4301,
-      "length": 15,
-      "value": "33"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4416,
-      "length": 20,
-      "value": "34"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4536,
-      "length": 19,
-      "value": "35"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 440,
-      "length": 13,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 577,
-      "length": 19,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 777,
-      "length": 18,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1002,
-      "length": 20,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1157,
-      "length": 16,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1269,
-      "length": 8,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1365,
-      "length": 10,
-      "value": "7"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1505,
-      "length": 14,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1616,
-      "length": 16,
-      "value": "9"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1696,
-      "length": 13,
-      "value": "10"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1860,
-      "length": 10,
-      "value": "11"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1961,
-      "length": 14,
-      "value": "12"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2053,
-      "length": 13,
-      "value": "13"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2159,
-      "length": 18,
-      "value": "14"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2265,
-      "length": 17,
-      "value": "15"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2424,
-      "length": 14,
-      "value": "16"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2547,
-      "length": 21,
-      "value": "17"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2638,
-      "length": 13,
-      "value": "18"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2748,
-      "length": 22,
-      "value": "19"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2859,
-      "length": 11,
-      "value": "20"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2964,
-      "length": 19,
-      "value": "21"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3073,
-      "length": 20,
-      "value": "22"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3172,
-      "length": 14,
-      "value": "23"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3268,
-      "length": 18,
-      "value": "24"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3386,
-      "length": 24,
-      "value": "25"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3495,
-      "length": 18,
-      "value": "26"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3589,
-      "length": 21,
-      "value": "27"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3702,
-      "length": 18,
-      "value": "28"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3794,
-      "length": 20,
-      "value": "29"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3890,
-      "length": 19,
-      "value": "30"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3994,
-      "length": 16,
-      "value": "31"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4193,
-      "length": 14,
-      "value": "32"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4301,
-      "length": 15,
-      "value": "33"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4416,
-      "length": 20,
-      "value": "34"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/ResultCode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4536,
-      "length": 19,
-      "value": "35"
-    },
-    {
       "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Message\/DownstreamFilterMessage.swift",
       "kind": "Array",
       "offset": 354,
@@ -27779,13 +28087,6 @@
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/iSCP\/Stream\/Downstream.swift",
-      "kind": "StringLiteral",
-      "offset": 1661,
-      "length": 10,
-      "value": "\"iSCP.Downstream\""
-    },
-    {
       "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/iSCP\/Connection\/Connection.swift",
       "kind": "IntegerLiteral",
       "offset": 208,
@@ -27889,13 +28190,6 @@
       "offset": 14051,
       "length": 2,
       "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/iSCP\/Connection\/Connection.swift",
-      "kind": "StringLiteral",
-      "offset": 1782,
-      "length": 10,
-      "value": "\"iSCP.Connection\""
     },
     {
       "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Encoding\/AutoGen\/upstream.pb.swift",
@@ -29039,18 +29333,11 @@
       "value": "false"
     },
     {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Transport\/WebSocket\/WebSocket.swift",
-      "kind": "StringLiteral",
-      "offset": 315,
-      "length": 9,
-      "value": "\"iSCP.WebSocket\""
-    },
-    {
       "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/iSCP\/Consts.swift",
       "kind": "StringLiteral",
       "offset": 256,
       "length": 7,
-      "value": "\"1.0.0\""
+      "value": "\"1.1.0\""
     },
     {
       "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/iSCP\/Consts.swift",
@@ -29352,13 +29639,6 @@
       "offset": 7383,
       "length": 28,
       "value": "\".DisconnectExtensionFields\""
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Transport\/Transport.swift",
-      "kind": "StringLiteral",
-      "offset": 696,
-      "length": 11,
-      "value": "\"WebSocket\""
     },
     {
       "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Transport\/Transport.swift",
@@ -30318,48 +30598,6 @@
       "offset": 701,
       "length": 6,
       "value": "10000"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/iSCP\/Stream\/StreamModels.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4003,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/iSCP\/Stream\/StreamModels.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4035,
-      "length": 8,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/iSCP\/Stream\/StreamModels.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4128,
-      "length": 7,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/iSCP\/Stream\/StreamModels.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4003,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/iSCP\/Stream\/StreamModels.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4035,
-      "length": 8,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/iSCP\/Stream\/StreamModels.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4128,
-      "length": 7,
-      "value": "2"
     },
     {
       "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/iSCP\/Stream\/StreamModels.swift",
