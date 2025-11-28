@@ -6,34 +6,25 @@ iSCP Client for Swift は、iSCP version 2 を用いたリアルタイムAPIに�
 
 - iOS 13 or later
 - macOS 10.15 (Catalina) or later
-- Xcode 14.1 (14B47b) or later
+- Xcode 16 (16A242d) or later
 
 ## Installation
 
+### Cocoapods
+
 iscp-swiftは [CocoaPods](https://cocoapods.org/) から入手可能です。
-`Podfile` に、iscp-swiftと依存ライブラリ [SwiftProtobuf](https://github.com/apple/swift-protobuf) を追加してください。
 
 ```
 target '{YOUR_APP_SCHEME}' do
   ...
   pod 'iSCP'
-  pod 'SwiftProtobuf', '~> 1.0'
   ...
 end
-
-# Please add at the end
-post_install do |installer|
-  installer.pods_project.targets.each do |target|
-    target.build_configurations.each do |config|
-      config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
-      # for iOS
-      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
-      # for Mac
-      config.build_settings['MACOSX_DEPLOYMENT_TARGET'] = '10.14.6'
-    end
-  end
-end
 ```
+
+### Swift Package Manager
+
+iscp-swiftは [Swift Package Manager](https://swift.org/package-manager/) からも利用できます。
 
 ## Implementation
 
@@ -71,12 +62,12 @@ extension ExampleViewController {
             address = urls[1]
         }
         // WebSocketを使って接続するように指定します。
-        let transportConfig: ITransportConfig = Transport.WebSocket.Config(
+        let connector: IConnector = Transport.WebSocketConnector(
             enableTLS: enableTLS
         )
         Connection.connect(
             address: address,
-            transportConfig: transportConfig,
+            connector: connector,
             tokenSource: { token in
                 // アクセス用のトークンを指定します。接続時に発生するイベントにより使用されます。
                 // ここでは固定のトークンを返していますが随時トークンの更新を行う実装にするとトークンの期限切れを考える必要がなくなります。
@@ -330,12 +321,12 @@ extension E2ECallExampleViewController {
             address = urls[1]
         }
         // WebSocketを使って接続するように指定します。
-        let transportConfig: ITransportConfig = Transport.WebSocket.Config(
+        let connector: IConnector = Transport.WebSocketConnector(
             enableTLS: enableTLS
         )
         Connection.connect(
             address: address,
-            transportConfig: transportConfig,
+            connector: connector,
             tokenSource: { [weak self] token in
                 // アクセストークンを指定します。接続時に発生するイベントにより使用されます。
                 // ここでは固定のトークンを返していますが、随時トークンの更新を行う実装にするとトークンの期限切れを考える必要がなくなります。
@@ -385,12 +376,12 @@ extension E2ECallExampleViewController {
             address = urls[1]
         }
         // WebSocketを使って接続するように指定します。
-        let transportConfig: ITransportConfig = Transport.WebSocket.Config(
+        let connector: IConnector = Transport.WebSocketConnector(
             enableTLS: enableTLS
         )
         Connection.connect(
             address: address,
-            transportConfig: transportConfig,
+            connector: connector,
             tokenSource: { [weak self] token in
                 // アクセストークンを指定します。接続時に発生するイベントにより使用されます。
                 // ここでは固定のトークンを返していますが、随時トークンの更新を行う実装にするとトークンの期限切れを考える必要がなくなります。
@@ -438,6 +429,15 @@ extension E2ECallExampleViewController : ConnectionE2ECallDelegate {
     
 }
 ```
+
+## Third-Party License Notices
+iscp-swiftはサードパーティ製オープンソースソフトウェアを同梱・利用しています。
+
+これらコンポーネントのライセンス条文およびクレジットの詳細は [THIRD-PARTY-LICENSES.txt](https://github.com/aptpod/iscp-swift/blob/main/THIRD-PARTY-LICENSES.txt) を参照してください。
+
+## Dependencies
+- [SwiftProtobuf](https://github.com/apple/swift-protobuf)  
+  - Licensed under the Apache License, Version 2.0.
 
 ## References
 - [APIリファレンス](https://docs.intdash.jp/api/intdash-sdk/swift/latest/)

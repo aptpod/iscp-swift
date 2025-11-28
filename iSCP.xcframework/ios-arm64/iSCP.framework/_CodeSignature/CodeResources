@@ -4,9 +4,29 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Frameworks/SwiftProtobuf_iSCP.framework/CMakeLists.txt</key>
+		<data>
+		37EMUuKKx8mSn9Q33KDiTp8paSY=
+		</data>
+		<key>Frameworks/SwiftProtobuf_iSCP.framework/Info.plist</key>
+		<data>
+		4lcTB8i8NV5txu4wrQ5o3FUCZog=
+		</data>
+		<key>Frameworks/SwiftProtobuf_iSCP.framework/PrivacyInfo.xcprivacy</key>
+		<data>
+		F6mYXr6EQZyLKcQNM0vmTGcGMns=
+		</data>
+		<key>Frameworks/SwiftProtobuf_iSCP.framework/SwiftProtobuf_iSCP</key>
+		<data>
+		VWnSPQc6EH3LKNP9hH1NecMHiTo=
+		</data>
+		<key>Frameworks/SwiftProtobuf_iSCP.framework/_CodeSignature/CodeResources</key>
+		<data>
+		Z285afBtc5QNb1AMMtUh3QcRUUk=
+		</data>
 		<key>Headers/iSCP-Swift.h</key>
 		<data>
-		ACjLm+76cRB8BAyHDKfMq3RPmkY=
+		dV8PMcsuRQbO6hPYlQo7cI/KZ4k=
 		</data>
 		<key>Headers/iSCP.h</key>
 		<data>
@@ -14,27 +34,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		hb5DC1GuhdDMiABNlNXeBcWyQwk=
+		I+jmPJlV7bpMzikrRbO5556ujGM=
 		</data>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		HNOGAGMVUW7b1MxQnVeb+3iQQgM=
+		/uGomgetxOvdORn7yM9n5F7b2vo=
 		</data>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		8iNyW82W41gIZTDzBLz4blBLCIg=
+		J3w3tfh3LVrFoUNx+3Cv7Fkb7RM=
 		</data>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		XXW8hl06QaYaNsMwk3td/huF3tU=
+		h9J+iYjJIK2aS/62qyTGL5cKo58=
 		</data>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		8iNyW82W41gIZTDzBLz4blBLCIg=
+		J3w3tfh3LVrFoUNx+3Cv7Fkb7RM=
 		</data>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		G/elDyYIp+MBBaVPHzLDZR9OJqM=
+		ZCm/YREYChMkCLQRDitiqKVjdnY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -43,11 +63,46 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Frameworks/SwiftProtobuf_iSCP.framework/CMakeLists.txt</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			pHkRtoORjmmSAeqAF/nBxTuOgBR9xowCRHrEzGBCHjU=
+			</data>
+		</dict>
+		<key>Frameworks/SwiftProtobuf_iSCP.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			UrHxDPsXuXZEYLPn5FOBCWWtlQtv3nWpp3Gad5iqqW0=
+			</data>
+		</dict>
+		<key>Frameworks/SwiftProtobuf_iSCP.framework/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			oHQY5f4SjiJM03lkvCHFA7eqL1dee0knRoR4rYcyFP4=
+			</data>
+		</dict>
+		<key>Frameworks/SwiftProtobuf_iSCP.framework/SwiftProtobuf_iSCP</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			n3QVELceg6SkSyxWJ/FnUWuZtukYJaq72NLc1/MHDAc=
+			</data>
+		</dict>
+		<key>Frameworks/SwiftProtobuf_iSCP.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			hwexy3Iz+sFO/gHLs26kH2q5o9P8Z+zUaQUmGOlqDpQ=
+			</data>
+		</dict>
 		<key>Headers/iSCP-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			x7ehuxFAUAc9cwMVHHRV1KF1SnsdZbZc3+7+5MqPqkk=
+			asgJy1ywBlfd5VIKLNqO9ObAuEtaqR+XGgmpGJaacxk=
 			</data>
 		</dict>
 		<key>Headers/iSCP.h</key>
@@ -61,35 +116,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+HBadLeVAcULfM9gwn2n8np4gfiHTV5u7rUxitI8nUo=
+			oIHKM6eJx81xqYSbGjpoL6e9mI6T/jVjIw45NAXEg/I=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RHoQ+Ewp6J5L5+krMchnkCjE3afyG5LVldiqsr7CAbQ=
+			5V5zw26KVoPQkwGaI6fLUKLow2VgkPOuWNAT83zZtfo=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7xPY/NZTAKTXkQKkK3TTLBZdC7BYA/fyPnjmbivSSrU=
+			7TgE4xP2ZRSG+HpiX6ECY7BIQt3Xmbnk2bO6/aNEaHg=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RHoQ+Ewp6J5L5+krMchnkCjE3afyG5LVldiqsr7CAbQ=
+			5V5zw26KVoPQkwGaI6fLUKLow2VgkPOuWNAT83zZtfo=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/I2U0DgEgxN0bWRnqnCs4e/mjXxA3kJ1WYfw6nWuc7o=
+			WOc4PaZ01cmfKp323hkfotSwj0JmbRFvQGWwJHaS2mo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

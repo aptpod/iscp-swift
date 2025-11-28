@@ -16,7 +16,7 @@
     <a title="iSCP  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">iSCP v1.1.0 Docs</a></p>
+        <p><a href="index.html">iSCP v1.2.0 Docs</a></p>
         <div class="header-right">
           <form role="search" action="search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -50,13 +50,19 @@
                 <a href="Classes/ISCPLog.html">ISCPLog</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/NegotiationParams.html">NegotiationParams</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/SequenceNumberGenerator.html">SequenceNumberGenerator</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/Transport.html">Transport</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/Transport/WebSocket.html">– WebSocket</a>
+                <a href="Classes/Transport/WebScoket.html">– WebScoket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Transport/WebSocketConnector.html">– WebSocketConnector</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/Upstream.html">Upstream</a>
@@ -93,7 +99,7 @@
                 <a href="Enums/QoS.html">QoS</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/TransportType.html">TransportType</a>
+                <a href="Enums/SwiftQUICState.html">SwiftQUICState</a>
               </li>
             </ul>
           </li>
@@ -151,10 +157,16 @@
                 <a href="Protocols/DownstreamDelegate.html">DownstreamDelegate</a>
               </li>
               <li class="nav-group-task">
+                <a href="Protocols/IConnector.html">IConnector</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Protocols/ISCPLogDelegate.html">ISCPLogDelegate</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/ITransportConfig.html">ITransportConfig</a>
+                <a href="Protocols/ITransport.html">ITransport</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/ITransportDelegate.html">ITransportDelegate</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/UpstreamDelegate.html">UpstreamDelegate</a>
@@ -244,6 +256,14 @@
               </li>
             </ul>
           </li>
+          <li class="nav-group-name">
+            <a href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:4iSCP16ITransportConfiga">ITransportConfig</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <article class="main-content">
@@ -258,30 +278,21 @@
 <ul>
 <li>iOS 13 or later</li>
 <li>macOS 10.15 (Catalina) or later</li>
-<li>Xcode 14.1 (14B47b) or later</li>
+<li>Xcode 16 (16A242d) or later</li>
 </ul>
 <h2 id='installation' class='heading'>Installation</h2>
+<h3 id='cocoapods' class='heading'>Cocoapods</h3>
 
-<p>iscp-swiftは <a href="https://cocoapods.org/">CocoaPods</a> から入手可能です。
-<code>Podfile</code> に、iscp-swiftと依存ライブラリ <a href="https://github.com/apple/swift-protobuf">SwiftProtobuf</a> を追加してください。</p>
+<p>iscp-swiftは <a href="https://cocoapods.org/">CocoaPods</a> から入手可能です。</p>
 <pre class="highlight plaintext"><code>target '{YOUR_APP_SCHEME}' do
   ...
   pod 'iSCP'
-  pod 'SwiftProtobuf', '~&gt; 1.0'
   ...
 end
-
-# Please add at the end
-post_install do |installer|
-  installer.pods_project.targets.each do |target|
-    target.build_configurations.each do |config|
-      config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
-      # for Mac
-      config.build_settings['MACOSX_DEPLOYMENT_TARGET'] = '10.14.6'
-    end
-  end
-end
 </code></pre>
+<h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
+
+<p>iscp-swiftは <a href="https://swift.org/package-manager/">Swift Package Manager</a> からも利用できます。</p>
 <h2 id='implementation' class='heading'>Implementation</h2>
 <h3 id='em-connect-to-intdash-api-em' class='heading'><em>Connect To intdash API</em></h3>
 
@@ -315,12 +326,12 @@ end
             <span class="n">address</span> <span class="o">=</span> <span class="n">urls</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
         <span class="p">}</span>
         <span class="c1">// WebSocketを使って接続するように指定します。</span>
-        <span class="k">let</span> <span class="nv">transportConfig</span><span class="p">:</span> <span class="kt">ITransportConfig</span> <span class="o">=</span> <span class="kt">Transport</span><span class="o">.</span><span class="kt">WebSocket</span><span class="o">.</span><span class="kt">Config</span><span class="p">(</span>
+        <span class="k">let</span> <span class="nv">connector</span><span class="p">:</span> <span class="kt">IConnector</span> <span class="o">=</span> <span class="kt">Transport</span><span class="o">.</span><span class="kt">WebSocketConnector</span><span class="p">(</span>
             <span class="nv">enableTLS</span><span class="p">:</span> <span class="n">enableTLS</span>
         <span class="p">)</span>
         <span class="kt">Connection</span><span class="o">.</span><span class="nf">connect</span><span class="p">(</span>
             <span class="nv">address</span><span class="p">:</span> <span class="n">address</span><span class="p">,</span>
-            <span class="nv">transportConfig</span><span class="p">:</span> <span class="n">transportConfig</span><span class="p">,</span>
+            <span class="nv">connector</span><span class="p">:</span> <span class="n">connector</span><span class="p">,</span>
             <span class="nv">tokenSource</span><span class="p">:</span> <span class="p">{</span> <span class="n">token</span> <span class="k">in</span>
                 <span class="c1">// アクセス用のトークンを指定します。接続時に発生するイベントにより使用されます。</span>
                 <span class="c1">// ここでは固定のトークンを返していますが随時トークンの更新を行う実装にするとトークンの期限切れを考える必要がなくなります。</span>
@@ -565,12 +576,12 @@ end
             <span class="n">address</span> <span class="o">=</span> <span class="n">urls</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
         <span class="p">}</span>
         <span class="c1">// WebSocketを使って接続するように指定します。</span>
-        <span class="k">let</span> <span class="nv">transportConfig</span><span class="p">:</span> <span class="kt">ITransportConfig</span> <span class="o">=</span> <span class="kt">Transport</span><span class="o">.</span><span class="kt">WebSocket</span><span class="o">.</span><span class="kt">Config</span><span class="p">(</span>
+        <span class="k">let</span> <span class="nv">connector</span><span class="p">:</span> <span class="kt">IConnector</span> <span class="o">=</span> <span class="kt">Transport</span><span class="o">.</span><span class="kt">WebSocketConnector</span><span class="p">(</span>
             <span class="nv">enableTLS</span><span class="p">:</span> <span class="n">enableTLS</span>
         <span class="p">)</span>
         <span class="kt">Connection</span><span class="o">.</span><span class="nf">connect</span><span class="p">(</span>
             <span class="nv">address</span><span class="p">:</span> <span class="n">address</span><span class="p">,</span>
-            <span class="nv">transportConfig</span><span class="p">:</span> <span class="n">transportConfig</span><span class="p">,</span>
+            <span class="nv">connector</span><span class="p">:</span> <span class="n">connector</span><span class="p">,</span>
             <span class="nv">tokenSource</span><span class="p">:</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="n">token</span> <span class="k">in</span>
                 <span class="c1">// アクセストークンを指定します。接続時に発生するイベントにより使用されます。</span>
                 <span class="c1">// ここでは固定のトークンを返していますが、随時トークンの更新を行う実装にするとトークンの期限切れを考える必要がなくなります。</span>
@@ -620,12 +631,12 @@ end
             <span class="n">address</span> <span class="o">=</span> <span class="n">urls</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
         <span class="p">}</span>
         <span class="c1">// WebSocketを使って接続するように指定します。</span>
-        <span class="k">let</span> <span class="nv">transportConfig</span><span class="p">:</span> <span class="kt">ITransportConfig</span> <span class="o">=</span> <span class="kt">Transport</span><span class="o">.</span><span class="kt">WebSocket</span><span class="o">.</span><span class="kt">Config</span><span class="p">(</span>
+        <span class="k">let</span> <span class="nv">connector</span><span class="p">:</span> <span class="kt">IConnector</span> <span class="o">=</span> <span class="kt">Transport</span><span class="o">.</span><span class="kt">WebSocketConnector</span><span class="p">(</span>
             <span class="nv">enableTLS</span><span class="p">:</span> <span class="n">enableTLS</span>
         <span class="p">)</span>
         <span class="kt">Connection</span><span class="o">.</span><span class="nf">connect</span><span class="p">(</span>
             <span class="nv">address</span><span class="p">:</span> <span class="n">address</span><span class="p">,</span>
-            <span class="nv">transportConfig</span><span class="p">:</span> <span class="n">transportConfig</span><span class="p">,</span>
+            <span class="nv">connector</span><span class="p">:</span> <span class="n">connector</span><span class="p">,</span>
             <span class="nv">tokenSource</span><span class="p">:</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="n">token</span> <span class="k">in</span>
                 <span class="c1">// アクセストークンを指定します。接続時に発生するイベントにより使用されます。</span>
                 <span class="c1">// ここでは固定のトークンを返していますが、随時トークンの更新を行う実装にするとトークンの期限切れを考える必要がなくなります。</span>
@@ -673,6 +684,20 @@ end
 
 <span class="p">}</span>
 </code></pre>
+<h2 id='third-party-license-notices' class='heading'>Third-Party License Notices</h2>
+
+<p>iscp-swiftはサードパーティ製オープンソースソフトウェアを同梱・利用しています。</p>
+
+<p>これらコンポーネントのライセンス条文およびクレジットの詳細は <a href="https://github.com/aptpod/iscp-swift/blob/main/THIRD-PARTY-LICENSES.txt">THIRD-PARTY-LICENSES.txt</a> を参照してください。</p>
+<h2 id='dependencies' class='heading'>Dependencies</h2>
+
+<ul>
+<li><a href="https://github.com/apple/swift-protobuf">SwiftProtobuf</a><br>
+
+<ul>
+<li>Licensed under the Apache License, Version 2.0.</li>
+</ul></li>
+</ul>
 <h2 id='references' class='heading'>References</h2>
 
 <ul>
@@ -687,7 +712,7 @@ end
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2024 <a class="link" href="https://www.aptpod.co.jp" target="_blank" rel="external noopener">aptpod Inc</a>. All rights reserved. (Last updated: 2024-12-09)</p>
+          <p>&copy; 2025 <a class="link" href="https://www.aptpod.co.jp" target="_blank" rel="external noopener">aptpod Inc</a>. All rights reserved. (Last updated: 2025-11-27)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>

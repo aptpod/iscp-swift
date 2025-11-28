@@ -43,29 +43,50 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/uenomasamitsu/WorkSpace/Xcode/iOS/WorkSpace/iscp-swift/iscp/iSCP/Classes/Transport/QUIC/SwiftQUIC.swift",
+      "line": 60,
+      "symbol": "SwiftQUICState",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/uenomasamitsu/WorkSpace/Xcode/iOS/WorkSpace/iscp-swift/iscp/iSCP/Classes/Transport/Transport.swift",
+      "line": 12,
+      "symbol": "ITransportConfig",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/uenomasamitsu/WorkSpace/Xcode/iOS/WorkSpace/iscp-swift/iscp/iSCP/Classes/Transport/WebSocket/WebSocketTransport.swift",
+      "line": 20,
+      "symbol": "Transport.WebScoket.Config",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/uenomasamitsu/WorkSpace/Xcode/iOS/WorkSpace/iscp-swift/iscp/iSCP/Classes/iSCP/Stream/Downstream.swift",
-      "line": 124,
+      "line": 132,
       "symbol": "Downstream.hash",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/uenomasamitsu/WorkSpace/Xcode/iOS/WorkSpace/iscp-swift/iscp/iSCP/Classes/iSCP/Stream/Downstream.swift",
-      "line": 176,
+      "line": 190,
       "symbol": "Downstream.isEqual(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/uenomasamitsu/WorkSpace/Xcode/iOS/WorkSpace/iscp-swift/iscp/iSCP/Classes/iSCP/Stream/Upstream.swift",
-      "line": 138,
+      "line": 142,
       "symbol": "Upstream.hash",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/uenomasamitsu/WorkSpace/Xcode/iOS/WorkSpace/iscp-swift/iscp/iSCP/Classes/iSCP/Stream/Upstream.swift",
-      "line": 190,
+      "line": 197,
       "symbol": "Upstream.isEqual(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

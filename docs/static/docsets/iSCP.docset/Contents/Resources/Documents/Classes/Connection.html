@@ -17,7 +17,7 @@
     <a title="Connection Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">iSCP v1.1.0 Docs</a></p>
+        <p><a href="../index.html">iSCP v1.2.0 Docs</a></p>
         <div class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -51,13 +51,19 @@
                 <a href="../Classes/ISCPLog.html">ISCPLog</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NegotiationParams.html">NegotiationParams</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/SequenceNumberGenerator.html">SequenceNumberGenerator</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Transport.html">Transport</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/Transport/WebSocket.html">– WebSocket</a>
+                <a href="../Classes/Transport/WebScoket.html">– WebScoket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Transport/WebSocketConnector.html">– WebSocketConnector</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Upstream.html">Upstream</a>
@@ -94,7 +100,7 @@
                 <a href="../Enums/QoS.html">QoS</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/TransportType.html">TransportType</a>
+                <a href="../Enums/SwiftQUICState.html">SwiftQUICState</a>
               </li>
             </ul>
           </li>
@@ -152,10 +158,16 @@
                 <a href="../Protocols/DownstreamDelegate.html">DownstreamDelegate</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Protocols/IConnector.html">IConnector</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/ISCPLogDelegate.html">ISCPLogDelegate</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/ITransportConfig.html">ITransportConfig</a>
+                <a href="../Protocols/ITransport.html">ITransport</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ITransportDelegate.html">ITransportDelegate</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/UpstreamDelegate.html">UpstreamDelegate</a>
@@ -245,6 +257,14 @@
               </li>
             </ul>
           </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:4iSCP16ITransportConfiga">ITransportConfig</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <article class="main-content">
@@ -255,6 +275,7 @@
                 <div class="language">
                   
                   <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Connection</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">Connection</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ITransportDelegate.html">ITransportDelegate</a></span></code></pre>
 
                 </div>
               </div>
@@ -273,6 +294,33 @@
                 </div>
               </div>
               <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP10ConnectionC23DEFAULT_CONNECT_TIMEOUTSdvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/DEFAULT_CONNECT_TIMEOUT" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP10ConnectionC23DEFAULT_CONNECT_TIMEOUTSdvpZ">DEFAULT_CONNECT_TIMEOUT</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>コネクトのタイムアウトのデフォルト値。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">DEFAULT_CONNECT_TIMEOUT</span><span class="p">:</span> <span class="kt">TimeInterval</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -435,6 +483,60 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP10ConnectionC29DEFAULT_SEND_METADATA_TIMEOUTSdvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/DEFAULT_SEND_METADATA_TIMEOUT" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP10ConnectionC29DEFAULT_SEND_METADATA_TIMEOUTSdvpZ">DEFAULT_SEND_METADATA_TIMEOUT</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>メタデータ送信のタイムアウトのデフォルト値。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">DEFAULT_SEND_METADATA_TIMEOUT</span><span class="p">:</span> <span class="kt">TimeInterval</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP10ConnectionC24DEFAULT_E2E_CALL_TIMEOUTSdvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/DEFAULT_E2E_CALL_TIMEOUT" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP10ConnectionC24DEFAULT_E2E_CALL_TIMEOUTSdvpZ">DEFAULT_E2E_CALL_TIMEOUT</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>E2Eコールのタイムアウトのデフォルト値。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">DEFAULT_E2E_CALL_TIMEOUT</span><span class="p">:</span> <span class="kt">TimeInterval</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
             <div class="task-group">
@@ -451,9 +553,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4iSCP10ConnectionC7connect7address15transportConfig11tokenSource6nodeID11projectUUID11pingTimeout0M8Interval13autoReconnect013reconnectBaseO00r3MaxO08encoding8delegate15e2eCallDelegate10completionySS_AA010ITransportF0_pyySSSgccS2SS2dSbS2dAA12EncodingNameOAA0bY0_pSgAA0b7E2ECallY0_pSgyACSg_s5Error_pSgtctFZ"></a>
-                    <a name="//apple_ref/swift/Method/connect(address:transportConfig:tokenSource:nodeID:projectUUID:pingTimeout:pingInterval:autoReconnect:reconnectBaseInterval:reconnectMaxInterval:encoding:delegate:e2eCallDelegate:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4iSCP10ConnectionC7connect7address15transportConfig11tokenSource6nodeID11projectUUID11pingTimeout0M8Interval13autoReconnect013reconnectBaseO00r3MaxO08encoding8delegate15e2eCallDelegate10completionySS_AA010ITransportF0_pyySSSgccS2SS2dSbS2dAA12EncodingNameOAA0bY0_pSgAA0b7E2ECallY0_pSgyACSg_s5Error_pSgtctFZ">connect(address:<wbr>transportConfig:<wbr>tokenSource:<wbr>nodeID:<wbr>projectUUID:<wbr>pingTimeout:<wbr>pingInterval:<wbr>autoReconnect:<wbr>reconnectBaseInterval:<wbr>reconnectMaxInterval:<wbr>encoding:<wbr>delegate:<wbr>e2eCallDelegate:<wbr>completion:<wbr>)</a>
+                    <a name="/s:4iSCP10ConnectionC7connect7address9connector11tokenSource6nodeID11projectUUID0C7Timeout04pingL00M8Interval13autoReconnect013reconnectBaseN00q3MaxN08encoding8delegate15e2eCallDelegate10completionySS_AA10IConnector_pyySSSgccS2SS3dSbS2dAA12EncodingNameOAA0bX0_pSgAA0b7E2ECallX0_pSgyACSg_s5Error_pSgtctFZ"></a>
+                    <a name="//apple_ref/swift/Method/connect(address:connector:tokenSource:nodeID:projectUUID:connectTimeout:pingTimeout:pingInterval:autoReconnect:reconnectBaseInterval:reconnectMaxInterval:encoding:delegate:e2eCallDelegate:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP10ConnectionC7connect7address9connector11tokenSource6nodeID11projectUUID0C7Timeout04pingL00M8Interval13autoReconnect013reconnectBaseN00q3MaxN08encoding8delegate15e2eCallDelegate10completionySS_AA10IConnector_pyySSSgccS2SS3dSbS2dAA12EncodingNameOAA0bX0_pSgAA0b7E2ECallX0_pSgyACSg_s5Error_pSgtctFZ">connect(address:<wbr>connector:<wbr>tokenSource:<wbr>nodeID:<wbr>projectUUID:<wbr>connectTimeout:<wbr>pingTimeout:<wbr>pingInterval:<wbr>autoReconnect:<wbr>reconnectBaseInterval:<wbr>reconnectMaxInterval:<wbr>encoding:<wbr>delegate:<wbr>e2eCallDelegate:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -469,10 +571,11 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">connect</span><span class="p">(</span><span class="nv">address</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                           <span class="nv">transportConfig</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ITransportConfig.html">ITransportConfig</a></span><span class="p">,</span>
+                           <span class="nv">connector</span><span class="p">:</span> <span class="kt"><a href="../Protocols/IConnector.html">IConnector</a></span><span class="p">,</span>
                            <span class="nv">tokenSource</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">token</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span><span class="o">-&gt;</span><span class="p">()</span> <span class="p">)</span><span class="o">-&gt;</span><span class="p">()),</span>
                            <span class="nv">nodeID</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span>
                            <span class="nv">projectUUID</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span>
+                           <span class="nv">connectTimeout</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Connection.html#/s:4iSCP10ConnectionC23DEFAULT_CONNECT_TIMEOUTSdvpZ">DEFAULT_CONNECT_TIMEOUT</a></span><span class="p">,</span>
                            <span class="nv">pingTimeout</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Connection.html#/s:4iSCP10ConnectionC20DEFAULT_PING_TIMEOUTSdvpZ">DEFAULT_PING_TIMEOUT</a></span><span class="p">,</span>
                            <span class="nv">pingInterval</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Connection.html#/s:4iSCP10ConnectionC21DEFAULT_PING_INTERVALSdvpZ">DEFAULT_PING_INTERVAL</a></span><span class="p">,</span>
                            <span class="nv">autoReconnect</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Connection.html#/s:4iSCP10ConnectionC22DEFAULT_AUTO_RECONNECTSbvpZ">DEFAULT_AUTO_RECONNECT</a></span><span class="p">,</span>
@@ -497,19 +600,19 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>接続先のアドレス。127.0.0.1:8080 形式。</p>
+                                  <p>接続先のアドレス。 <code>127.0.0.1:8080</code> 形式。</p>
                                 </div>
                               </td>
                             </tr>
                             <tr>
                               <td>
                                 <code>
-                                <em>transportConfig</em>
+                                <em>connector</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>トランスポートの設定。</p>
+                                  <p>トランスポートのコネクター。</p>
                                 </div>
                               </td>
                             </tr>
@@ -546,6 +649,18 @@
                               <td>
                                 <div>
                                   <p>プロジェクトID。</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>connectTimeout</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>コネクトのタイムアウト。 <code>0</code> 以下の場合はタイムアウトしません。</p>
                                 </div>
                               </td>
                             </tr>
@@ -787,9 +902,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4iSCP10ConnectionC15transportConfigAA010ITransportD0_pvp"></a>
-                    <a name="//apple_ref/swift/Property/transportConfig" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4iSCP10ConnectionC15transportConfigAA010ITransportD0_pvp">transportConfig</a>
+                    <a name="/s:4iSCP10ConnectionC9connectorAA10IConnector_pvp"></a>
+                    <a name="//apple_ref/swift/Property/connector" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP10ConnectionC9connectorAA10IConnector_pvp">connector</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -797,14 +912,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>トランスポートの設定。</p>
+                        <p>トランスポートのコネクター。</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">transportConfig</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ITransportConfig.html">ITransportConfig</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">connector</span><span class="p">:</span> <span class="kt"><a href="../Protocols/IConnector.html">IConnector</a></span></code></pre>
 
                         </div>
                       </div>
@@ -886,6 +1001,33 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">projectUUID</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP10ConnectionC14connectTimeoutSdvp"></a>
+                    <a name="//apple_ref/swift/Property/connectTimeout" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP10ConnectionC14connectTimeoutSdvp">connectTimeout</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>コネクトのタイムアウト。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">connectTimeout</span><span class="p">:</span> <span class="kt">TimeInterval</span></code></pre>
 
                         </div>
                       </div>
@@ -1151,9 +1293,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4iSCP10ConnectionC7address15transportConfig11tokenSource6nodeID11projectUUID11pingTimeout0L8Interval13autoReconnect013reconnectBaseN00q3MaxN08encodingACSS_AA010ITransportE0_pyySSSgccS2SS2dSbS2dAA12EncodingNameOtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(address:transportConfig:tokenSource:nodeID:projectUUID:pingTimeout:pingInterval:autoReconnect:reconnectBaseInterval:reconnectMaxInterval:encoding:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4iSCP10ConnectionC7address15transportConfig11tokenSource6nodeID11projectUUID11pingTimeout0L8Interval13autoReconnect013reconnectBaseN00q3MaxN08encodingACSS_AA010ITransportE0_pyySSSgccS2SS2dSbS2dAA12EncodingNameOtcfc">init(address:<wbr>transportConfig:<wbr>tokenSource:<wbr>nodeID:<wbr>projectUUID:<wbr>pingTimeout:<wbr>pingInterval:<wbr>autoReconnect:<wbr>reconnectBaseInterval:<wbr>reconnectMaxInterval:<wbr>encoding:<wbr>)</a>
+                    <a name="/s:4iSCP10ConnectionC7address9connector11tokenSource6nodeID11projectUUID14connectTimeout04pingL00M8Interval13autoReconnect013reconnectBaseN00q3MaxN08encodingACSS_AA10IConnector_pyySSSgccS2SS3dSbS2dAA12EncodingNameOtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(address:connector:tokenSource:nodeID:projectUUID:connectTimeout:pingTimeout:pingInterval:autoReconnect:reconnectBaseInterval:reconnectMaxInterval:encoding:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP10ConnectionC7address9connector11tokenSource6nodeID11projectUUID14connectTimeout04pingL00M8Interval13autoReconnect013reconnectBaseN00q3MaxN08encodingACSS_AA10IConnector_pyySSSgccS2SS3dSbS2dAA12EncodingNameOtcfc">init(address:<wbr>connector:<wbr>tokenSource:<wbr>nodeID:<wbr>projectUUID:<wbr>connectTimeout:<wbr>pingTimeout:<wbr>pingInterval:<wbr>autoReconnect:<wbr>reconnectBaseInterval:<wbr>reconnectMaxInterval:<wbr>encoding:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1168,10 +1310,11 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">address</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-            <span class="nv">transportConfig</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ITransportConfig.html">ITransportConfig</a></span><span class="p">,</span>
+            <span class="nv">connector</span><span class="p">:</span> <span class="kt"><a href="../Protocols/IConnector.html">IConnector</a></span><span class="p">,</span>
             <span class="nv">tokenSource</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">token</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span><span class="o">-&gt;</span><span class="p">()</span> <span class="p">)</span><span class="o">-&gt;</span><span class="p">()),</span>
             <span class="nv">nodeID</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span>
             <span class="nv">projectUUID</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span>
+            <span class="nv">connectTimeout</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Connection.html#/s:4iSCP10ConnectionC23DEFAULT_CONNECT_TIMEOUTSdvpZ">DEFAULT_CONNECT_TIMEOUT</a></span><span class="p">,</span>
             <span class="nv">pingTimeout</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Connection.html#/s:4iSCP10ConnectionC20DEFAULT_PING_TIMEOUTSdvpZ">DEFAULT_PING_TIMEOUT</a></span><span class="p">,</span>
             <span class="nv">pingInterval</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Connection.html#/s:4iSCP10ConnectionC21DEFAULT_PING_INTERVALSdvpZ">DEFAULT_PING_INTERVAL</a></span><span class="p">,</span>
             <span class="nv">autoReconnect</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Connection.html#/s:4iSCP10ConnectionC22DEFAULT_AUTO_RECONNECTSbvpZ">DEFAULT_AUTO_RECONNECT</a></span><span class="p">,</span>
@@ -1193,19 +1336,19 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>接続先のアドレス。127.0.0.1:8080 形式。</p>
+                                  <p>接続先のアドレス。 <code>127.0.0.1:8080</code> 形式。</p>
                                 </div>
                               </td>
                             </tr>
                             <tr>
                               <td>
                                 <code>
-                                <em>transportConfig</em>
+                                <em>connector</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>トランスポートの設定。</p>
+                                  <p>トランスポートのコネクター。</p>
                                 </div>
                               </td>
                             </tr>
@@ -1242,6 +1385,18 @@
                               <td>
                                 <div>
                                   <p>プロジェクトID。</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>connectTimeout</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>コネクトのタイムアウト。 <code>0</code> 以下の場合はタイムアウトしません。</p>
                                 </div>
                               </td>
                             </tr>
@@ -1433,9 +1588,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4iSCP10ConnectionC14openDownstream17downstreamFilters7dataIDs3qos14omitEmptyChunk14expiryInterval03ackN010completionySayAA0D6FilterVG_SayAA6DataIDVGAA3QoSOSbS2dyAA0D0CSg_s5Error_pSgtctF"></a>
-                    <a name="//apple_ref/swift/Method/openDownstream(downstreamFilters:dataIDs:qos:omitEmptyChunk:expiryInterval:ackInterval:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4iSCP10ConnectionC14openDownstream17downstreamFilters7dataIDs3qos14omitEmptyChunk14expiryInterval03ackN010completionySayAA0D6FilterVG_SayAA6DataIDVGAA3QoSOSbS2dyAA0D0CSg_s5Error_pSgtctF">openDownstream(downstreamFilters:<wbr>dataIDs:<wbr>qos:<wbr>omitEmptyChunk:<wbr>expiryInterval:<wbr>ackInterval:<wbr>completion:<wbr>)</a>
+                    <a name="/s:4iSCP10ConnectionC14openDownstream17downstreamFilters7dataIDs3qos14omitEmptyChunk14expiryInterval03ackN00C7Timeout05closeP010completionySayAA0D6FilterVG_SayAA6DataIDVGAA3QoSOSbS4dyAA0D0CSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/openDownstream(downstreamFilters:dataIDs:qos:omitEmptyChunk:expiryInterval:ackInterval:openTimeout:closeTimeout:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP10ConnectionC14openDownstream17downstreamFilters7dataIDs3qos14omitEmptyChunk14expiryInterval03ackN00C7Timeout05closeP010completionySayAA0D6FilterVG_SayAA6DataIDVGAA3QoSOSbS4dyAA0D0CSg_s5Error_pSgtctF">openDownstream(downstreamFilters:<wbr>dataIDs:<wbr>qos:<wbr>omitEmptyChunk:<wbr>expiryInterval:<wbr>ackInterval:<wbr>openTimeout:<wbr>closeTimeout:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1456,6 +1611,8 @@
                            <span class="nv">omitEmptyChunk</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Downstream.html">Downstream</a></span><span class="o">.</span><span class="kt">DEFAULT_OMIT_EMPTY_CHUNK</span><span class="p">,</span>
                            <span class="nv">expiryInterval</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Downstream.html">Downstream</a></span><span class="o">.</span><span class="kt">DEFAULT_EXPIRY_INTERVAL</span><span class="p">,</span>
                            <span class="nv">ackInterval</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Downstream.html">Downstream</a></span><span class="o">.</span><span class="kt">DEFAULT_ACK_INTERVAL</span><span class="p">,</span>
+                           <span class="nv">openTimeout</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Downstream.html">Downstream</a></span><span class="o">.</span><span class="kt">DEFAULT_OPEN_TIMEOUT</span><span class="p">,</span>
+                           <span class="nv">closeTimeout</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Downstream.html">Downstream</a></span><span class="o">.</span><span class="kt">DEFAULT_CLOSE_TIMEOUT</span><span class="p">,</span>
                            <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="n">_</span> <span class="nv">downstream</span><span class="p">:</span> <span class="kt"><a href="../Classes/Downstream.html">Downstream</a></span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span><span class="o">-&gt;</span><span class="p">()))</span></code></pre>
 
                         </div>
@@ -1539,6 +1696,30 @@
                             <tr>
                               <td>
                                 <code>
+                                <em>openTimeout</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>オープンのタイムアウト。 <code>0</code> 以下の場合はタイムアウトしません。</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closeTimeout</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>クローズのタイムアウト。 <code>0</code> 以下の場合はタイムアウトしません。</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
                                 <em>completion</em>
                                 </code>
                               </td>
@@ -1615,9 +1796,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4iSCP10ConnectionC8sendCall08upstreamD010completionSSSgAA08UpstreamD0V_ys5Error_pSgcSgtF"></a>
-                    <a name="//apple_ref/swift/Method/sendCall(upstreamCall:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4iSCP10ConnectionC8sendCall08upstreamD010completionSSSgAA08UpstreamD0V_ys5Error_pSgcSgtF">sendCall(upstreamCall:<wbr>completion:<wbr>)</a>
+                    <a name="/s:4iSCP10ConnectionC8sendCall08upstreamD00C7Timeout10completionSSSgAA08UpstreamD0V_Sdys5Error_pSgcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/sendCall(upstreamCall:sendTimeout:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP10ConnectionC8sendCall08upstreamD00C7Timeout10completionSSSgAA08UpstreamD0V_Sdys5Error_pSgcSgtF">sendCall(upstreamCall:<wbr>sendTimeout:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1633,7 +1814,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">sendCall</span><span class="p">(</span><span class="nv">upstreamCall</span><span class="p">:</span> <span class="kt"><a href="../Structs/UpstreamCall.html">UpstreamCall</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">())?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">sendCall</span><span class="p">(</span><span class="nv">upstreamCall</span><span class="p">:</span> <span class="kt"><a href="../Structs/UpstreamCall.html">UpstreamCall</a></span><span class="p">,</span> <span class="nv">sendTimeout</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Connection.html#/s:4iSCP10ConnectionC24DEFAULT_E2E_CALL_TIMEOUTSdvpZ">DEFAULT_E2E_CALL_TIMEOUT</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">())?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1650,6 +1831,18 @@
                               <td>
                                 <div>
                                   <p>E2Eコール。</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sendTimeout</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>送信のタイムアウト。 <code>0</code> 以下の場合はタイムアウトしません。</p>
                                 </div>
                               </td>
                             </tr>
@@ -1678,9 +1871,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4iSCP10ConnectionC13sendReplyCall08upstreamdE010completionSSSgAA08UpstreamdE0V_ys5Error_pSgcSgtF"></a>
-                    <a name="//apple_ref/swift/Method/sendReplyCall(upstreamReplyCall:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4iSCP10ConnectionC13sendReplyCall08upstreamdE010completionSSSgAA08UpstreamdE0V_ys5Error_pSgcSgtF">sendReplyCall(upstreamReplyCall:<wbr>completion:<wbr>)</a>
+                    <a name="/s:4iSCP10ConnectionC13sendReplyCall08upstreamdE00C7Timeout10completionSSSgAA08UpstreamdE0V_Sdys5Error_pSgcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/sendReplyCall(upstreamReplyCall:sendTimeout:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP10ConnectionC13sendReplyCall08upstreamdE00C7Timeout10completionSSSgAA08UpstreamdE0V_Sdys5Error_pSgcSgtF">sendReplyCall(upstreamReplyCall:<wbr>sendTimeout:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1696,7 +1889,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">sendReplyCall</span><span class="p">(</span><span class="nv">upstreamReplyCall</span><span class="p">:</span> <span class="kt"><a href="../Structs/UpstreamReplyCall.html">UpstreamReplyCall</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">())?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">sendReplyCall</span><span class="p">(</span><span class="nv">upstreamReplyCall</span><span class="p">:</span> <span class="kt"><a href="../Structs/UpstreamReplyCall.html">UpstreamReplyCall</a></span><span class="p">,</span> <span class="nv">sendTimeout</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Connection.html#/s:4iSCP10ConnectionC24DEFAULT_E2E_CALL_TIMEOUTSdvpZ">DEFAULT_E2E_CALL_TIMEOUT</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">())?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1719,6 +1912,18 @@
                             <tr>
                               <td>
                                 <code>
+                                <em>sendTimeout</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>送信のタイムアウト。 <code>0</code> 以下の場合はタイムアウトしません。</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
                                 <em>completion</em>
                                 </code>
                               </td>
@@ -1741,9 +1946,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4iSCP10ConnectionC021sendCallAndWaitReplayD008upstreamD010completionSSSgAA08UpstreamD0V_yAA015DownstreamReplyD0VSg_s5Error_pSgtctF"></a>
-                    <a name="//apple_ref/swift/Method/sendCallAndWaitReplayCall(upstreamCall:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4iSCP10ConnectionC021sendCallAndWaitReplayD008upstreamD010completionSSSgAA08UpstreamD0V_yAA015DownstreamReplyD0VSg_s5Error_pSgtctF">sendCallAndWaitReplayCall(upstreamCall:<wbr>completion:<wbr>)</a>
+                    <a name="/s:4iSCP10ConnectionC021sendCallAndWaitReplayD008upstreamD00C7Timeout04waitI010completionSSSgAA08UpstreamD0V_S2dyAA015DownstreamReplyD0VSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/sendCallAndWaitReplayCall(upstreamCall:sendTimeout:waitTimeout:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP10ConnectionC021sendCallAndWaitReplayD008upstreamD00C7Timeout04waitI010completionSSSgAA08UpstreamD0V_S2dyAA015DownstreamReplyD0VSg_s5Error_pSgtctF">sendCallAndWaitReplayCall(upstreamCall:<wbr>sendTimeout:<wbr>waitTimeout:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1759,7 +1964,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">sendCallAndWaitReplayCall</span><span class="p">(</span><span class="nv">upstreamCall</span><span class="p">:</span> <span class="kt"><a href="../Structs/UpstreamCall.html">UpstreamCall</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="n">_</span> <span class="nv">downstreamReplyCall</span><span class="p">:</span> <span class="kt"><a href="../Structs/DownstreamReplyCall.html">DownstreamReplyCall</a></span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">()))</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">sendCallAndWaitReplayCall</span><span class="p">(</span><span class="nv">upstreamCall</span><span class="p">:</span> <span class="kt"><a href="../Structs/UpstreamCall.html">UpstreamCall</a></span><span class="p">,</span> <span class="nv">sendTimeout</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Connection.html#/s:4iSCP10ConnectionC24DEFAULT_E2E_CALL_TIMEOUTSdvpZ">DEFAULT_E2E_CALL_TIMEOUT</a></span><span class="p">,</span> <span class="nv">waitTimeout</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Connection.html#/s:4iSCP10ConnectionC24DEFAULT_E2E_CALL_TIMEOUTSdvpZ">DEFAULT_E2E_CALL_TIMEOUT</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="n">_</span> <span class="nv">downstreamReplyCall</span><span class="p">:</span> <span class="kt"><a href="../Structs/DownstreamReplyCall.html">DownstreamReplyCall</a></span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">()))</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1782,6 +1987,30 @@
                             <tr>
                               <td>
                                 <code>
+                                <em>sendTimeout</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>送信のタイムアウト。 <code>0</code> 以下の場合はタイムアウトしません。</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>waitTimeout</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>受信のタイムアウト。 <code>0</code> 以下の場合はタイムアウトしません。</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
                                 <em>completion</em>
                                 </code>
                               </td>
@@ -1804,9 +2033,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4iSCP10ConnectionC12sendBaseTime04baseE07persist10completionyAA0dE0V_Sbys5Error_pSgcSgtF"></a>
-                    <a name="//apple_ref/swift/Method/sendBaseTime(baseTime:persist:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4iSCP10ConnectionC12sendBaseTime04baseE07persist10completionyAA0dE0V_Sbys5Error_pSgcSgtF">sendBaseTime(baseTime:<wbr>persist:<wbr>completion:<wbr>)</a>
+                    <a name="/s:4iSCP10ConnectionC12sendBaseTime04baseE07persist0C7Timeout10completionyAA0dE0V_SbSdys5Error_pSgcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/sendBaseTime(baseTime:persist:sendTimeout:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP10ConnectionC12sendBaseTime04baseE07persist0C7Timeout10completionyAA0dE0V_SbSdys5Error_pSgcSgtF">sendBaseTime(baseTime:<wbr>persist:<wbr>sendTimeout:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1821,7 +2050,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sendBaseTime</span><span class="p">(</span><span class="nv">baseTime</span><span class="p">:</span> <span class="kt"><a href="../Structs/BaseTime.html">BaseTime</a></span><span class="p">,</span> <span class="nv">persist</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">())?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sendBaseTime</span><span class="p">(</span><span class="nv">baseTime</span><span class="p">:</span> <span class="kt"><a href="../Structs/BaseTime.html">BaseTime</a></span><span class="p">,</span> <span class="nv">persist</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">sendTimeout</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Connection.html#/s:4iSCP10ConnectionC29DEFAULT_SEND_METADATA_TIMEOUTSdvpZ">DEFAULT_SEND_METADATA_TIMEOUT</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">())?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1856,6 +2085,18 @@
                             <tr>
                               <td>
                                 <code>
+                                <em>sendTimeout</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>送信のタイムアウト。 <code>0</code> 以下の場合はタイムアウトしません。</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
                                 <em>completion</em>
                                 </code>
                               </td>
@@ -1871,12 +2112,129 @@
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/ITransportDelegate"></a>
+                <a name="//apple_ref/swift/Section/ITransportDelegate" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/ITransportDelegate"></a>
+                  <h3 class="section-name"><span>ITransportDelegate</span>
+</h3>
+                </div>
+              </div>
+              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4iSCP10ConnectionC12openUpstream9sessionID14expiryInterval7dataIDs3qos03ackH07persist11flushPolicy12closeTimeout10completionySS_SdSayAA04DataF0VGAA3QoSOSdSbAA05FlushO0VSdyAA0D0CSg_s5Error_pSgtctF"></a>
-                    <a name="//apple_ref/swift/Method/openUpstream(sessionID:expiryInterval:dataIDs:qos:ackInterval:persist:flushPolicy:closeTimeout:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4iSCP10ConnectionC12openUpstream9sessionID14expiryInterval7dataIDs3qos03ackH07persist11flushPolicy12closeTimeout10completionySS_SdSayAA04DataF0VGAA3QoSOSdSbAA05FlushO0VSdyAA0D0CSg_s5Error_pSgtctF">openUpstream(sessionID:<wbr>expiryInterval:<wbr>dataIDs:<wbr>qos:<wbr>ackInterval:<wbr>persist:<wbr>flushPolicy:<wbr>closeTimeout:<wbr>completion:<wbr>)</a>
+                    <a name="/s:4iSCP18ITransportDelegateP10didConnectyyAA0B0_pF"></a>
+                    <a name="//apple_ref/swift/Method/didConnect(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP18ITransportDelegateP10didConnectyyAA0B0_pF">didConnect(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didConnect</span><span class="p">(</span><span class="n">_</span> <span class="nv">transport</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ITransport.html">ITransport</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP18ITransportDelegateP13didDisconnectyyAA0B0_pF"></a>
+                    <a name="//apple_ref/swift/Method/didDisconnect(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP18ITransportDelegateP13didDisconnectyyAA0B0_pF">didDisconnect(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didDisconnect</span><span class="p">(</span><span class="n">_</span> <span class="nv">transport</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ITransport.html">ITransport</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP18ITransportDelegateP16didFailWithError_5erroryAA0B0_p_s0G0_ptF"></a>
+                    <a name="//apple_ref/swift/Method/didFailWithError(_:error:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP18ITransportDelegateP16didFailWithError_5erroryAA0B0_p_s0G0_ptF">didFailWithError(_:<wbr>error:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didFailWithError</span><span class="p">(</span><span class="n">_</span> <span class="nv">transport</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ITransport.html">ITransport</a></span><span class="p">,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP18ITransportDelegateP17didReceiveMessage_7messageyAA0B0_p_ypSgtF"></a>
+                    <a name="//apple_ref/swift/Method/didReceiveMessage(_:message:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP18ITransportDelegateP17didReceiveMessage_7messageyAA0B0_p_ypSgtF">didReceiveMessage(_:<wbr>message:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didReceiveMessage</span><span class="p">(</span><span class="n">_</span> <span class="nv">transport</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ITransport.html">ITransport</a></span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP10ConnectionC12openUpstream9sessionID14expiryInterval7dataIDs3qos03ackH07persist11flushPolicy0C7Timeout05closeP010completionySS_SdSayAA04DataF0VGAA3QoSOSdSbAA05FlushO0VS2dyAA0D0CSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/openUpstream(sessionID:expiryInterval:dataIDs:qos:ackInterval:persist:flushPolicy:openTimeout:closeTimeout:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP10ConnectionC12openUpstream9sessionID14expiryInterval7dataIDs3qos03ackH07persist11flushPolicy0C7Timeout05closeP010completionySS_SdSayAA04DataF0VGAA3QoSOSdSbAA05FlushO0VS2dyAA0D0CSg_s5Error_pSgtctF">openUpstream(sessionID:<wbr>expiryInterval:<wbr>dataIDs:<wbr>qos:<wbr>ackInterval:<wbr>persist:<wbr>flushPolicy:<wbr>openTimeout:<wbr>closeTimeout:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1898,6 +2256,7 @@
                          <span class="nv">ackInterval</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Upstream.html">Upstream</a></span><span class="o">.</span><span class="kt">DEFAULT_ACK_INTERVAL</span><span class="p">,</span>
                          <span class="nv">persist</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Upstream.html">Upstream</a></span><span class="o">.</span><span class="kt">DEFAULT_PERSIST</span><span class="p">,</span>
                          <span class="nv">flushPolicy</span><span class="p">:</span> <span class="kt"><a href="../Structs/FlushPolicy.html">FlushPolicy</a></span> <span class="o">=</span> <span class="kt"><a href="../Classes/Upstream.html">Upstream</a></span><span class="o">.</span><span class="kt">DEFAULT_FLUSH_POLICY</span><span class="p">,</span>
+                         <span class="nv">openTimeout</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Upstream.html">Upstream</a></span><span class="o">.</span><span class="kt">DEFAULT_OPEN_TIMEOUT</span><span class="p">,</span>
                          <span class="nv">closeTimeout</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Upstream.html">Upstream</a></span><span class="o">.</span><span class="kt">DEFAULT_CLOSE_TIMEOUT</span><span class="p">,</span>
                          <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="n">_</span> <span class="nv">upstream</span><span class="p">:</span> <span class="kt"><a href="../Classes/Upstream.html">Upstream</a></span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span><span class="o">-&gt;</span><span class="p">()))</span></code></pre>
 
@@ -1994,12 +2353,24 @@
                             <tr>
                               <td>
                                 <code>
+                                <em>openTimeout</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>オープンのタイムアウト。 <code>0</code> 以下の場合はタイムアウトしません。</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
                                 <em>closeTimeout</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>クローズのタイムアウト。</p>
+                                  <p>クローズのタイムアウト。 <code>0</code> 以下の場合はタイムアウトしません。</p>
                                 </div>
                               </td>
                             </tr>
@@ -2096,7 +2467,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2024 <a class="link" href="https://www.aptpod.co.jp" target="_blank" rel="external noopener">aptpod Inc</a>. All rights reserved. (Last updated: 2024-12-09)</p>
+          <p>&copy; 2025 <a class="link" href="https://www.aptpod.co.jp" target="_blank" rel="external noopener">aptpod Inc</a>. All rights reserved. (Last updated: 2025-11-27)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>
