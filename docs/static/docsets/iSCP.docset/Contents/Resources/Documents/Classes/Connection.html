@@ -17,7 +17,7 @@
     <a title="Connection Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">iSCP v1.2.0 Docs</a></p>
+        <p><a href="../index.html">iSCP v1.3.0 Docs</a></p>
         <div class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -132,6 +132,9 @@
                 <a href="../Extensions/Int8.html">Int8</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Extensions/UInt16.html">UInt16</a>
               </li>
               <li class="nav-group-task">
@@ -203,6 +206,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/DownstreamFilter.html">DownstreamFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DownstreamFilterReference.html">DownstreamFilterReference</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DownstreamFilterReferences.html">DownstreamFilterReferences</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/DownstreamMetadata.html">DownstreamMetadata</a>
@@ -866,6 +875,33 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">e2eCallDelegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ConnectionE2ECallDelegate.html">ConnectionE2ECallDelegate</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP10ConnectionC15protocolVersionSSvp"></a>
+                    <a name="//apple_ref/swift/Property/protocolVersion" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP10ConnectionC15protocolVersionSSvp">protocolVersion</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>プロトコルバージョン。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">protocolVersion</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1796,6 +1832,33 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:4iSCP10ConnectionC021sendCallAndWaitReplayD008upstreamD00C7Timeout04waitI010completionSSSgAA08UpstreamD0V_S2dyAA015DownstreamReplyD0VSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/sendCallAndWaitReplayCall(upstreamCall:sendTimeout:waitTimeout:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP10ConnectionC021sendCallAndWaitReplayD008upstreamD00C7Timeout04waitI010completionSSSgAA08UpstreamD0V_S2dyAA015DownstreamReplyD0VSg_s5Error_pSgtctF">sendCallAndWaitReplayCall(upstreamCall:<wbr>sendTimeout:<wbr>waitTimeout:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">sendCallAndWaitReplayCall</span><span class="p">(</span><span class="nv">upstreamCall</span><span class="p">:</span> <span class="kt"><a href="../Structs/UpstreamCall.html">UpstreamCall</a></span><span class="p">,</span> <span class="nv">sendTimeout</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Connection.html#/s:4iSCP10ConnectionC24DEFAULT_E2E_CALL_TIMEOUTSdvpZ">DEFAULT_E2E_CALL_TIMEOUT</a></span><span class="p">,</span> <span class="nv">waitTimeout</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Connection.html#/s:4iSCP10ConnectionC24DEFAULT_E2E_CALL_TIMEOUTSdvpZ">DEFAULT_E2E_CALL_TIMEOUT</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="n">_</span> <span class="nv">downstreamReplyCall</span><span class="p">:</span> <span class="kt"><a href="../Structs/DownstreamReplyCall.html">DownstreamReplyCall</a></span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">()))</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:4iSCP10ConnectionC8sendCall08upstreamD00C7Timeout10completionSSSgAA08UpstreamD0V_Sdys5Error_pSgcSgtF"></a>
                     <a name="//apple_ref/swift/Method/sendCall(upstreamCall:sendTimeout:completion:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:4iSCP10ConnectionC8sendCall08upstreamD00C7Timeout10completionSSSgAA08UpstreamD0V_Sdys5Error_pSgcSgtF">sendCall(upstreamCall:<wbr>sendTimeout:<wbr>completion:<wbr>)</a>
@@ -1946,9 +2009,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4iSCP10ConnectionC021sendCallAndWaitReplayD008upstreamD00C7Timeout04waitI010completionSSSgAA08UpstreamD0V_S2dyAA015DownstreamReplyD0VSg_s5Error_pSgtctF"></a>
-                    <a name="//apple_ref/swift/Method/sendCallAndWaitReplayCall(upstreamCall:sendTimeout:waitTimeout:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4iSCP10ConnectionC021sendCallAndWaitReplayD008upstreamD00C7Timeout04waitI010completionSSSgAA08UpstreamD0V_S2dyAA015DownstreamReplyD0VSg_s5Error_pSgtctF">sendCallAndWaitReplayCall(upstreamCall:<wbr>sendTimeout:<wbr>waitTimeout:<wbr>completion:<wbr>)</a>
+                    <a name="/s:4iSCP10ConnectionC020sendCallAndWaitReplyD008upstreamD00C7Timeout04waitI010completionSSSgAA08UpstreamD0V_S2dyAA010DownstreamgD0VSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/sendCallAndWaitReplyCall(upstreamCall:sendTimeout:waitTimeout:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP10ConnectionC020sendCallAndWaitReplyD008upstreamD00C7Timeout04waitI010completionSSSgAA08UpstreamD0V_S2dyAA010DownstreamgD0VSg_s5Error_pSgtctF">sendCallAndWaitReplyCall(upstreamCall:<wbr>sendTimeout:<wbr>waitTimeout:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1964,7 +2027,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">sendCallAndWaitReplayCall</span><span class="p">(</span><span class="nv">upstreamCall</span><span class="p">:</span> <span class="kt"><a href="../Structs/UpstreamCall.html">UpstreamCall</a></span><span class="p">,</span> <span class="nv">sendTimeout</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Connection.html#/s:4iSCP10ConnectionC24DEFAULT_E2E_CALL_TIMEOUTSdvpZ">DEFAULT_E2E_CALL_TIMEOUT</a></span><span class="p">,</span> <span class="nv">waitTimeout</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Connection.html#/s:4iSCP10ConnectionC24DEFAULT_E2E_CALL_TIMEOUTSdvpZ">DEFAULT_E2E_CALL_TIMEOUT</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="n">_</span> <span class="nv">downstreamReplyCall</span><span class="p">:</span> <span class="kt"><a href="../Structs/DownstreamReplyCall.html">DownstreamReplyCall</a></span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">()))</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">sendCallAndWaitReplyCall</span><span class="p">(</span><span class="nv">upstreamCall</span><span class="p">:</span> <span class="kt"><a href="../Structs/UpstreamCall.html">UpstreamCall</a></span><span class="p">,</span> <span class="nv">sendTimeout</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Connection.html#/s:4iSCP10ConnectionC24DEFAULT_E2E_CALL_TIMEOUTSdvpZ">DEFAULT_E2E_CALL_TIMEOUT</a></span><span class="p">,</span> <span class="nv">waitTimeout</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt"><a href="../Classes/Connection.html#/s:4iSCP10ConnectionC24DEFAULT_E2E_CALL_TIMEOUTSdvpZ">DEFAULT_E2E_CALL_TIMEOUT</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="n">_</span> <span class="nv">downstreamReplyCall</span><span class="p">:</span> <span class="kt"><a href="../Structs/DownstreamReplyCall.html">DownstreamReplyCall</a></span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">()))</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -2467,7 +2530,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2025 <a class="link" href="https://www.aptpod.co.jp" target="_blank" rel="external noopener">aptpod Inc</a>. All rights reserved. (Last updated: 2025-11-27)</p>
+          <p>&copy; 2026 <a class="link" href="https://www.aptpod.co.jp" target="_blank" rel="external noopener">aptpod Inc</a>. All rights reserved. (Last updated: 2026-04-08)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>

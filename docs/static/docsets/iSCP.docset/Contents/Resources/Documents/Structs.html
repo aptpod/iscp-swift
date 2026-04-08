@@ -17,7 +17,7 @@
     <a title="Structures  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">iSCP v1.2.0 Docs</a></p>
+        <p><a href="index.html">iSCP v1.3.0 Docs</a></p>
         <div class="header-right">
           <form role="search" action="search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -132,6 +132,9 @@
                 <a href="Extensions/Int8.html">Int8</a>
               </li>
               <li class="nav-group-task">
+                <a href="Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Extensions/UInt16.html">UInt16</a>
               </li>
               <li class="nav-group-task">
@@ -203,6 +206,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="Structs/DownstreamFilter.html">DownstreamFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/DownstreamFilterReference.html">DownstreamFilterReference</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/DownstreamFilterReferences.html">DownstreamFilterReferences</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/DownstreamMetadata.html">DownstreamMetadata</a>
@@ -290,7 +299,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Upstreamのフラッシュの方法について定義します。</p>
+                        <p><code><a href="Classes/Upstream.html">Upstream</a></code> のフラッシュの方法について定義します。</p>
 
                         <a href="Structs/FlushPolicy.html" class="slightly-smaller">See more</a>
                       </div>
@@ -299,6 +308,68 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">FlushPolicy</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP25DownstreamFilterReferenceV"></a>
+                    <a name="//apple_ref/swift/Struct/DownstreamFilterReference" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP25DownstreamFilterReferenceV">DownstreamFilterReference</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>ダウンストリームフィルタリファレンス。</p>
+
+<p>ダウンストリームされたデータポイントグループが、どのダウンストリームフィルタのどのデータフィルタにマッチしているかを示します。</p>
+
+                        <a href="Structs/DownstreamFilterReference.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DownstreamFilterReference</span> <span class="p">:</span> <span class="kt">Equatable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4iSCP26DownstreamFilterReferencesV"></a>
+                    <a name="//apple_ref/swift/Struct/DownstreamFilterReferences" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4iSCP26DownstreamFilterReferencesV">DownstreamFilterReferences</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>ダウンストリームフィルタリファレンス。</p>
+
+<p>ダウンストリームフィルタリファレンスは、データポイントグループがどのダウンストリームフィルタにマッチしたことによりダウンストリームされているのかを示す情報です。</p>
+
+<p>データポイントグループが複数のダウンストリームフィルタにマッチしている場合、 <code>references</code> には複数の <code><a href="Structs/DownstreamFilterReference.html">DownstreamFilterReference</a></code> が格納されます。</p>
+
+                        <a href="Structs/DownstreamFilterReferences.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DownstreamFilterReferences</span> <span class="p">:</span> <span class="kt">Equatable</span></code></pre>
 
                         </div>
                       </div>
@@ -996,7 +1067,7 @@ iSCP におけるデータ伝送は、このチャンク単位で行われます
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2025 <a class="link" href="https://www.aptpod.co.jp" target="_blank" rel="external noopener">aptpod Inc</a>. All rights reserved. (Last updated: 2025-11-27)</p>
+          <p>&copy; 2026 <a class="link" href="https://www.aptpod.co.jp" target="_blank" rel="external noopener">aptpod Inc</a>. All rights reserved. (Last updated: 2026-04-08)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>

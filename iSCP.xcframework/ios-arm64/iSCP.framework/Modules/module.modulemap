@@ -7,5 +7,4 @@ framework module iSCP {
 
 module iSCP.Swift {
   header "iSCP-Swift.h"
-  requires objc
 }

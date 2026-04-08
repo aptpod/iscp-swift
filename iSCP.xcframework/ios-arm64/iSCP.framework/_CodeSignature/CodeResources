@@ -10,7 +10,7 @@
 		</data>
 		<key>Frameworks/SwiftProtobuf_iSCP.framework/Info.plist</key>
 		<data>
-		4lcTB8i8NV5txu4wrQ5o3FUCZog=
+		emJj9Mi2/jzeZL+xOAMSl8NZQ4g=
 		</data>
 		<key>Frameworks/SwiftProtobuf_iSCP.framework/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -18,15 +18,15 @@
 		</data>
 		<key>Frameworks/SwiftProtobuf_iSCP.framework/SwiftProtobuf_iSCP</key>
 		<data>
-		VWnSPQc6EH3LKNP9hH1NecMHiTo=
+		w+BqfBouaQSUzp9JvvFLm1J9pdI=
 		</data>
 		<key>Frameworks/SwiftProtobuf_iSCP.framework/_CodeSignature/CodeResources</key>
 		<data>
-		Z285afBtc5QNb1AMMtUh3QcRUUk=
+		jPiazWLdjoBhCHEoktdCiG4ZWkw=
 		</data>
 		<key>Headers/iSCP-Swift.h</key>
 		<data>
-		dV8PMcsuRQbO6hPYlQo7cI/KZ4k=
+		7rXIQN2XWBmQtOXUIFcOUHfRBlM=
 		</data>
 		<key>Headers/iSCP.h</key>
 		<data>
@@ -34,31 +34,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		I+jmPJlV7bpMzikrRbO5556ujGM=
+		A4byDJyx484te2kD6vUQzn6VQY0=
 		</data>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		/uGomgetxOvdORn7yM9n5F7b2vo=
+		W9kwKzpTxMOdqLVH10lFH9p5KZM=
 		</data>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		J3w3tfh3LVrFoUNx+3Cv7Fkb7RM=
+		9869gFcoDvf9TiZI1gGEmA7xnIk=
 		</data>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		h9J+iYjJIK2aS/62qyTGL5cKo58=
+		JEyyWM8dQtm9486jHTz6BXvYPVw=
 		</data>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		J3w3tfh3LVrFoUNx+3Cv7Fkb7RM=
+		9869gFcoDvf9TiZI1gGEmA7xnIk=
 		</data>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		ZCm/YREYChMkCLQRDitiqKVjdnY=
+		B1IgiK/Xc9gz8bq1JPV01uA7Fzo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		v2f9fozffS9J/fqakLF4lzP1AxQ=
+		OCwEltEDdyJKSbmVuyGnCnmCRcc=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -74,7 +74,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			UrHxDPsXuXZEYLPn5FOBCWWtlQtv3nWpp3Gad5iqqW0=
+			dj12/XQ4rgHWmQAuooBj+y82DSfawLOw5GkVJ//BaNI=
 			</data>
 		</dict>
 		<key>Frameworks/SwiftProtobuf_iSCP.framework/PrivacyInfo.xcprivacy</key>
@@ -88,21 +88,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			n3QVELceg6SkSyxWJ/FnUWuZtukYJaq72NLc1/MHDAc=
+			/5rNgf1oeJP66mIDGXxQGTqBEnB2vRmvqZ/MH3VX2W0=
 			</data>
 		</dict>
 		<key>Frameworks/SwiftProtobuf_iSCP.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hwexy3Iz+sFO/gHLs26kH2q5o9P8Z+zUaQUmGOlqDpQ=
+			ADMmzSSzCAsWle2UMikrrRYSDAgCUpHC/mRxcRxWOrg=
 			</data>
 		</dict>
 		<key>Headers/iSCP-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			asgJy1ywBlfd5VIKLNqO9ObAuEtaqR+XGgmpGJaacxk=
+			n/xfQ4zzSQiLkXUs+QrAZGqF51JXYoDKUcyko6AFP8Y=
 			</data>
 		</dict>
 		<key>Headers/iSCP.h</key>
@@ -116,42 +116,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			oIHKM6eJx81xqYSbGjpoL6e9mI6T/jVjIw45NAXEg/I=
+			nqO/BhLRjC2Qt48puCl8C0ZOqa50/IXtGBWY70J5V8A=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5V5zw26KVoPQkwGaI6fLUKLow2VgkPOuWNAT83zZtfo=
+			idChHSDDCsxTnOUFde2Ile+3MMyzuAEW1DqjacNGT5U=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7TgE4xP2ZRSG+HpiX6ECY7BIQt3Xmbnk2bO6/aNEaHg=
+			Cw/N7nUUeZRQeQCWsJXCZvFpIb6yeZIBqYA2kMzgAi4=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5V5zw26KVoPQkwGaI6fLUKLow2VgkPOuWNAT83zZtfo=
+			idChHSDDCsxTnOUFde2Ile+3MMyzuAEW1DqjacNGT5U=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WOc4PaZ01cmfKp323hkfotSwj0JmbRFvQGWwJHaS2mo=
+			fLa28Apqa3av8kZH/1Pcmb6mpgcDztOPEeEhEWtUrto=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/XZyKQageW/rSCMKWscdNuerRT98T2AU9puJDhuhCAU=
+			NQtD3G8KNmeH0GfbWIMKKpEaJcsPOLcE4PrHmrkmQHY=
 			</data>
 		</dict>
 	</dict>

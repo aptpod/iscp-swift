@@ -1,6 +1,13 @@
 {
   "warnings": [
     {
+      "file": "/Users/uenomasamitsu/WorkSpace/Xcode/iOS/WorkSpace/iscp-swift/iscp/iSCP/Classes/Extensions/StringExtensions.swift",
+      "line": 14,
+      "symbol": "String.toMaskString(head:tail:maskChar:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/uenomasamitsu/WorkSpace/Xcode/iOS/WorkSpace/iscp-swift/iscp/iSCP/Classes/Logger/Logger.swift",
       "line": 16,
       "symbol": "ISCPLogLevel.verbose",
@@ -64,29 +71,36 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/uenomasamitsu/WorkSpace/Xcode/iOS/WorkSpace/iscp-swift/iscp/iSCP/Classes/iSCP/Connection/Connection+E2ECall.swift",
+      "line": 14,
+      "symbol": "Connection.sendCallAndWaitReplayCall(upstreamCall:sendTimeout:waitTimeout:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/uenomasamitsu/WorkSpace/Xcode/iOS/WorkSpace/iscp-swift/iscp/iSCP/Classes/iSCP/Stream/Downstream.swift",
-      "line": 132,
+      "line": 134,
       "symbol": "Downstream.hash",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/uenomasamitsu/WorkSpace/Xcode/iOS/WorkSpace/iscp-swift/iscp/iSCP/Classes/iSCP/Stream/Downstream.swift",
-      "line": 190,
+      "line": 194,
       "symbol": "Downstream.isEqual(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/uenomasamitsu/WorkSpace/Xcode/iOS/WorkSpace/iscp-swift/iscp/iSCP/Classes/iSCP/Stream/Upstream.swift",
-      "line": 142,
+      "line": 145,
       "symbol": "Upstream.hash",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/uenomasamitsu/WorkSpace/Xcode/iOS/WorkSpace/iscp-swift/iscp/iSCP/Classes/iSCP/Stream/Upstream.swift",
-      "line": 197,
+      "line": 202,
       "symbol": "Upstream.isEqual(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

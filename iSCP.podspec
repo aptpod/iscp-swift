@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
 spec.name         = "iSCP"
-  spec.version      = "1.2.0"
+  spec.version      = "1.3.0"
   spec.summary      = "iSCP 2.0 Client Library for Swift"
   spec.homepage     = "https://github.com/aptpod/iscp-swift"
 

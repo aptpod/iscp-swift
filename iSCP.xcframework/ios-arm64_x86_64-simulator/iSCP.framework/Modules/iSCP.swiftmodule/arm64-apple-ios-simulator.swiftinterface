@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
-// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-alias SwiftProtobuf=SwiftProtobuf_iSCP -enable-bare-slash-regex -module-name iSCP
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.3 effective-5.10 (swiftlang-6.3.0.123.5 clang-2100.0.123.102)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -module-alias SwiftProtobuf=SwiftProtobuf_iSCP -enable-bare-slash-regex -module-name iSCP
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3
 import Foundation
 import Network
 import Swift
@@ -9,6 +9,9 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 @_exported import iSCP
+extension Swift.String {
+  public func toMaskString(head: Swift.Int = 8, tail: Swift.Int = 0, maskChar: Swift.String = "*") -> Swift.String
+}
 extension iSCP.Connection : iSCP.ITransportDelegate {
   public func didConnect(_ transport: any iSCP.ITransport)
   public func didDisconnect(_ transport: any iSCP.ITransport)
@@ -39,8 +42,8 @@ public enum ISCPError : Swift.Error, Foundation.LocalizedError, Swift.Equatable 
   public static func == (lhs: iSCP.ISCPError, rhs: iSCP.ISCPError) -> Swift.Bool
 }
 extension iSCP.Connection {
-  public func openUpstream(sessionID: Swift.String, expiryInterval: Foundation.TimeInterval = Upstream.DEFAULT_EXPIRY_INTERVAL, dataIDs: [iSCP.DataID] = [], qos: iSCP.QoS = Upstream.DEFAULT_QOS, ackInterval: Foundation.TimeInterval = Upstream.DEFAULT_ACK_INTERVAL, persist: Swift.Bool = Upstream.DEFAULT_PERSIST, flushPolicy: iSCP.FlushPolicy = Upstream.DEFAULT_FLUSH_POLICY, openTimeout: Foundation.TimeInterval = Upstream.DEFAULT_OPEN_TIMEOUT, closeTimeout: Foundation.TimeInterval = Upstream.DEFAULT_CLOSE_TIMEOUT, completion: @escaping ((_ upstream: iSCP.Upstream?, _ error: (any Swift.Error)?) -> ()))
-  public func reopenUpstream(_ upstream: iSCP.Upstream, handoverDataPoints: Swift.Bool = true, completion: @escaping ((_ upstream: iSCP.Upstream?, _ error: (any Swift.Error)?) -> ()))
+  public func openUpstream(sessionID: Swift.String, expiryInterval: Foundation.TimeInterval = Upstream.DEFAULT_EXPIRY_INTERVAL, dataIDs: [iSCP.DataID] = [], qos: iSCP.QoS = Upstream.DEFAULT_QOS, ackInterval: Foundation.TimeInterval = Upstream.DEFAULT_ACK_INTERVAL, persist: Swift.Bool = Upstream.DEFAULT_PERSIST, flushPolicy: iSCP.FlushPolicy = Upstream.DEFAULT_FLUSH_POLICY, openTimeout: Foundation.TimeInterval = Upstream.DEFAULT_OPEN_TIMEOUT, closeTimeout: Foundation.TimeInterval = Upstream.DEFAULT_CLOSE_TIMEOUT, completion: @escaping (_ upstream: iSCP.Upstream?, _ error: (any Swift.Error)?) -> ())
+  public func reopenUpstream(_ upstream: iSCP.Upstream, handoverDataPoints: Swift.Bool = true, completion: @escaping (_ upstream: iSCP.Upstream?, _ error: (any Swift.Error)?) -> ())
 }
 public class NegotiationParams {
   public var encodingName: iSCP.EncodingName
@@ -237,13 +240,16 @@ public protocol ConnectionE2ECallDelegate : ObjectiveC.NSObjectProtocol {
   public static let DEFAULT_ENCODING: iSCP.EncodingName
   public static let DEFAULT_SEND_METADATA_TIMEOUT: Swift.Double
   public static let DEFAULT_E2E_CALL_TIMEOUT: Swift.Double
-  public static func connect(address: Swift.String, connector: any iSCP.IConnector, tokenSource: @escaping ((@escaping (_ token: Swift.String?) -> ()) -> ()), nodeID: Swift.String = "", projectUUID: Swift.String = "", connectTimeout: Foundation.TimeInterval = DEFAULT_CONNECT_TIMEOUT, pingTimeout: Foundation.TimeInterval = DEFAULT_PING_TIMEOUT, pingInterval: Foundation.TimeInterval = DEFAULT_PING_INTERVAL, autoReconnect: Swift.Bool = DEFAULT_AUTO_RECONNECT, reconnectBaseInterval: Foundation.TimeInterval = DEFAULT_RECONNECT_BASE_INTERVAL, reconnectMaxInterval: Foundation.TimeInterval = DEFAULT_RECONNECT_MAX_INTERVAL, encoding: iSCP.EncodingName = DEFAULT_ENCODING, delegate: (any iSCP.ConnectionDelegate)? = nil, e2eCallDelegate: (any iSCP.ConnectionE2ECallDelegate)? = nil, completion: @escaping ((_ connection: iSCP.Connection?, _ error: (any Swift.Error)?) -> ()))
+  public static func connect(address: Swift.String, connector: any iSCP.IConnector, tokenSource: @escaping (@escaping (_ token: Swift.String?) -> ()) -> (), nodeID: Swift.String = "", projectUUID: Swift.String = "", connectTimeout: Foundation.TimeInterval = DEFAULT_CONNECT_TIMEOUT, pingTimeout: Foundation.TimeInterval = DEFAULT_PING_TIMEOUT, pingInterval: Foundation.TimeInterval = DEFAULT_PING_INTERVAL, autoReconnect: Swift.Bool = DEFAULT_AUTO_RECONNECT, reconnectBaseInterval: Foundation.TimeInterval = DEFAULT_RECONNECT_BASE_INTERVAL, reconnectMaxInterval: Foundation.TimeInterval = DEFAULT_RECONNECT_MAX_INTERVAL, encoding: iSCP.EncodingName = DEFAULT_ENCODING, delegate: (any iSCP.ConnectionDelegate)? = nil, e2eCallDelegate: (any iSCP.ConnectionE2ECallDelegate)? = nil, completion: @escaping (_ connection: iSCP.Connection?, _ error: (any Swift.Error)?) -> ())
   public var tag: Swift.Int
   weak public var delegate: (any iSCP.ConnectionDelegate)?
   weak public var e2eCallDelegate: (any iSCP.ConnectionE2ECallDelegate)?
+  public var protocolVersion: Swift.String {
+    get
+  }
   final public let address: Swift.String
   final public let connector: any iSCP.IConnector
-  final public let tokenSource: ((@escaping (_ token: Swift.String?) -> ()) -> ())
+  final public let tokenSource: (@escaping (_ token: Swift.String?) -> ()) -> ()
   final public let nodeID: Swift.String
   final public let projectUUID: Swift.String
   final public let connectTimeout: Foundation.TimeInterval
@@ -262,8 +268,8 @@ public protocol ConnectionE2ECallDelegate : ObjectiveC.NSObjectProtocol {
   public var isConnecting: Swift.Bool {
     get
   }
-  public init(address: Swift.String, connector: any iSCP.IConnector, tokenSource: @escaping ((@escaping (_ token: Swift.String?) -> ()) -> ()), nodeID: Swift.String = "", projectUUID: Swift.String = "", connectTimeout: Foundation.TimeInterval = DEFAULT_CONNECT_TIMEOUT, pingTimeout: Foundation.TimeInterval = DEFAULT_PING_TIMEOUT, pingInterval: Foundation.TimeInterval = DEFAULT_PING_INTERVAL, autoReconnect: Swift.Bool = DEFAULT_AUTO_RECONNECT, reconnectBaseInterval: Foundation.TimeInterval = DEFAULT_RECONNECT_BASE_INTERVAL, reconnectMaxInterval: Foundation.TimeInterval = DEFAULT_RECONNECT_MAX_INTERVAL, encoding: iSCP.EncodingName = DEFAULT_ENCODING)
-  public func connect(completion: @escaping ((_ error: (any Swift.Error)?) -> ()))
+  public init(address: Swift.String, connector: any iSCP.IConnector, tokenSource: @escaping (@escaping (_ token: Swift.String?) -> ()) -> (), nodeID: Swift.String = "", projectUUID: Swift.String = "", connectTimeout: Foundation.TimeInterval = DEFAULT_CONNECT_TIMEOUT, pingTimeout: Foundation.TimeInterval = DEFAULT_PING_TIMEOUT, pingInterval: Foundation.TimeInterval = DEFAULT_PING_INTERVAL, autoReconnect: Swift.Bool = DEFAULT_AUTO_RECONNECT, reconnectBaseInterval: Foundation.TimeInterval = DEFAULT_RECONNECT_BASE_INTERVAL, reconnectMaxInterval: Foundation.TimeInterval = DEFAULT_RECONNECT_MAX_INTERVAL, encoding: iSCP.EncodingName = DEFAULT_ENCODING)
+  public func connect(completion: @escaping (_ error: (any Swift.Error)?) -> ())
   public func close(completion: ((_ error: (any Swift.Error)?) -> ())? = nil)
   @objc deinit
 }
@@ -291,19 +297,22 @@ extension iSCP.Transport {
     public var clientAuthPkcs12Path: Swift.String?
     public var clientAuthPkcs12Password: Swift.String?
     public init(path: Swift.String = DEFAULT_PATH, port: Swift.Int? = nil, enableTLS: Swift.Bool = false, clientAuthPkcs12Path: Swift.String? = nil, clientAuthPkcs12Password: Swift.String? = nil)
-    public func connect(address: Swift.String, negotiationParams: iSCP.NegotiationParams, completion: @escaping ((_ transport: (any iSCP.ITransport)?, _ error: (any Swift.Error)?) -> ()))
+    public func connect(address: Swift.String, negotiationParams: iSCP.NegotiationParams, completion: @escaping (_ transport: (any iSCP.ITransport)?, _ error: (any Swift.Error)?) -> ())
     @objc deinit
   }
 }
 public let kISCPFrameworkVersion: Swift.String
 public let kISCPSupportedProtocolVersion: Swift.String
 extension iSCP.Connection {
+  @available(*, deprecated, renamed: "sendCallAndWaitReplyCall()")
+  @discardableResult
+  public func sendCallAndWaitReplayCall(upstreamCall: iSCP.UpstreamCall, sendTimeout: Foundation.TimeInterval = DEFAULT_E2E_CALL_TIMEOUT, waitTimeout: Foundation.TimeInterval = DEFAULT_E2E_CALL_TIMEOUT, completion: @escaping (_ downstreamReplyCall: iSCP.DownstreamReplyCall?, _ error: (any Swift.Error)?) -> ()) -> Swift.String?
   @discardableResult
   public func sendCall(upstreamCall: iSCP.UpstreamCall, sendTimeout: Foundation.TimeInterval = DEFAULT_E2E_CALL_TIMEOUT, completion: ((_ error: (any Swift.Error)?) -> ())? = nil) -> Swift.String?
   @discardableResult
   public func sendReplyCall(upstreamReplyCall: iSCP.UpstreamReplyCall, sendTimeout: Foundation.TimeInterval = DEFAULT_E2E_CALL_TIMEOUT, completion: ((_ error: (any Swift.Error)?) -> ())? = nil) -> Swift.String?
   @discardableResult
-  public func sendCallAndWaitReplayCall(upstreamCall: iSCP.UpstreamCall, sendTimeout: Foundation.TimeInterval = DEFAULT_E2E_CALL_TIMEOUT, waitTimeout: Foundation.TimeInterval = DEFAULT_E2E_CALL_TIMEOUT, completion: @escaping ((_ downstreamReplyCall: iSCP.DownstreamReplyCall?, _ error: (any Swift.Error)?) -> ())) -> Swift.String?
+  public func sendCallAndWaitReplyCall(upstreamCall: iSCP.UpstreamCall, sendTimeout: Foundation.TimeInterval = DEFAULT_E2E_CALL_TIMEOUT, waitTimeout: Foundation.TimeInterval = DEFAULT_E2E_CALL_TIMEOUT, completion: @escaping (_ downstreamReplyCall: iSCP.DownstreamReplyCall?, _ error: (any Swift.Error)?) -> ()) -> Swift.String?
 }
 @available(*, deprecated, renamed: "IConnector")
 public typealias ITransportConfig = iSCP.IConnector
@@ -322,12 +331,12 @@ public protocol ITransport {
   var negotiationParams: iSCP.NegotiationParams? { get }
   var delegate: (any iSCP.ITransportDelegate)? { get set }
   var isConnecting: Swift.Bool { get }
-  func connect(address: Swift.String, negotiationParams: iSCP.NegotiationParams, completion: @escaping ((_ error: (any Swift.Error)?) -> ()))
+  func connect(address: Swift.String, negotiationParams: iSCP.NegotiationParams, completion: @escaping (_ error: (any Swift.Error)?) -> ())
   func close(completion: (((any Swift.Error)?) -> ())?)
   func write(data: Foundation.Data) -> (any Swift.Error)?
 }
 public protocol IConnector {
-  func connect(address: Swift.String, negotiationParams: iSCP.NegotiationParams, completion: @escaping ((_ transport: (any iSCP.ITransport)?, _ error: (any Swift.Error)?) -> ()))
+  func connect(address: Swift.String, negotiationParams: iSCP.NegotiationParams, completion: @escaping (_ transport: (any iSCP.ITransport)?, _ error: (any Swift.Error)?) -> ())
 }
 public struct FlushPolicy {
   public static let DEFAULT_FLUSH_TYPE: iSCP.FlushPolicy.FlushType
@@ -363,6 +372,15 @@ public enum QoS : Swift.UInt8 {
   public var rawValue: Swift.UInt8 {
     get
   }
+}
+public struct DownstreamFilterReference : Swift.Equatable {
+  public var downstreamFilterIndex: Swift.UInt32
+  public var dataFilterIndex: Swift.UInt32
+  public static func == (lhs: iSCP.DownstreamFilterReference, rhs: iSCP.DownstreamFilterReference) -> Swift.Bool
+}
+public struct DownstreamFilterReferences : Swift.Equatable {
+  public var references: [iSCP.DownstreamFilterReference]
+  public static func == (lhs: iSCP.DownstreamFilterReferences, rhs: iSCP.DownstreamFilterReferences) -> Swift.Bool
 }
 public struct DownstreamFilter : Swift.Equatable {
   public static func allFor(_ sourceNodeID: Swift.String) -> iSCP.DownstreamFilter
@@ -422,6 +440,7 @@ public struct DownstreamChunk : Swift.Equatable {
   public var sequenceNumber: Swift.UInt32
   public var dataPointGroups: [iSCP.DataPointGroup]
   public var upstreamInfo: iSCP.UpstreamInfo
+  public var downstreamFilterReferences: [iSCP.DownstreamFilterReferences]
   public static func == (lhs: iSCP.DownstreamChunk, rhs: iSCP.DownstreamChunk) -> Swift.Bool
 }
 public struct UpstreamInfo : Swift.Equatable {
@@ -553,8 +572,8 @@ public struct DownstreamReplyCall : Swift.Equatable {
   public static func == (lhs: iSCP.DownstreamReplyCall, rhs: iSCP.DownstreamReplyCall) -> Swift.Bool
 }
 extension iSCP.Connection {
-  public func openDownstream(downstreamFilters: [iSCP.DownstreamFilter] = [], dataIDs: [iSCP.DataID] = [], qos: iSCP.QoS = Downstream.DEFAULT_QOS, omitEmptyChunk: Swift.Bool = Downstream.DEFAULT_OMIT_EMPTY_CHUNK, expiryInterval: Foundation.TimeInterval = Downstream.DEFAULT_EXPIRY_INTERVAL, ackInterval: Foundation.TimeInterval = Downstream.DEFAULT_ACK_INTERVAL, openTimeout: Foundation.TimeInterval = Downstream.DEFAULT_OPEN_TIMEOUT, closeTimeout: Foundation.TimeInterval = Downstream.DEFAULT_CLOSE_TIMEOUT, completion: @escaping ((_ downstream: iSCP.Downstream?, _ error: (any Swift.Error)?) -> ()))
-  public func reopenDownstream(_ downstream: iSCP.Downstream, completion: @escaping ((_ downstream: iSCP.Downstream?, _ error: (any Swift.Error)?) -> ()))
+  public func openDownstream(downstreamFilters: [iSCP.DownstreamFilter] = [], dataIDs: [iSCP.DataID] = [], qos: iSCP.QoS = Downstream.DEFAULT_QOS, omitEmptyChunk: Swift.Bool = Downstream.DEFAULT_OMIT_EMPTY_CHUNK, expiryInterval: Foundation.TimeInterval = Downstream.DEFAULT_EXPIRY_INTERVAL, ackInterval: Foundation.TimeInterval = Downstream.DEFAULT_ACK_INTERVAL, openTimeout: Foundation.TimeInterval = Downstream.DEFAULT_OPEN_TIMEOUT, closeTimeout: Foundation.TimeInterval = Downstream.DEFAULT_CLOSE_TIMEOUT, completion: @escaping (_ downstream: iSCP.Downstream?, _ error: (any Swift.Error)?) -> ())
+  public func reopenDownstream(_ downstream: iSCP.Downstream, completion: @escaping (_ downstream: iSCP.Downstream?, _ error: (any Swift.Error)?) -> ())
 }
 extension iSCP.EncodingName : Swift.Equatable {}
 extension iSCP.EncodingName : Swift.Hashable {}
