@@ -6,25 +6,16 @@
 	<dict>
 		<key>Resources/Info.plist</key>
 		<data>
-		zWbqMpDoVRCrZXNkKCgSo1K6rVc=
+		bmbw45Bhx+YxHiCFpR7dwAtO1kA=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Frameworks/SwiftProtobuf_iSCP.framework</key>
-		<dict>
-			<key>cdhash</key>
-			<data>
-			GuO21J5LRHGXHsFBSzOVtGQZVzk=
-			</data>
-			<key>requirement</key>
-			<string>identifier "com.aptpod.SwiftProtobuf-iSCP-macOS" and anchor apple generic and certificate leaf[subject.CN] = 0x4170706c6520446576656c6f706d656e743a20e6ada3e5858920e4b88ae9878e202837343932324c3442564d29 and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
-		</dict>
 		<key>Headers/iSCP-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ta+j75DQlWqm4mGYrwWJSkZiSSSccN+aF8NFBibChQM=
+			HpngBB1p5VdK2EMYumr/e1GKXxwsDaKPqxWxJBBf5H8=
 			</data>
 		</dict>
 		<key>Headers/iSCP.h</key>
@@ -38,70 +29,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			m2VIkzx/PXMa1ov5WtDx9Jrmy9QyfCRcE9Mh4ywV11s=
+			ZGnIJGVLxlruoIYb9b4C5xGka0WpWjcVJZOlM/SFgCQ=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-macos.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/4jc5aJ0fvWhHaQDk7CHeNB8IhBry5X/ay0NjR3j++A=
+			/NvjWlkkqXU9ar+CvFPZ0MADFjbggYe+d98Pu/Ss84o=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-macos.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			j7nWlIlipPOzuXSJ4hKAoKLo6xCUDNgxUaGp+cEHX9M=
+			eVbAa1Mv6Uwp6uK9Q1TsDCrsD/AfBitT8810NZmoi44=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-macos.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/4jc5aJ0fvWhHaQDk7CHeNB8IhBry5X/ay0NjR3j++A=
+			/NvjWlkkqXU9ar+CvFPZ0MADFjbggYe+d98Pu/Ss84o=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-macos.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rOFNxiGkc5XCa2Bv+ClIv89H/yzPBlcWxIRN4wnKTy8=
+			6c9fo6EiyYm4eDgz7frhgKpHtTXwU5YFqCp1gbrY/rI=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/x86_64-apple-macos.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			m2VIkzx/PXMa1ov5WtDx9Jrmy9QyfCRcE9Mh4ywV11s=
+			ZGnIJGVLxlruoIYb9b4C5xGka0WpWjcVJZOlM/SFgCQ=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/x86_64-apple-macos.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3NcE21njrODP49OKgIIoKsp2rZ5eHWQfeXs8cEgAoZA=
+			laKvLqHa/LrlwyfsiiZ2NtJEiOyGsWCxbo2hOBtNsGY=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/x86_64-apple-macos.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gSM6cQSIXfbuYWTE7gVJ2n/5IDIfZ8Z0z+u82hflCuc=
+			B9Zb1tmH5oC83XSmHKj3xN3zVYozJwjpG+P7IAB7VkQ=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/x86_64-apple-macos.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3NcE21njrODP49OKgIIoKsp2rZ5eHWQfeXs8cEgAoZA=
+			laKvLqHa/LrlwyfsiiZ2NtJEiOyGsWCxbo2hOBtNsGY=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/x86_64-apple-macos.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VmxvSp6+b15/Pft1943HCa0Kl3IWiLEoV7oa4Mg1474=
+			8OuwcEfQGnsxOxchxqe+7TPdnE60zj2q4kETaTqUCzU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -115,7 +106,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SIHkAETXaFW21LG2FfEyMwzVOEX1IWhaEpW3oZSHafw=
+			ps8/Y2tO37PARbtLsEBB7myJRIBBXDgQw4NrM2FV64c=
 			</data>
 		</dict>
 	</dict>
