@@ -78,29 +78,36 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/uenomasamitsu/WorkSpace/Xcode/iOS/WorkSpace/iscp-swift/iscp/iSCP/Classes/iSCP/Connection/Connection.swift",
+      "line": 164,
+      "symbol": "Connection.isReconnecting",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/uenomasamitsu/WorkSpace/Xcode/iOS/WorkSpace/iscp-swift/iscp/iSCP/Classes/iSCP/Stream/Downstream.swift",
-      "line": 134,
+      "line": 149,
       "symbol": "Downstream.hash",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/uenomasamitsu/WorkSpace/Xcode/iOS/WorkSpace/iscp-swift/iscp/iSCP/Classes/iSCP/Stream/Downstream.swift",
-      "line": 194,
+      "line": 207,
       "symbol": "Downstream.isEqual(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/uenomasamitsu/WorkSpace/Xcode/iOS/WorkSpace/iscp-swift/iscp/iSCP/Classes/iSCP/Stream/Upstream.swift",
-      "line": 145,
+      "line": 174,
       "symbol": "Upstream.hash",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/uenomasamitsu/WorkSpace/Xcode/iOS/WorkSpace/iscp-swift/iscp/iSCP/Classes/iSCP/Stream/Upstream.swift",
-      "line": 202,
+      "line": 229,
       "symbol": "Upstream.isEqual(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
