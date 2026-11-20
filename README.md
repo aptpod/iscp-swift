@@ -4,8 +4,8 @@ iSCP Client for Swift は、iSCP version 2 を用いたリアルタイムAPIに�
 
 ## Requirements
 
-- iOS 13 or later
-- macOS 10.15 (Catalina) or later
+- iOS 15.0 or later
+- macOS 12.0 (Monterey) or later
 - Xcode 26 or later
 
 ## Installation

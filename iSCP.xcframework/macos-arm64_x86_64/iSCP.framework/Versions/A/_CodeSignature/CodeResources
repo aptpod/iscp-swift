@@ -6,7 +6,7 @@
 	<dict>
 		<key>Resources/Info.plist</key>
 		<data>
-		mYXZCNc6zFc/+l7sGqNbXTglJJ8=
+		l1YxYBNKraSgc65lWHcycmLfwUc=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -29,7 +29,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			B6ogrTbncMa7dpmnnVjkkDc0s7y7tzUGYUEpBxFEZe0=
+			tZtApbR9QJe2uwaLcDvGj454E3yRO+4DBn9zrEXmgFg=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-macos.private.swiftinterface</key>
@@ -57,14 +57,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HrLhTTeCEHR3dTMZqNtmps9vgolsU0cq2p03MIrLRXk=
+			3cY5emzgL1g8XFuUbMSRdEoGb/SI6dKKvfahEDnBXE0=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/x86_64-apple-macos.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			B6ogrTbncMa7dpmnnVjkkDc0s7y7tzUGYUEpBxFEZe0=
+			tZtApbR9QJe2uwaLcDvGj454E3yRO+4DBn9zrEXmgFg=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/x86_64-apple-macos.private.swiftinterface</key>
@@ -92,7 +92,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			avTf2SxGMXR9OtSKmF6+NGBa34oHutGtd652Sp8yZ9M=
+			C3PC6YAhu8eK5cX8a73v1/htC1dopLQuevifY/HeHoo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -106,7 +106,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7/WRZdkCJdoDtLK+RBmCYpMcWnsHjiellxwjG/nTKgU=
+			2Emr4aSaSgS+28MyT5Au4P/lAuyI6gzKqf8PqEa0JVg=
 			</data>
 		</dict>
 	</dict>

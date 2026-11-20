@@ -35518,7 +35518,7 @@
       "kind": "StringLiteral",
       "offset": 256,
       "length": 7,
-      "value": "\"1.3.3\""
+      "value": "\"1.3.4\""
     },
     {
       "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/iSCP\/Consts.swift",

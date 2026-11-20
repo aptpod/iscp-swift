@@ -1,14 +1,14 @@
 Pod::Spec.new do |spec|
 spec.name         = "iSCP"
-  spec.version      = "1.3.3"
+  spec.version      = "1.3.4"
   spec.summary      = "iSCP 2.0 Client Library for Swift"
   spec.homepage     = "https://github.com/aptpod/iscp-swift"
 
   spec.license      = { :type => "Apache License, Version 2.0" }
   spec.author       = { "aptpod" => "ueno@aptpod.co.jp" }
 
-  spec.ios.deployment_target = "13.0"
-  spec.osx.deployment_target = "10.15"
+  spec.ios.deployment_target = "15.0"
+  spec.osx.deployment_target = "12.0"
   spec.source       = { :git => "https://github.com/aptpod/iscp-swift.git", :tag => "v#{spec.version}" }
 
   spec.vendored_frameworks = "iSCP.xcframework"
