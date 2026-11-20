@@ -34347,14 +34347,14 @@
     {
       "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/iSCP\/Connection\/Connection+Upstream.swift",
       "kind": "BooleanLiteral",
-      "offset": 6537,
+      "offset": 6635,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/iSCP\/Connection\/Connection+Upstream.swift",
       "kind": "BooleanLiteral",
-      "offset": 12231,
+      "offset": 12119,
       "length": 5,
       "value": "false"
     },
@@ -34368,7 +34368,7 @@
     {
       "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/Transport\/WebSocket\/SwiftWebSocket.swift",
       "kind": "Array",
-      "offset": 1332,
+      "offset": 1447,
       "length": 2,
       "value": "[]"
     },
@@ -34612,57 +34612,64 @@
     },
     {
       "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/iSCP\/Stream\/Upstream.swift",
+      "kind": "Array",
+      "offset": 5526,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/iSCP\/Stream\/Upstream.swift",
       "kind": "IntegerLiteral",
-      "offset": 5505,
+      "offset": 5561,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/iSCP\/Stream\/Upstream.swift",
       "kind": "IntegerLiteral",
-      "offset": 5547,
+      "offset": 5603,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/iSCP\/Stream\/Upstream.swift",
       "kind": "IntegerLiteral",
-      "offset": 5749,
+      "offset": 5805,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/iSCP\/Stream\/Upstream.swift",
       "kind": "BooleanLiteral",
-      "offset": 6147,
+      "offset": 6203,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/iSCP\/Stream\/Upstream.swift",
       "kind": "BooleanLiteral",
-      "offset": 7265,
+      "offset": 7321,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/iSCP\/Stream\/Upstream.swift",
       "kind": "IntegerLiteral",
-      "offset": 7624,
+      "offset": 7680,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/iSCP\/Stream\/Upstream.swift",
       "kind": "StringLiteral",
-      "offset": 7760,
+      "offset": 7816,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/iSCP\/Stream\/Upstream.swift",
       "kind": "BooleanLiteral",
-      "offset": 10310,
+      "offset": 10408,
       "length": 5,
       "value": "false"
     },
@@ -35511,7 +35518,7 @@
       "kind": "StringLiteral",
       "offset": 256,
       "length": 7,
-      "value": "\"1.3.2\""
+      "value": "\"1.3.3\""
     },
     {
       "filePath": "\/Users\/uenomasamitsu\/WorkSpace\/Xcode\/iOS\/WorkSpace\/iscp-swift\/iscp\/iSCP\/Classes\/iSCP\/Consts.swift",

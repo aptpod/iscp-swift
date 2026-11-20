@@ -14,27 +14,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		PVhL9R/AWwz3Dynfw5Vg24iuyuU=
+		jATvSOJCj+gvSY+Qw8NYevuRX6E=
 		</data>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		HhjfqbiO1nrfVwJ0/4iJurN43pU=
+		KVpXcxLKMd16u1ZJkFNWq5z9V7A=
 		</data>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		6aEnWa4TUVomWJmVYEUGoX469EU=
+		TMtQXmD8UGz0EhnKyEm83growok=
 		</data>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		a1O/M0utr/Nn+s/gzMSd9Q8HIBU=
+		7WU6Kp9W29gR3zTuIoEJxnZTFiQ=
 		</data>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		6aEnWa4TUVomWJmVYEUGoX469EU=
+		TMtQXmD8UGz0EhnKyEm83growok=
 		</data>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		ypvfoqoGhCPtp58gKaUAnqz5FPw=
+		bXUCa2AseiNkYFp4js59k2GNZbg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -61,35 +61,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TP+4v08/8tJqaFTo2H/8/TnoScCz/9nnYutlN27zlt4=
+			MEsGTntfe9VhUCAzhhGNvHMSsDydg+PvNxcJh+BBcm4=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tu5TqxZA/gH5xyLQ5OfaXJf8s6ZVtFRmy6yWGqQ6l7o=
+			uo6igsWMAwW8buNaRq50FCduohQP66Krjfa6yd4ZH2w=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QUjuTs8PYZ2gqdhiJR/yZC7OubQtLPKEy+Xi6srCmNo=
+			+Un7GrL5y5/7nOvR1HfnhNUT+3UykPZIqz9VK3QTW3k=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tu5TqxZA/gH5xyLQ5OfaXJf8s6ZVtFRmy6yWGqQ6l7o=
+			uo6igsWMAwW8buNaRq50FCduohQP66Krjfa6yd4ZH2w=
 			</data>
 		</dict>
 		<key>Modules/iSCP.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			v3idqh1qow35LeJKNJ/HRo2Xz2WN1KyknU5lUk/4poY=
+			su5Bx+x0dg4+np+i33URiZ/aB7iRb5P5D5+Yz8Gq2sc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

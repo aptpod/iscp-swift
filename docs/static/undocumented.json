@@ -93,21 +93,21 @@
     },
     {
       "file": "/Users/uenomasamitsu/WorkSpace/Xcode/iOS/WorkSpace/iscp-swift/iscp/iSCP/Classes/iSCP/Stream/Downstream.swift",
-      "line": 207,
+      "line": 208,
       "symbol": "Downstream.isEqual(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/uenomasamitsu/WorkSpace/Xcode/iOS/WorkSpace/iscp-swift/iscp/iSCP/Classes/iSCP/Stream/Upstream.swift",
-      "line": 174,
+      "line": 175,
       "symbol": "Upstream.hash",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/uenomasamitsu/WorkSpace/Xcode/iOS/WorkSpace/iscp-swift/iscp/iSCP/Classes/iSCP/Stream/Upstream.swift",
-      "line": 229,
+      "line": 231,
       "symbol": "Upstream.isEqual(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
